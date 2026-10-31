@@ -120,3 +120,31 @@ CREATE TABLE IF NOT EXISTS assembly_assessments (
  evidence_id bigint NOT NULL REFERENCES evidence(id),
  review_status text NOT NULL DEFAULT 'pending' CHECK(review_status IN ('pending','reviewed','conflict'))
 );
+CREATE TABLE IF NOT EXISTS catalog_groups (
+ code text PRIMARY KEY,
+ name_zh text NOT NULL,
+ purpose_zh text NOT NULL
+);
+CREATE TABLE IF NOT EXISTS catalog_sections (
+ code text PRIMARY KEY,
+ group_code text NOT NULL REFERENCES catalog_groups(code),
+ kind text NOT NULL CHECK(kind IN ('series','series_group','component_group','interface_group','reference','service_group')),
+ title_en text NOT NULL, summary_zh text NOT NULL,
+ printed_start text NOT NULL, printed_end text NOT NULL,
+ source_page_id bigint NOT NULL REFERENCES pages(id),
+ source_quote text NOT NULL,
+ engineering_batch integer NOT NULL CHECK(engineering_batch BETWEEN 1 AND 3),
+ catalog_version text NOT NULL,
+ review_status text NOT NULL DEFAULT 'pending' CHECK(review_status IN ('pending','reviewed','conflict'))
+);
+CREATE TABLE IF NOT EXISTS catalog_family_links (
+ section_code text NOT NULL REFERENCES catalog_sections(code),
+ product_family_code text NOT NULL,
+ PRIMARY KEY(section_code,product_family_code)
+);
+CREATE TABLE IF NOT EXISTS catalog_page_labels (
+ page_id bigint NOT NULL REFERENCES pages(id),
+ printed_label text NOT NULL,
+ method text NOT NULL CHECK(method IN ('ocr_footer_candidate','existing_page_label')),
+ PRIMARY KEY(page_id,printed_label,method)
+);

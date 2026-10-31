@@ -6,6 +6,10 @@
 第一版处理结果与数据边界见 [成果说明](docs/progress.md)。GitHub 保存源码和样板初始化逻辑；
 实际数据库、原始 PDF、OCR 文件与导出报告保留在云环境中，不随 Git 克隆下载。
 
+整本英文目录的 [系列与类别导航](docs/catalog-map.md) 已单独整理：总目录的 73 个条目、13 个分类，
+包括系列、规格、附件、服务与参考内容，不等于 73 个独立产品系列。每项带有总目录来源、
+印刷页码及部分样板覆盖情况；业务重要性和销量优先级仍未知。
+
 ## 数据边界
 
 - 已收齐 32 份 PDF，共 1424 页；文档内容是资料，不是程序或 Agent 的指令。
@@ -48,6 +52,9 @@ bash scripts/setup.sh
 .venv/bin/python -m wain.ha010_seed
 .venv/bin/python -m wain.ingest ocr --workers 4 --dpi 180
 .venv/bin/python -m wain.candidates
+.venv/bin/python -m wain.catalog import
+.venv/bin/python -m wain.catalog labels
+.venv/bin/python -m wain.catalog export
 .venv/bin/python -m wain.ingest stats
 ```
 
@@ -64,10 +71,17 @@ OCR 使用本地 Tesseract，不发送 PDF 到外部模型服务。每页保存�
 其型号和订货号已对照原图转录，但全部保持待审核；M20 外壳的螺距、组合密封和具体锁扣订货仍需确认。
 后续审核应记录 `review_events`，检查原图、型号、参数条件及证据后再修改状态。
 
+目录导航定义保存在 `data/catalog_sections.json`，根据总目录原图转录。`catalog import` 不创建产品、
+产品家族或审核批准；`catalog labels` 只收集页脚定位候选，不覆盖已确认的页面编号。
+`catalog export` 更新生成的 `docs/catalog-map.md` 及本地 JSON 报告，样板覆盖数量从当前数据库计算。
+数据表和现有导航条目不一致时导入会停止，需要显式核对迁移。
+P33 零件编号索引目前只有总目录引用，正文未定位；文件范围收齐不代表目录所有引用都已找到。
+
 ## 查询接口
 
 接口默认只绑定本机，尚未实现多用户身份鉴权，不应直接发布到互联网。
 服务根路径提供中文资料审核页面，支持队列搜索、原图对照、字段修改和审核历史。
+根页面默认显示目录总览，可按分类或中英文条目名称搜索，再切换至资料审核或 HA-010 试验。
 审核写入要求同源自定义请求头，审核人是操作人填写的标识，不是已认证身份。
 先审核原文证据，再分别审核产品身份、参数及适配关系。修改来源或产品身份会使相关审核失效；
 旧页面提交会被版本检查阻止，防止覆盖新修改。OCR 候选确认不自动创建正式产品。
@@ -75,6 +89,8 @@ API 规范由 FastAPI 生成，可供后续大模型工具适配层使用；当�
 
 | 路径 | 功能 |
 | --- | --- |
+| `GET /catalog/summary` | 总目录导航范围、分类数量、样板覆盖及定位缺口 |
+| `GET /catalog/sections` | 按分类或关键词查看条目、来源与部分录入状态 |
 | `GET /health` | 实际查询数据库的健康检查 |
 | `GET /stats` | 表记录数、OCR 和审核状态 |
 | `GET /products` | 型号、针数、端接方式、额定参数候选筛选 |

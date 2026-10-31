@@ -2,8 +2,11 @@
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WAIN 产品审核与选型</title><link rel="stylesheet" href="/static/style.css"></head>
 <body><header><div><b>WAIN</b> 产品资料工作台</div><span>原文可追溯 · 未知条件不默认通过</span></header>
-<nav><button id="reviewTab">资料审核</button><button id="selectionTab">HA-010 选型试验</button></nav>
-<main id="reviewPanel"><section class="toolbar">
+<nav><button id="catalogTab">目录总览</button><button id="reviewTab">资料审核</button><button id="selectionTab">HA-010 选型试验</button></nav>
+<main id="catalogPanel"><h1>英文目录系列与类别导航</h1><p class="notice">这是总目录条目清单，包含系列、外壳规格、附件和参考内容，不是完整产品库。用途说明依据目录标题；主销系列与销售优先级尚未知。</p>
+<p id="catalogSummary" role="status">正在读取目录…</p><section class="toolbar"><label>分类<select id="catalogGroup"><option value="">全部分类</option></select></label><label>搜索条目<input id="catalogQuery" placeholder="例如 HE、M12、外壳、铁路"></label></section>
+<div id="catalogTable"></div><p id="catalogNotice">页码匹配来自原页脚 OCR 候选，不能证明对应系列已经录全。P33 零件编号索引尚未定位。</p></main>
+<main id="reviewPanel" hidden><section class="toolbar">
 <label>数据类型<select id="kind"><option value="product">产品身份</option><option value="specification">产品参数</option><option value="relation">适配关系</option><option value="assessment">工况工程核对</option><option value="evidence">原文证据</option><option value="candidate">OCR 候选</option></select></label>
 <label>状态<select id="status"><option value="pending">待审核</option><option value="all">全部</option><option value="reviewed">已确认</option><option value="conflict">有冲突</option><option value="accepted">候选文字已确认</option><option value="rejected">候选已拒绝</option></select></label>
 <label>搜索<input id="query" placeholder="型号、订货号或字段内容"></label><button id="load">查询</button>

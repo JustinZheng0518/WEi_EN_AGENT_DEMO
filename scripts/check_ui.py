@@ -12,6 +12,12 @@ with sync_playwright() as p:
     errors=[]
     page.on('pageerror',lambda error:errors.append(str(error)))
     page.goto(base)
+    expect(page.locator('#catalogSummary')).to_contain_text('73 个总目录条目')
+    expect(page.locator('#catalogTable tr')).to_have_count(74)
+    page.screenshot(path=str(out/'catalog-overview.png'),full_page=True)
+    page.fill('#catalogQuery','M12')
+    expect(page.locator('#catalogTable')).to_contain_text('M12-A')
+    page.click('#reviewTab')
     page.fill('#query','HA-010');page.click('#load')
     expect(page.locator('#queue button').first).to_contain_text('HA-010')
     page.locator('#queue button').first.click()
@@ -48,4 +54,4 @@ with sync_playwright() as p:
     page.screenshot(path=str(out/'selection-mobile.png'),full_page=True)
     assert not errors,errors
     browser.close()
-print('Chromium passed: review search, source image, reviewer validation, normal/pending, overcurrent rejection, crimp counts, stale-scope guard, mobile layout; no business writes')
+print('Chromium passed: catalog overview/filter, review search, source image, reviewer validation, normal/pending, overcurrent rejection, crimp counts, stale-scope guard, mobile layout; no business writes')

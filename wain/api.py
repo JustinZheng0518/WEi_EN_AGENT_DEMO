@@ -8,6 +8,7 @@ from psycopg import IntegrityError, sql
 from .db import ROOT
 from .review import ReviewAction, ReviewError, TABLES, get_record, apply_review
 from .selection import SelectionRequest,select
+from .catalog import sections as catalog_sections,summary as catalog_summary
 from pydantic import BaseModel,ConfigDict,Field,PositiveInt
 from typing import Literal
 from psycopg.types.json import Jsonb
@@ -18,6 +19,16 @@ app=FastAPI(title='WAIN Catalog Database',version='0.1.0',
     description='Evidence database with local review tools. Pending facts are not validated selections.')
 app.add_middleware(TrustedHostMiddleware,allowed_hosts=['127.0.0.1','localhost','[::1]','testserver'])
 app.mount('/static',StaticFiles(directory=ROOT/'wain/static'),name='static')
+
+@app.get('/catalog/summary')
+def catalog_overview():
+    with connect() as conn: return catalog_summary(conn)
+
+@app.get('/catalog/sections')
+def catalog_entries(group:str|None=None,q:str=Query('',max_length=100)):
+    with connect() as conn:
+        return {'items':catalog_sections(conn,group,q),'scope':'opening_contents_navigation',
+                'notice':'Entries include series, component groups and references; sample counts do not imply complete SKU coverage or business priority.'}
 
 def require_local_review(request):
     origin=request.headers.get('origin')
