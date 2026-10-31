@@ -3,6 +3,11 @@
 本仓库原为空仓库，现包含 PostgreSQL 数据结构、PDF 索引、可断点续跑的英文 OCR、
 候选型号提取、HA 系列样板数据、查询 API 及本地资料审核页面。
 
+项目续接入口：[当前进度与下一步](docs/STATUS.md) · [完整路线图](docs/ROADMAP.md) ·
+[73 条目录进度表](docs/series-progress.csv) · [项目记忆](docs/PROJECT_MEMORY.md)。
+进度唯一来源是 `data/project_progress.json`；每批更新后运行 `python scripts/project_progress.py`，
+再用 `python scripts/project_progress.py --check` 检查文档与清单一致，随后提交推送 GitHub。
+
 第一版处理结果与数据边界见 [成果说明](docs/progress.md)。GitHub 保存源码和样板初始化逻辑；
 实际数据库、原始 PDF、OCR 文件与导出报告保留在云环境中，不随 Git 克隆下载。
 
