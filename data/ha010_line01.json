@@ -1,0 +1,348 @@
+{
+  "id": "HA010-LINE01",
+  "version": 1,
+  "prepared_on": "2026-10-31",
+  "timezone": "America/Denver",
+  "status": "needs_confirmation",
+  "can_finalize": false,
+  "scope": "HA-010螺钉款；10普通接点+PE；一套侧进线到面板；非已完成线束",
+  "requirements_confirmed_by_customer": false,
+  "illustrative_request": {
+    "voltage_v": 24,
+    "current_a_per_contact": 3,
+    "ordinary_contacts": 10,
+    "pe": true,
+    "termination": "screw",
+    "wire_mm2": 1,
+    "cable_diameter_mm": 8,
+    "ambient_c": 25,
+    "quantity": 1,
+    "ac_dc": null,
+    "simultaneously_loaded_contacts": null
+  },
+  "components": [
+    {
+      "role": "male_insert",
+      "label": "公芯体",
+      "model": "HA-010-M",
+      "order_number": "1210100110001",
+      "assembly_quantity": 1,
+      "catalog_pack_quantity": 5,
+      "source_page": 76,
+      "printed_page": "01-04",
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation",
+      "notes": "公芯体暂放电缆端；供电侧与防触电确认后固定"
+    },
+    {
+      "role": "female_insert",
+      "label": "母芯体",
+      "model": "HA-010-F",
+      "order_number": "1210100210001",
+      "assembly_quantity": 1,
+      "catalog_pack_quantity": 5,
+      "source_page": 76,
+      "printed_page": "01-04",
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation",
+      "notes": "母芯体暂放面板端；配对待独立确认"
+    },
+    {
+      "role": "hood",
+      "label": "电缆端外壳",
+      "model": "H10A-SE-2B-M20",
+      "order_number": "1100105101002",
+      "assembly_quantity": 1,
+      "catalog_pack_quantity": 1,
+      "source_page": 469,
+      "printed_page": "15-17",
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation",
+      "notes": "侧进线；M20螺距、啮合及密封待确认"
+    },
+    {
+      "role": "panel_housing",
+      "label": "面板底座",
+      "model": "H10A-BK-1L/SC",
+      "order_number": "1100103211001",
+      "assembly_quantity": 1,
+      "catalog_pack_quantity": 1,
+      "source_page": 470,
+      "printed_page": "15-18",
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation",
+      "notes": "锁扣随件、配合、面板固定和密封待确认"
+    },
+    {
+      "role": "cable_entry",
+      "label": "电缆接头",
+      "model": "WNA-M20(D6-12)",
+      "order_number": "1021070151001",
+      "assembly_quantity": 1,
+      "catalog_pack_quantity": 1,
+      "source_page": 1401,
+      "printed_page": "32-07",
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation",
+      "notes": "仅适用外径6–12mm候选；M20x1.5、螺纹长8mm；需核实密封"
+    }
+  ],
+  "unselected_supply_items": [
+    {
+      "role": "external_cable",
+      "model": null,
+      "order_number": null,
+      "quantity": null,
+      "status": "needs_confirmation"
+    },
+    {
+      "role": "panel_wires",
+      "model": null,
+      "order_number": null,
+      "quantity": null,
+      "status": "needs_confirmation"
+    },
+    {
+      "role": "equipment_terminations",
+      "model": null,
+      "order_number": null,
+      "quantity": null,
+      "status": "needs_confirmation"
+    },
+    {
+      "role": "pe_bonding",
+      "model": null,
+      "order_number": null,
+      "quantity": null,
+      "status": "needs_confirmation"
+    },
+    {
+      "role": "mounting_fasteners",
+      "model": null,
+      "order_number": null,
+      "quantity": null,
+      "status": "needs_confirmation"
+    },
+    {
+      "role": "seals_and_gland_hardware",
+      "model": null,
+      "order_number": null,
+      "quantity": null,
+      "status": "needs_confirmation"
+    }
+  ],
+  "facts": [
+    {
+      "name": "insert_screw_wire_mm2",
+      "value": [
+        0.75,
+        2.5
+      ],
+      "source_page": 73
+    },
+    {
+      "name": "insert_screw_tightening_test_torque_nm",
+      "value": 0.5,
+      "source_page": 73,
+      "condition": "不用于壳体、接头或未知PE紧固点"
+    },
+    {
+      "name": "insert_limiting_temperature_c",
+      "value": [
+        -40,
+        125
+      ],
+      "source_page": 73,
+      "condition": "不是总成温度或任意温度下额定电流保证"
+    },
+    {
+      "name": "insert_rated_current_a",
+      "value": 16,
+      "source_page": 73,
+      "condition": "EN61984，污染等级3；需降额"
+    },
+    {
+      "name": "insert_rated_voltage_v",
+      "value": 250,
+      "source_page": 73,
+      "condition": "EN61984，污染等级3；AC/DC、电位关系需核对"
+    },
+    {
+      "name": "gland_clamping_range_mm",
+      "value": [
+        6,
+        12
+      ],
+      "source_page": 1401
+    },
+    {
+      "name": "gland_thread",
+      "value": "M20x1.5",
+      "source_page": 1401
+    },
+    {
+      "name": "gland_thread_length_mm",
+      "value": 8,
+      "source_page": 1401
+    },
+    {
+      "name": "gland_static_temperature_c",
+      "value": [
+        -40,
+        100
+      ],
+      "source_page": 1401
+    },
+    {
+      "name": "gland_dynamic_temperature_c",
+      "value": [
+        -20,
+        80
+      ],
+      "source_page": 1401
+    },
+    {
+      "name": "gland_ip",
+      "value": "IP68",
+      "source_page": 1401,
+      "condition": "with O-sealing；不代表整个总成IP68"
+    }
+  ],
+  "sources": [
+    {
+      "global_page": 57,
+      "printed_page": "00-02",
+      "pdf_file": "2025 WAIN Complete Product Catalog_51-100.pdf",
+      "page_in_pdf": 7,
+      "pdf_sha256": "ca0c1da8ceb0381c08e8f8e6bb65f9f4a0665810341d30f64269e9503e5beb46",
+      "verification": "original_page_visually_checked_this_batch_not_independent_approval"
+    },
+    {
+      "global_page": 73,
+      "printed_page": "01-02",
+      "pdf_file": "2025 WAIN Complete Product Catalog_51-100.pdf",
+      "page_in_pdf": 23,
+      "pdf_sha256": "ca0c1da8ceb0381c08e8f8e6bb65f9f4a0665810341d30f64269e9503e5beb46",
+      "verification": "original_page_visually_checked_this_batch_not_independent_approval"
+    },
+    {
+      "global_page": 76,
+      "printed_page": "01-04",
+      "pdf_file": "2025 WAIN Complete Product Catalog_51-100.pdf",
+      "page_in_pdf": 26,
+      "pdf_sha256": "ca0c1da8ceb0381c08e8f8e6bb65f9f4a0665810341d30f64269e9503e5beb46",
+      "verification": "original_page_visually_checked_this_batch_not_independent_approval"
+    },
+    {
+      "global_page": 445,
+      "printed_page": "15-02",
+      "pdf_file": "2025 WAIN Complete Product Catalog_401-450.pdf",
+      "page_in_pdf": 45,
+      "pdf_sha256": "252db00874d23be696c8003c0e7a7df1eb3952578867f0fe169dac78766db087",
+      "verification": "original_page_visually_checked_this_batch_not_independent_approval"
+    },
+    {
+      "global_page": 469,
+      "printed_page": "15-17",
+      "pdf_file": "2025 WAIN Complete Product Catalog_451-500.pdf",
+      "page_in_pdf": 19,
+      "pdf_sha256": "ea5735707277cbd9d8eff08f2c7bf7f37c800bdeddd859f1ad65570694c3e768",
+      "verification": "original_page_visually_checked_this_batch_not_independent_approval"
+    },
+    {
+      "global_page": 470,
+      "printed_page": "15-18",
+      "pdf_file": "2025 WAIN Complete Product Catalog_451-500.pdf",
+      "page_in_pdf": 20,
+      "pdf_sha256": "ea5735707277cbd9d8eff08f2c7bf7f37c800bdeddd859f1ad65570694c3e768",
+      "verification": "original_page_visually_checked_this_batch_not_independent_approval"
+    },
+    {
+      "global_page": 1401,
+      "printed_page": "32-07",
+      "pdf_file": "2025 WAIN Complete Product Catalog_1401-1424.pdf",
+      "page_in_pdf": 1,
+      "pdf_sha256": "c0b6fdae87dd2f01c62ab5fcc31912459989e3c6d68d9ba64f623bf6c2da1c23",
+      "verification": "original_page_visually_checked_this_batch_not_independent_approval"
+    }
+  ],
+  "open_items": [
+    {
+      "id": "G01",
+      "title": "真实使用工况",
+      "required_evidence": "用户给出 AC/DC、电压定义、每接点持续/峰值电流、同时载流数量、温度、污染/振动/腐蚀条件及目标防护",
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "G02",
+      "title": "公母配对及安装方向",
+      "required_evidence": "厂家/技术人员确认两个准确订货号可配对，供电侧防触电、公母位置、键位和针位图；不能只按公母和 10A 字样判定",
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "G03",
+      "title": "芯体固定、底座与面板",
+      "required_evidence": "核对芯体在壳体/底座中的安装、紧固件是否随件；核对开孔图、板厚、螺钉、扭矩、空间及线缆弯曲半径。不得把裸芯体开孔图用于底座开孔",
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "G04",
+      "title": "锁扣完整性",
+      "required_evidence": "确认 2B 外壳与 1L/SC 底座的实际配合、订货变体、锁扣是否随件，若另购则补确切订货号和数量",
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "G05",
+      "title": "接头螺纹与密封",
+      "required_evidence": "外壳只标 M20，接头明确 M20×1.5；确认外壳螺距、有效啮合长度、是否需锁紧螺母/O 形圈，确定数量、随件范围和装配工艺",
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "G06",
+      "title": "壳体/面板密封",
+      "required_evidence": "确认插合密封、面板垫片等是否随件，确定实际总成能否满足目标 IP；需要时取得厂家装配说明或试验依据",
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "G07",
+      "title": "PE 路径及壳体接地",
+      "required_evidence": "核对两端 PE 端接、导体规格、接地紧固点、金属壳体连接、连续性及所需附件。不能把普通接触件数量规则套给 PE",
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "G08",
+      "title": "两侧线材和端接工艺",
+      "required_evidence": "确认外部线缆与面板内导线的芯数、规格、长度、线色、绝缘、线序；补剥线长度、管形端头适用性、设备侧端子及检验工艺。10 路全装且同一多芯缆承担 PE 时，要核实至少 10 普通导体＋PE 的实际线缆方案",
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "G09",
+      "title": "实际载流与温度",
+      "required_evidence": "技术人员按实际工况和 HA-010 降额依据确认容量；整套以线缆、接头、密封等各部件适用条件共同限制",
+      "status": "open",
+      "resolution": null
+    },
+    {
+      "id": "G10",
+      "title": "断开状态防护与采购确认",
+      "required_evidence": "用户确认是否需要防尘/保护盖、编码件及其他现场附件；供应商确认版本、随件清单、包装和可采购订货号，新增件补入 BOM",
+      "status": "open",
+      "resolution": null
+    }
+  ],
+  "limitations": [
+    "目录原图核对不是独立审核或工程批准",
+    "未更改业务数据库或网页算法",
+    "示例工况不是用户确认的需求",
+    "未知附件数量不是0；采购数量未确定",
+    "不得依据同规格/公母名称自动生成已批准配对"
+  ]
+}

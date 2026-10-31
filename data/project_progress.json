@@ -4,7 +4,7 @@
   "baseline_commit": "e2a307a5aee16a5d54c7021c40f7e924b5ff53a4",
   "release_stage": "development",
   "goal": "根据中英文自然语言需求，基于可追溯产品数据生成完整搭配和 BOM；未知、冲突、缺件或未经审核的工程条件不能判定通过。当前优先英文目录。",
-  "snapshot_basis": "本批只保存关机前交接、国内企业服务方向与下一步计划，未重查数据库或重跑应用测试。数据快照和最近验证沿用功能提交 e2a307a：80 个产品全部待审核、1039 条参数、102 条关系；67 项 pytest、7 项参数识别及新旧 Chromium 验收通过。模型 API 与公开部署仍未完成。",
+  "snapshot_basis": "本批完成 HA010-LINE01 螺钉端接样板资料整理，查看 7 页原始目录图，交付 5 类主件、6 类未选定供料及 10 项确认清单；不是完整线束或工程批准。未访问或修改业务数据库；80 个待审核产品、1039 条参数、102 条关系及 67 项应用测试等仍沿用功能提交 e2a307a 的历史快照，本批未重跑应用测试。模型与公开部署未完成。",
   "snapshot": {
     "pdf_files": 32, "pdf_pages": 1424, "ocr_pages": 1424,
     "catalog_entries": 73, "catalog_groups": 13,
@@ -17,8 +17,9 @@
     "llm_connected": false, "public_deployment": false, "all_catalog_products_entered": false,
     "real_engineering_approved_bom": false
   },
-  "next_tasks": ["AGENT-01", "AGENT-03", "AGENT-02", "AGENT-04", "APP-02", "HA-02", "REVIEW-04"],
+  "next_tasks": ["HA-05", "HA-02", "REVIEW-03", "REVIEW-04", "REVIEW-05", "AGENT-01", "AGENT-03"],
   "known_gaps": [
+    "HA010-LINE01 的 5 类主件已整理，但 G01–G10 工况、公母配对、PE、锁扣、螺纹、密封及随件等仍待确认；外部线缆、面板内导线及设备端子未定，不是已完成线束。",
     "面向中国企业使用，当前推荐百炼＋Qwen-Plus 系列；实际地域、模型、账号和费用未确认，未提供密钥或联调；建议预算不视为付费授权。",
     "网页仅为 HA-010 交互原型；模型 API、多轮追问及公开部署尚未接入，Windows 下载试用仍待用户验收。",
     "HA-002 普通接点与 PE 定义未确认，不能按型号数字猜测。",
@@ -67,13 +68,15 @@
     {"id":"HA-02","status":"in_progress","title":"完善 HA 参数及适用条件","acceptance":"逐型号核对电压/电流、线径、剥线、扭矩、材质、温度等，保留明确条件和未知。","evidence":["wain/ha_series.py","docs/ha-coverage.md"],"depends_on":["HA-01","DATA-02"]},
     {"id":"HA-03","status":"todo","title":"转录并核对尺寸与安装图","acceptance":"区分长宽高、视图、开孔、安装状态和单位；数值关联图中区域并审核。","depends_on":["HA-01"]},
     {"id":"HA-04","status":"todo","title":"处理 HA-002、HA-004-V2 等明确疑点","acceptance":"通过原图、补充资料或厂家依据核实；未解决项保持未知，不以型号猜测。","depends_on":["HA-01"]},
-    {"id":"HA-05","status":"in_progress","title":"完成 HA 端子、编码件、工具及外壳关联","acceptance":"逐型号关联实际适用的产品、数量和条件；可选与必需分别记录。","evidence":["wain/ha_series.py","wain/ha010_seed.py"],"depends_on":["HA-01","COMMON-01","COMMON-02"]},
+    {"id":"HA-05","status":"in_progress","title":"完成 HA 端子、编码件、工具及外壳关联","acceptance":"逐型号关联实际适用的产品、数量和条件；可选与必需分别记录。","evidence":["docs/ha010-line01.md","wain/ha_series.py","wain/ha010_seed.py"],"depends_on":["HA-01","COMMON-01","COMMON-02"]},
     {"id":"HA-06","status":"todo","title":"完成 HA 数据独立审核及章节验收","acceptance":"审核身份、参数、来源、关系和遗漏；有未解问题则明确列出，不能声称参数全完。","depends_on":["HA-02","HA-03","HA-04","HA-05","REVIEW-04"]},
 
+    {"id":"HA-07","status":"done","title":"整理第一条 HA-010 螺钉端接样板链路资料","acceptance":"5类主件有候选订货号、每套用量、目录页与适用边界；列未选定供料、未解事项和技术确认问题。只验收资料包，不代表配对、完整线束或工程批准。","evidence":["docs/ha010-line01.md","docs/ha010-line01-bom.csv","data/ha010_line01.json"],"depends_on":["HA-01"]},
+
     {"id":"COMMON-01","status":"in_progress","title":"完整录入共用压接端子","acceptance":"P13 各电流/结构条目逐行盘点，核对适用芯体、线径、镀层、装配和工具。","evidence":["wain/seed.py","wain/ha_series.py"]},
-    {"id":"COMMON-02","status":"in_progress","title":"完整录入外壳、底座、锁扣及密封件","acceptance":"覆盖目录规格和变体，核对真实订货号、配对、进线、开孔和防护成立条件。","evidence":["wain/ha010_seed.py"]},
+    {"id":"COMMON-02","status":"in_progress","title":"完整录入外壳、底座、锁扣及密封件","acceptance":"覆盖目录规格和变体，核对真实订货号、配对、进线、开孔和防护成立条件。","evidence":["docs/ha010-line01.md","wain/ha010_seed.py"]},
     {"id":"COMMON-03","status":"in_progress","title":"录入编码、支架、框架、接地及其他附件","acceptance":"按原文建立实际适用关系和必需条件，避免只列主件。","evidence":["wain/ha_series.py"]},
-    {"id":"COMMON-04","status":"in_progress","title":"录入电缆接头、工具及辅助装配要求","acceptance":"核对螺纹/螺距、夹紧范围、密封、工具线径和辅助件要求，成品与工具分开。","evidence":["wain/ha010_seed.py","wain/ha_series.py"]},
+    {"id":"COMMON-04","status":"in_progress","title":"录入电缆接头、工具及辅助装配要求","acceptance":"核对螺纹/螺距、夹紧范围、密封、工具线径和辅助件要求，成品与工具分开。","evidence":["docs/ha010-line01.md","wain/ha010_seed.py","wain/ha_series.py"]},
     {"id":"COMMON-05","status":"todo","title":"处理可选线缆、线束和外部供料范围","acceptance":"明确连接器组件与完整线束的边界；需要线束时补线材规格、长度、端接和测试要求。","depends_on":["BASE-03"]},
 
     {"id":"EXPAND-01","status":"todo","title":"扩展 HE 与 HD/HDD 型号数据","acceptance":"按逐条目录进度表转录型号、参数、来源、配套和缺项，分别完成章节验收。","depends_on":["DATA-03","HA-01"]},

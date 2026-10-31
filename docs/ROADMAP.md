@@ -57,17 +57,18 @@
 | HA-02 | 进行中 / 部分完成 | 完善 HA 参数及适用条件 | 逐型号核对电压/电流、线径、剥线、扭矩、材质、温度等，保留明确条件和未知。 | HA-01, DATA-02 | [wain/ha_series.py](../wain/ha_series.py)、[docs/ha-coverage.md](../docs/ha-coverage.md) |
 | HA-03 | 待做 | 转录并核对尺寸与安装图 | 区分长宽高、视图、开孔、安装状态和单位；数值关联图中区域并审核。 | HA-01 | 待补交付证据 |
 | HA-04 | 待做 | 处理 HA-002、HA-004-V2 等明确疑点 | 通过原图、补充资料或厂家依据核实；未解决项保持未知，不以型号猜测。 | HA-01 | 待补交付证据 |
-| HA-05 | 进行中 / 部分完成 | 完成 HA 端子、编码件、工具及外壳关联 | 逐型号关联实际适用的产品、数量和条件；可选与必需分别记录。 | HA-01, COMMON-01, COMMON-02 | [wain/ha_series.py](../wain/ha_series.py)、[wain/ha010_seed.py](../wain/ha010_seed.py) |
+| HA-05 | 进行中 / 部分完成 | 完成 HA 端子、编码件、工具及外壳关联 | 逐型号关联实际适用的产品、数量和条件；可选与必需分别记录。 | HA-01, COMMON-01, COMMON-02 | [docs/ha010-line01.md](../docs/ha010-line01.md)、[wain/ha_series.py](../wain/ha_series.py)、[wain/ha010_seed.py](../wain/ha010_seed.py) |
 | HA-06 | 待做 | 完成 HA 数据独立审核及章节验收 | 审核身份、参数、来源、关系和遗漏；有未解问题则明确列出，不能声称参数全完。 | HA-02, HA-03, HA-04, HA-05, REVIEW-04 | 待补交付证据 |
+| HA-07 | 已完成（限定验收范围） | 整理第一条 HA-010 螺钉端接样板链路资料 | 5类主件有候选订货号、每套用量、目录页与适用边界；列未选定供料、未解事项和技术确认问题。只验收资料包，不代表配对、完整线束或工程批准。 | HA-01 | [docs/ha010-line01.md](../docs/ha010-line01.md)、[docs/ha010-line01-bom.csv](../docs/ha010-line01-bom.csv)、[data/ha010_line01.json](../data/ha010_line01.json) |
 
 ### 共用端子、外壳与附件
 
 | ID | 状态 | 要做什么 | 验收条件 | 前置任务 | 已有证据 |
 | --- | --- | --- | --- | --- | --- |
 | COMMON-01 | 进行中 / 部分完成 | 完整录入共用压接端子 | P13 各电流/结构条目逐行盘点，核对适用芯体、线径、镀层、装配和工具。 | — | [wain/seed.py](../wain/seed.py)、[wain/ha_series.py](../wain/ha_series.py) |
-| COMMON-02 | 进行中 / 部分完成 | 完整录入外壳、底座、锁扣及密封件 | 覆盖目录规格和变体，核对真实订货号、配对、进线、开孔和防护成立条件。 | — | [wain/ha010_seed.py](../wain/ha010_seed.py) |
+| COMMON-02 | 进行中 / 部分完成 | 完整录入外壳、底座、锁扣及密封件 | 覆盖目录规格和变体，核对真实订货号、配对、进线、开孔和防护成立条件。 | — | [docs/ha010-line01.md](../docs/ha010-line01.md)、[wain/ha010_seed.py](../wain/ha010_seed.py) |
 | COMMON-03 | 进行中 / 部分完成 | 录入编码、支架、框架、接地及其他附件 | 按原文建立实际适用关系和必需条件，避免只列主件。 | — | [wain/ha_series.py](../wain/ha_series.py) |
-| COMMON-04 | 进行中 / 部分完成 | 录入电缆接头、工具及辅助装配要求 | 核对螺纹/螺距、夹紧范围、密封、工具线径和辅助件要求，成品与工具分开。 | — | [wain/ha010_seed.py](../wain/ha010_seed.py)、[wain/ha_series.py](../wain/ha_series.py) |
+| COMMON-04 | 进行中 / 部分完成 | 录入电缆接头、工具及辅助装配要求 | 核对螺纹/螺距、夹紧范围、密封、工具线径和辅助件要求，成品与工具分开。 | — | [docs/ha010-line01.md](../docs/ha010-line01.md)、[wain/ha010_seed.py](../wain/ha010_seed.py)、[wain/ha_series.py](../wain/ha_series.py) |
 | COMMON-05 | 待做 | 处理可选线缆、线束和外部供料范围 | 明确连接器组件与完整线束的边界；需要线束时补线材规格、长度、端接和测试要求。 | BASE-03 | 待补交付证据 |
 
 ### 全目录型号级扩展
