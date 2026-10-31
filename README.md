@@ -45,6 +45,7 @@ bash scripts/setup.sh
 .venv/bin/python -m wain.ingest init
 .venv/bin/python -m wain.ingest inventory /workspace/attachments
 .venv/bin/python -m wain.ingest seed
+.venv/bin/python -m wain.ha010_seed
 .venv/bin/python -m wain.ingest ocr --workers 4 --dpi 180
 .venv/bin/python -m wain.candidates
 .venv/bin/python -m wain.ingest stats
@@ -59,6 +60,8 @@ OCR 使用本地 Tesseract，不发送 PDF 到外部模型服务。每页保存�
 `--start` / `--end` 指定整本文件页序，`--dpi` 可提高识别分辨率。已有成功页不会被自动覆盖。
 
 全文 OCR 不等于全文参数提取。候选表中的型号与订货号仍可能错位、误识别，不能自动提升为正式产品。
+`ha010_seed` 另导入两款 M20 外壳、一款面板底座和三款 M20 电缆接头，保留夹紧范围、锁扣和密封条件。
+其型号和订货号已对照原图转录，但全部保持待审核；M20 外壳的螺距、组合密封和具体锁扣订货仍需确认。
 后续审核应记录 `review_events`，检查原图、型号、参数条件及证据后再修改状态。
 
 ## 查询接口
