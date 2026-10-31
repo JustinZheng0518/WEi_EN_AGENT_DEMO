@@ -111,3 +111,4 @@ CREATE TABLE IF NOT EXISTS product_candidates (
  warning text NOT NULL DEFAULT 'Unverified OCR; model/order association may be incorrect',
  UNIQUE(page_id,line_hash,order_number_candidate,extractor_version)
 );
+ALTER TABLE review_events ADD COLUMN IF NOT EXISTS changes jsonb NOT NULL DEFAULT '{}';

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WAIN 产品审核与选型</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><header><div><b>WAIN</b> 产品资料工作台</div><span>原文可追溯 · 未知条件不默认通过</span></header>
+<nav><button id="reviewTab">资料审核</button><button id="selectionTab" disabled>HA-010 选型试验（下一步）</button></nav>
+<main id="reviewPanel"><section class="toolbar">
+<label>数据类型<select id="kind"><option value="product">产品身份</option><option value="specification">产品参数</option><option value="relation">适配关系</option><option value="evidence">原文证据</option><option value="candidate">OCR 候选</option></select></label>
+<label>状态<select id="status"><option value="pending">待审核</option><option value="all">全部</option><option value="reviewed">已确认</option><option value="conflict">有冲突</option><option value="accepted">候选文字已确认</option><option value="rejected">候选已拒绝</option></select></label>
+<label>搜索<input id="query" placeholder="型号、订货号或字段内容"></label><button id="load">查询</button>
+</section><p class="notice">请先确认原文证据，再审核引用它的产品或参数。确认产品身份不代表参数和搭配也已通过。OCR 候选确认仅确认文字，不会自动创建产品。</p>
+<section class="workspace"><aside><div id="queue"></div><div class="pager"><button id="previous">上一页</button><span id="position"></span><button id="next">下一页</button></div></aside>
+<article><h2 id="pageTitle">选择一条记录查看原文</h2><p id="sourceLabel"></p><img id="sourceImage" alt="产品目录原文" hidden><pre id="quotation"></pre></article>
+<section class="editor"><h2 id="recordTitle">审核记录</h2><div id="metadata"></div><div id="fields"></div>
+<label>审核人<input id="actor" maxlength="100" placeholder="填写实际审核人或明确的自动审核标识"></label>
+<label>修改或确认依据<textarea id="note" maxlength="2000" placeholder="例如：已对照文件第 76 页订货表逐项核对"></textarea></label>
+<div class="actions"><button id="save">保存为待审核</button><button id="approve">确认当前记录</button><button id="conflict">标记冲突 / 拒绝</button></div>
+<p id="message" role="status" aria-live="polite"></p><h3>审核历史</h3><div id="history"></div></section></section></main>
+<main id="selectionPanel" hidden><h1>HA-010 选型试验</h1><p>输入工况，生成候选 BOM 和逐项检查。缺少证据、组件或工况时会保持待确认。</p>
+<form id="selectionForm"><label>电压 V<input name="voltage" type="number" min="0.01" step="any" value="24" required></label>
+<label>每接点电流 A<input name="current" type="number" min="0.01" step="any" value="3" required></label>
+<label>普通接点数量（PE 单独计算）<input name="contacts" type="number" min="1" max="100" value="10" required></label>
+<label>端接方式<select name="termination"><option value="screw">螺钉</option><option value="crimp">压接</option><option value="spring">弹簧</option></select></label>
+<label>线径 mm²<input name="wire_mm2" type="number" min="0.01" step="any" placeholder="未知可留空"></label>
+<label>线缆外径 mm<input name="cable_diameter_mm" type="number" min="0.01" step="any" placeholder="未知可留空"></label>
+<label>环境温度 °C<input name="ambient_c" type="number" step="any" placeholder="未知可留空"></label>
+<label>连接套数<input name="quantity" type="number" min="1" max="10000" value="1" required></label><button type="submit">生成检查报告</button></form><div id="selectionResult" role="status"></div></main>
+<script src="/static/app.js" defer></script></body></html>

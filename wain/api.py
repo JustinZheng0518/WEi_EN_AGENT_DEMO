@@ -1,12 +1,56 @@
 from enum import Enum
 import pymupdf as fitz
-from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import Response
+from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.responses import Response, FileResponse
+from fastapi.staticfiles import StaticFiles
+from starlette.middleware.trustedhost import TrustedHostMiddleware
+from psycopg import IntegrityError, sql
+from .db import ROOT
+from .review import ReviewAction, ReviewError, TABLES, get_record, apply_review
 from .db import connect
 from .service import stats, search_products, product_details
 
 app=FastAPI(title='WAIN Catalog Database',version='0.1.0',
-    description='Read-only evidence database. Pending records and OCR text must not be treated as validated selections.')
+    description='Evidence database with local review tools. Pending facts are not validated selections.')
+app.add_middleware(TrustedHostMiddleware,allowed_hosts=['127.0.0.1','localhost','[::1]','testserver'])
+app.mount('/static',StaticFiles(directory=ROOT/'wain/static'),name='static')
+
+@app.get('/',include_in_schema=False)
+def review_page():
+    return FileResponse(ROOT/'wain/static/index.html',headers={
+        'Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'none'",
+        'X-Content-Type-Options':'nosniff'})
+
+@app.get('/review/queue')
+def review_queue(kind:str='product',status:str|None='pending',q:str=Query('',max_length=100),
+                 limit:int=Query(40,ge=1,le=100),offset:int=Query(0,ge=0)):
+    if kind not in TABLES: raise HTTPException(404,'Unknown review entity')
+    if status is not None and status not in {'pending','reviewed','conflict','accepted','rejected','all'}:
+        raise HTTPException(422,'Unknown review status')
+    join=sql.SQL('JOIN pages p ON p.id=r.page_id') if kind in {'evidence','candidate'} else sql.SQL('JOIN evidence e ON e.id=r.evidence_id JOIN pages p ON p.id=e.page_id')
+    with connect() as conn:
+        rows=conn.execute(sql.SQL('''SELECT r.*,p.global_page,p.printed_page FROM {} r {} WHERE
+            (%s::text IS NULL OR r.review_status=%s) AND (%s='' OR strpos(lower(to_jsonb(r)::text),lower(%s))>0)
+            ORDER BY p.global_page,r.id LIMIT %s OFFSET %s''').format(sql.Identifier(TABLES[kind]),join),
+            (None if status=='all' else status,status,q,q,limit,offset)).fetchall()
+    return {'items':rows,'entity':kind}
+
+@app.get('/review/{kind}/{entity_id}')
+def review_record(kind:str,entity_id:int):
+    try:
+        with connect() as conn: return get_record(conn,kind,entity_id)
+    except ReviewError as exc: raise HTTPException(exc.status,str(exc))
+
+@app.post('/review/{kind}/{entity_id}')
+def save_review(kind:str,entity_id:int,action:ReviewAction,request:Request):
+    # Local tool, not an authenticated multi-user deployment. Block cross-origin browser mutations.
+    origin=request.headers.get('origin')
+    if request.headers.get('x-wain-review')!='1' or (origin and origin.rstrip('/')!=str(request.base_url).rstrip('/')):
+        raise HTTPException(403,'Same-origin review header is required')
+    try:
+        with connect() as conn: return apply_review(conn,kind,entity_id,action)
+    except ReviewError as exc: raise HTTPException(exc.status,str(exc))
+    except IntegrityError: raise HTTPException(422,'Edit violates a data constraint; no changes saved')
 
 class Gender(str,Enum):
     male='male'
