@@ -20,8 +20,10 @@ def csv_value(value):
     return value
 
 with connect() as conn:
-    for table in ['documents','pages','products','product_specifications','evidence','product_relations','product_candidates','assembly_assessments','review_events']:
-        rows=conn.execute(f'SELECT * FROM {table} ORDER BY id').fetchall()
+    for table in ['documents','pages','products','product_specifications','evidence','product_relations','product_candidates','assembly_assessments','review_events','product_source_occurrences','catalog_arrangements','catalog_arrangement_components']:
+        ordering={'product_source_occurrences':'source_key','catalog_arrangements':'code',
+                  'catalog_arrangement_components':'arrangement_code,product_id'}.get(table,'id')
+        rows=conn.execute(f'SELECT * FROM {table} ORDER BY {ordering}').fetchall()
         if rows:
             with (folder/f'{table}.csv').open('w',newline='',encoding='utf-8-sig') as stream:
                 writer=csv.DictWriter(stream,fieldnames=rows[0].keys())

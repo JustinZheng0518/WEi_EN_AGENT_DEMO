@@ -148,3 +148,28 @@ CREATE TABLE IF NOT EXISTS catalog_page_labels (
  method text NOT NULL CHECK(method IN ('ocr_footer_candidate','existing_page_label')),
  PRIMARY KEY(page_id,printed_label,method)
 );
+CREATE TABLE IF NOT EXISTS product_source_occurrences (
+ source_key text PRIMARY KEY,
+ product_id bigint NOT NULL REFERENCES products(id),
+ evidence_id bigint NOT NULL REFERENCES evidence(id),
+ source_scope text NOT NULL,
+ context_label text NOT NULL,
+ source_model text NOT NULL,
+ source_order_number text NOT NULL
+);
+CREATE TABLE IF NOT EXISTS catalog_arrangements (
+ code text PRIMARY KEY,
+ label text NOT NULL,
+ description text NOT NULL,
+ evidence_id bigint NOT NULL REFERENCES evidence(id),
+ declared_contact_count integer NOT NULL CHECK(declared_contact_count>0),
+ housing_reference text NOT NULL,
+ review_status text NOT NULL DEFAULT 'pending' CHECK(review_status IN ('pending','reviewed','conflict'))
+);
+CREATE TABLE IF NOT EXISTS catalog_arrangement_components (
+ arrangement_code text NOT NULL REFERENCES catalog_arrangements(code),
+ product_id bigint NOT NULL REFERENCES products(id),
+ quantity integer NOT NULL CHECK(quantity>0),
+ position_label text NOT NULL,
+ PRIMARY KEY(arrangement_code,product_id)
+);

@@ -1,0 +1,67 @@
+{
+  "scope": "2025 catalog HA chapter, physical PDF pages 72–79; ordering-table transcription, not engineering approval",
+  "pages": [
+    {"page":72,"printed":"01-01","role":"series_cover"},
+    {"page":73,"printed":"01-02","role":"technical_data_and_derating_curves"},
+    {"page":74,"printed":"01-03","role":"ordering_small_screw_and_spring"},
+    {"page":75,"printed":"01-03.1","role":"ordering_quick_in_and_coding"},
+    {"page":76,"printed":"01-04","role":"ordering_HA010_contacts_tools"},
+    {"page":77,"printed":"01-05","role":"ordering_HA016_contacts_tools"},
+    {"page":78,"printed":"01-06","role":"HA032_arrangement_with_HA016_halves"},
+    {"page":79,"printed":"01-07","role":"application_photo_no_ordering_rows"}
+  ],
+  "inserts": [
+    {"model":"HA-003-M","order":"1210030110001","count":3,"pe":1,"gender":"male","termination":"screw","profile":"small_screw","housing":"3A","pack":10,"pages":[74]},
+    {"model":"HA-003-F","order":"1210030210001","count":3,"pe":1,"gender":"female","termination":"screw","profile":"small_screw","housing":"3A","pack":10,"pages":[74]},
+    {"model":"HA-003-M-V2","order":"1210030110505","count":3,"pe":1,"gender":"male","termination":"screw","profile":"small_screw_v2_003","housing":"3A","pack":10,"pages":[74]},
+    {"model":"HA-003-F-V2","order":"1210030210505","count":3,"pe":1,"gender":"female","termination":"screw","profile":"small_screw_v2_003","housing":"3A","pack":10,"pages":[74]},
+    {"model":"HA-004-M-V2","order":"1210040110002","count":4,"pe":1,"gender":"male","termination":"screw","profile":"small_screw_v2_004_unresolved_wire","housing":"3A","pack":10,"pages":[74]},
+    {"model":"HA-004-F-V2","order":"1210040210002","count":4,"pe":1,"gender":"female","termination":"screw","profile":"small_screw_v2_004_unresolved_wire","housing":"3A","pack":10,"pages":[74]},
+    {"model":"HA-002-MS","order":"1210020120001","count":null,"pe":null,"gender":"male","termination":"spring","profile":"small_spring","housing":"3A","pack":10,"pages":[74]},
+    {"model":"HA-002-FS","order":"1210020220001","count":null,"pe":null,"gender":"female","termination":"spring","profile":"small_spring","housing":"3A","pack":10,"pages":[74]},
+    {"model":"HA-003-MS","order":"1210030120001","count":3,"pe":1,"gender":"male","termination":"spring","profile":"small_spring","housing":"3A","pack":10,"pages":[74]},
+    {"model":"HA-003-FS","order":"1210030220001","count":3,"pe":1,"gender":"female","termination":"spring","profile":"small_spring","housing":"3A","pack":10,"pages":[74]},
+    {"model":"HA-004-MS","order":"1210040120001","count":4,"pe":1,"gender":"male","termination":"spring","profile":"small_spring","housing":"3A","pack":10,"pages":[74]},
+    {"model":"HA-004-FS","order":"1210040220001","count":4,"pe":1,"gender":"female","termination":"spring","profile":"small_spring","housing":"3A","pack":10,"pages":[74]},
+    {"model":"HA-003-MQ","order":"1210030010001","count":3,"pe":1,"gender":"male","termination":"spring_quick_in","profile":"small_quick_in","housing":"3A","pack":10,"pages":[75]},
+    {"model":"HA-003-FQ","order":"1210030020001","count":3,"pe":1,"gender":"female","termination":"spring_quick_in","profile":"small_quick_in","housing":"3A","pack":10,"pages":[75]},
+    {"model":"HA-004-MQ","order":"1210040010001","count":4,"pe":1,"gender":"male","termination":"spring_quick_in","profile":"small_quick_in","housing":"3A","pack":10,"pages":[75]},
+    {"model":"HA-004-FQ","order":"1210040020001","count":4,"pe":1,"gender":"female","termination":"spring_quick_in","profile":"small_quick_in","housing":"3A","pack":10,"pages":[75]},
+    {"model":"HA-010-M","order":"1210100110001","count":10,"pe":1,"gender":"male","termination":"screw","profile":"large_screw","housing":"10A","pack":5,"pages":[76]},
+    {"model":"HA-010-F","order":"1210100210001","count":10,"pe":1,"gender":"female","termination":"screw","profile":"large_screw","housing":"10A","pack":5,"pages":[76]},
+    {"model":"HA-010-M/B","order":"1210100110503","count":10,"pe":1,"gender":"male","termination":"screw","profile":"large_screw","housing":"10A","pack":5,"pages":[76]},
+    {"model":"HA-010-F/B","order":"1210100210503","count":10,"pe":1,"gender":"female","termination":"screw","profile":"large_screw","housing":"10A","pack":5,"pages":[76]},
+    {"model":"HA-010-MC","order":"1210100100001","count":10,"pe":1,"gender":"male","termination":"crimp","profile":"large_crimp","housing":"10A","pack":5,"pages":[76]},
+    {"model":"HA-010-FC","order":"1210100200001","count":10,"pe":1,"gender":"female","termination":"crimp","profile":"large_crimp","housing":"10A","pack":5,"pages":[76]},
+    {"model":"HA-010-MS","order":"1210100120001","count":10,"pe":1,"gender":"male","termination":"spring","profile":"large_spring","housing":"10A","pack":5,"pages":[76]},
+    {"model":"HA-010-FS","order":"1210100220001","count":10,"pe":1,"gender":"female","termination":"spring","profile":"large_spring","housing":"10A","pack":5,"pages":[76]},
+    {"model":"HA-016-M","order":"1210160110001","count":16,"pe":1,"gender":"male","termination":"screw","profile":"large_screw","housing":"16A","pack":5,"pages":[77,78]},
+    {"model":"HA-016-F","order":"1210160210001","count":16,"pe":1,"gender":"female","termination":"screw","profile":"large_screw","housing":"16A","pack":5,"pages":[77,78]},
+    {"model":"HA-016-M/B","order":"1210160110505","count":16,"pe":1,"gender":"male","termination":"screw","profile":"large_screw","housing":"16A","pack":5,"pages":[77,78]},
+    {"model":"HA-016-F/B","order":"1210160210505","count":16,"pe":1,"gender":"female","termination":"screw","profile":"large_screw","housing":"16A","pack":5,"pages":[77,78]},
+    {"model":"HA-016-MC","order":"1210160100001","count":16,"pe":1,"gender":"male","termination":"crimp","profile":"large_crimp","housing":"16A","pack":5,"pages":[77,78]},
+    {"model":"HA-016-FC","order":"1210160200001","count":16,"pe":1,"gender":"female","termination":"crimp","profile":"large_crimp","housing":"16A","pack":5,"pages":[77,78]},
+    {"model":"HA-016-M(17-32)","order":"1210160110002","count":16,"pe":1,"gender":"male","termination":"screw","profile":"large_screw","housing":null,"pack":5,"pages":[78]},
+    {"model":"HA-016-F(17-32)","order":"1210160210002","count":16,"pe":1,"gender":"female","termination":"screw","profile":"large_screw","housing":null,"pack":5,"pages":[78]},
+    {"model":"HA-016-M/B(17-32)","order":"1210160110504","count":16,"pe":1,"gender":"male","termination":"screw","profile":"large_screw","housing":null,"pack":5,"pages":[78]},
+    {"model":"HA-016-F/B(17-32)","order":"1210160210504","count":16,"pe":1,"gender":"female","termination":"screw","profile":"large_screw","housing":null,"pack":5,"pages":[78]},
+    {"model":"HA-016-MC(17-32)","order":"1210160100002","count":16,"pe":1,"gender":"male","termination":"crimp","profile":"large_crimp","housing":null,"pack":5,"pages":[78]},
+    {"model":"HA-016-FC(17-32)","order":"1210160200002","count":16,"pe":1,"gender":"female","termination":"crimp","profile":"large_crimp","housing":null,"pack":5,"pages":[78]}
+  ],
+  "coding": [
+    {"model":"CODE-Q3","order":"1980020050034","pack":100,"pages":[74,75],"suitable":["HA-003-M-V2","HA-003-F-V2","HA-003-MQ","HA-003-FQ"]},
+    {"model":"CODE-Q5","order":"1980020050036","pack":100,"pages":[75],"suitable":["HA-004-MQ","HA-004-FQ"]}
+  ],
+  "referenced_tools": [
+    {"model":"TL02","order":"1980010010001","page":1399,"region":[0.28,0.22,0.68,0.28],"application":"10A/16A crimping tool; 0.14–4mm2; HA chapter specifies TL02 for 0.14–0.37mm2"},
+    {"model":"TL15","order":"1980010000026","page":1396,"region":[0.28,0.79,0.68,0.88],"application":"Auxiliary pin assembly tool of 10A/16A; HA chapter recommends it below 0.75mm2"}
+  ],
+  "expected": {"insert_skus":36,"insert_ordering_rows":42,"chapter_unique_skus":72,"chapter_ordering_rows":147,"additional_referenced_tool_skus":2},
+  "issues": [
+    {"code":"ha002-contact-definition","models":["HA-002-MS","HA-002-FS"],"page":74,"detail":"Ordering rows explicitly list HA-002, but the page headline says 3/4+PE and the technical contact list omits 2. Do not infer signal/PE counts from the model digits."},
+    {"code":"ha004-v2-wire-range","models":["HA-004-M-V2","HA-004-F-V2"],"page":73,"detail":"Technical table gives a general HA-003/004 screw range and an explicit larger HA-003-M/F-V2 range, but no separate HA-004-V2 range. Keep its wire limits unknown pending variant confirmation."},
+    {"code":"ha032-not-a-single-sku","models":[],"page":78,"detail":"HA-032 is a 2x16 arrangement; ordering table supplies HA-016 base and (17-32) numbered halves. No separate HA-032 order number is printed."},
+    {"code":"drawing-axes-and-mounting","models":[],"page":73,"detail":"Dimension drawings and panel cutouts are retained as evidence but numeric dimension axes and mounting state are not yet independently transcribed or verified."},
+    {"code":"no-engineering-approval","models":[],"page":73,"detail":"Derating curves, model mating, PE construction, complete enclosures and seals require separate engineering review. Catalog transcription is not approval."}
+  ]
+}

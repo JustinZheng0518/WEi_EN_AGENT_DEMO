@@ -36,7 +36,7 @@
     {"code":"PCB_ADAPTER","group":"accessories","kind":"component_group","title_en":"PCB-adapter","summary_zh":"PCB 转接附件","start":"P14-02","end":"P14-11","source":5,"batch":1},
     {"code":"RAIL_BRACKET","group":"accessories","kind":"component_group","title_en":"Rail bracket","summary_zh":"导轨支架附件","start":"P14-12","end":"P14-13","source":5,"batch":1},
     {"code":"GROUND_DOCKING","group":"accessories","kind":"component_group","title_en":"Ground terminal/Docking frame","summary_zh":"接地端子与对接框架","start":"P14-14","end":"P14-16","source":5,"batch":1},
-    {"code":"CODE_PIN","group":"accessories","kind":"component_group","title_en":"Code pin","summary_zh":"编码销附件，具体防呆方式待型号页确认","start":"P14-17","end":"P14-18","source":5,"batch":1},
+    {"code":"CODE_PIN","group":"accessories","kind":"component_group","title_en":"Code pin","summary_zh":"编码销附件，具体防呆方式待型号页确认","start":"P14-17","end":"P14-18","source":5,"batch":1,"families":["CODING"]},
     {"code":"CABLE_CLAMP","group":"accessories","kind":"component_group","title_en":"Cable clamp","summary_zh":"线缆夹持附件","start":"P14-19","end":"P14-19","source":5,"batch":1},
     {"code":"DSUB_ADAPTER","group":"accessories","kind":"component_group","title_en":"D-Sub adapter","summary_zh":"D-Sub 转接附件","start":"P14-21","end":"P14-21","source":5,"batch":1},
     {"code":"ENCLOSURE_3A","group":"enclosures","kind":"component_group","title_en":"3A Hoods/Housings","summary_zh":"3A 规格外壳和底座，材料与保护形式按具体型号核对","start":"P15-06","end":"P15-16.1","source":5,"batch":1},

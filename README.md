@@ -17,8 +17,10 @@
 - `pages.ocr_status='done'` 只代表 OCR 得到文字，不代表文字准确或该页产品已建库。
 - `product_candidates` 是自动识别的来源行；重复出现在多页会保留多条，不能当作不同型号计数。
 - 最初 48 条样板记录来自第 73、76、77 页，包括 14 条 HA-010/016 芯体、32 条压接端子、2 条工具。
-  加上第 469、470、1401 页的 6 条配套产品，当前共 54 条，全部仍待独立审核。
-- 当前 283 条参数记录保留独立证据；64 条端子适用关系仍待审核。
+  后续加入配套产品并完成 HA 本章订货号转录，当前共 80 条产品，全部仍待独立审核。
+- HA 本章登记 36 个芯体、72 个不同订货号、147 行订货表来源，详见 [型号与缺项核对](docs/ha-coverage.md)。
+  这只表示有边界的本章订货表转录完成，不表示所有参数、搭配或整本目录已完成。
+- 当前 1039 条参数记录保留独立证据；102 条端子/可选编码件关系仍待审核。
 - 当前没有审核通过的完整搭配，不提供自动通过的 BOM。额定值筛选只是候选筛选，必须继续核验降额、温度、线径等条件。
 - 目录没有声明的配对关系不推断为事实；没有自动添加 `mates_with` 关系。
 
@@ -50,6 +52,8 @@ bash scripts/setup.sh
 .venv/bin/python -m wain.ingest inventory /workspace/attachments
 .venv/bin/python -m wain.ingest seed
 .venv/bin/python -m wain.ha010_seed
+.venv/bin/python -m wain.ha_series import
+.venv/bin/python -m wain.ha_series export
 .venv/bin/python -m wain.ingest ocr --workers 4 --dpi 180
 .venv/bin/python -m wain.candidates
 .venv/bin/python -m wain.catalog import
@@ -67,6 +71,10 @@ OCR 使用本地 Tesseract，不发送 PDF 到外部模型服务。每页保存�
 `--start` / `--end` 指定整本文件页序，`--dpi` 可提高识别分辨率。已有成功页不会被自动覆盖。
 
 全文 OCR 不等于全文参数提取。候选表中的型号与订货号仍可能错位、误识别，不能自动提升为正式产品。
+`ha_series import` 根据逐页转录清单导入 HA 本章，保留每次跨页出现记录和原文来源，不覆盖现有审核或更正。
+发现现有身份、参数、来源与清单冲突时整批回滚，需通过审核流程明确处理。
+HA-032 被保存为两半芯体的目录编排，没有创建不存在的独立订货号；编排仍待工程核对。
+HA-002 接点定义、HA-004-V2 线径、数值尺寸及真实配对等缺项明确保留。
 `ha010_seed` 另导入两款 M20 外壳、一款面板底座和三款 M20 电缆接头，保留夹紧范围、锁扣和密封条件。
 其型号和订货号已对照原图转录，但全部保持待审核；M20 外壳的螺距、组合密封和具体锁扣订货仍需确认。
 后续审核应记录 `review_events`，检查原图、型号、参数条件及证据后再修改状态。
@@ -91,10 +99,11 @@ API 规范由 FastAPI 生成，可供后续大模型工具适配层使用；当�
 | --- | --- |
 | `GET /catalog/summary` | 总目录导航范围、分类数量、样板覆盖及定位缺口 |
 | `GET /catalog/sections` | 按分类或关键词查看条目、来源与部分录入状态 |
+| `GET /series/ha/coverage` | 本章订货表行数、独立型号及参数/搭配缺项，分别报告转录与审核状态 |
 | `GET /health` | 实际查询数据库的健康检查 |
 | `GET /stats` | 表记录数、OCR 和审核状态 |
 | `GET /products` | 型号、针数、端接方式、额定参数候选筛选 |
-| `GET /products/{id}` | 参数、关系、来源页及审核状态 |
+| `GET /products/{id}` | 参数、关系、首次及跨页来源和审核状态 |
 | `GET /candidates` | 分页查看未审核的 OCR 型号/订货号候选 |
 | `GET /pages/search` | 英文全文检索 OCR 内容 |
 | `GET /pages/{global_page}` | OCR 文字及源文件校验值 |

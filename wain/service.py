@@ -1,7 +1,8 @@
 def stats(conn):
     counts={}
     for table in ('documents','pages','product_families','products','product_specifications',
-                  'evidence','product_relations','assembly_templates','assembly_requirements','product_candidates'):
+                  'evidence','product_relations','assembly_templates','assembly_requirements','product_candidates',
+                  'product_source_occurrences','catalog_arrangements'):
         counts[table]=conn.execute(f'SELECT count(*) AS n FROM {table}').fetchone()['n']
     counts['ocr']={row['ocr_status']:row['n'] for row in conn.execute(
         'SELECT ocr_status,count(*) AS n FROM pages GROUP BY ocr_status').fetchall()}
@@ -48,4 +49,8 @@ def product_details(conn,product_id):
         JOIN pages p ON p.id=e.page_id JOIN documents d ON d.id=p.document_id WHERE e.id=%s''',
         (product['evidence_id'],)).fetchone()
     product['can_finalize']=False
+    product['source_occurrences']=conn.execute('''SELECT o.source_scope,o.context_label,o.source_model,
+        o.source_order_number,o.evidence_id,p.global_page,p.printed_page FROM product_source_occurrences o
+        JOIN evidence e ON e.id=o.evidence_id JOIN pages p ON p.id=e.page_id
+        WHERE o.product_id=%s ORDER BY p.global_page''',(product_id,)).fetchall()
     return product

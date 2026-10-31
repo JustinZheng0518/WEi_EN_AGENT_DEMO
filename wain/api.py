@@ -9,6 +9,7 @@ from .db import ROOT
 from .review import ReviewAction, ReviewError, TABLES, get_record, apply_review
 from .selection import SelectionRequest,select
 from .catalog import sections as catalog_sections,summary as catalog_summary
+from .ha_series import coverage as ha_coverage
 from pydantic import BaseModel,ConfigDict,Field,PositiveInt
 from typing import Literal
 from psycopg.types.json import Jsonb
@@ -23,6 +24,10 @@ app.mount('/static',StaticFiles(directory=ROOT/'wain/static'),name='static')
 @app.get('/catalog/summary')
 def catalog_overview():
     with connect() as conn: return catalog_summary(conn)
+
+@app.get('/series/ha/coverage')
+def ha_transcription_coverage():
+    with connect() as conn: return ha_coverage(conn)
 
 @app.get('/catalog/sections')
 def catalog_entries(group:str|None=None,q:str=Query('',max_length=100)):
