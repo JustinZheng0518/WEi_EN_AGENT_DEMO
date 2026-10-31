@@ -47,6 +47,8 @@ def seed_ha010(conn):
         lo,hi={'screw':(.75,2.5),'spring':(.14,2.5),'crimp':(.14,4)}[insert['termination']]
         spec(insert['id'],'wire_cross_section_min',technical['id'],number=lo,unit='mm2')
         spec(insert['id'],'wire_cross_section_max',technical['id'],number=hi,unit='mm2')
+        spec(insert['id'],'limiting_temperature_min',technical['id'],number=-40,unit='degC')
+        spec(insert['id'],'limiting_temperature_max',technical['id'],number=125,unit='degC')
     rows=[('H10A-SE-2B-M20','1100105101002','hood','H10A',hood_ev),
           ('H10A-TE-2B-M20','1100104101002','hood','H10A',hood_ev),
           ('H10A-BK-1L/SC','1100103211001','housing','H10A',base_ev),

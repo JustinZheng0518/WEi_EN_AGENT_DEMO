@@ -7,6 +7,10 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 from psycopg import IntegrityError, sql
 from .db import ROOT
 from .review import ReviewAction, ReviewError, TABLES, get_record, apply_review
+from .selection import SelectionRequest,select
+from pydantic import BaseModel,ConfigDict,Field,PositiveInt
+from typing import Literal
+from psycopg.types.json import Jsonb
 from .db import connect
 from .service import stats, search_products, product_details
 
@@ -14,6 +18,61 @@ app=FastAPI(title='WAIN Catalog Database',version='0.1.0',
     description='Evidence database with local review tools. Pending facts are not validated selections.')
 app.add_middleware(TrustedHostMiddleware,allowed_hosts=['127.0.0.1','localhost','[::1]','testserver'])
 app.mount('/static',StaticFiles(directory=ROOT/'wain/static'),name='static')
+
+def require_local_review(request):
+    origin=request.headers.get('origin')
+    if request.headers.get('x-wain-review')!='1' or (origin and origin.rstrip('/')!=str(request.base_url).rstrip('/')):
+        raise HTTPException(403,'Same-origin review header is required')
+
+class NewRelation(BaseModel):
+    model_config=ConfigDict(extra='forbid')
+    source_product_id:PositiveInt
+    target_product_id:PositiveInt
+    relation:Literal['mates_with','uses_contact','uses_housing','requires_accessory','optional_accessory','alternative']
+    evidence_id:PositiveInt
+    conditions:dict=Field(default_factory=dict)
+    actor:str=Field(min_length=1,max_length=100)
+    note:str=Field(min_length=1,max_length=2000)
+
+class NewAssessment(BaseModel):
+    model_config=ConfigDict(extra='forbid')
+    check_code:Literal['derating','mechanical_sealing','pe_termination','pinout_mounting']
+    scope:dict
+    findings:dict
+    evidence_id:PositiveInt
+    actor:str=Field(min_length=1,max_length=100)
+    note:str=Field(min_length=1,max_length=2000)
+
+@app.post('/selection/ha010')
+def select_ha010(request:SelectionRequest):
+    with connect() as conn: return select(conn,request)
+
+@app.post('/review/relations')
+def new_relation(body:NewRelation,request:Request):
+    require_local_review(request)
+    if not body.actor.strip() or not body.note.strip(): raise HTTPException(422,'Reviewer and reason are required')
+    try:
+        with connect() as conn:
+            row=conn.execute('''INSERT INTO product_relations(source_product_id,target_product_id,relation,conditions,evidence_id)
+                VALUES(%s,%s,%s,%s,%s) RETURNING *''',(body.source_product_id,body.target_product_id,body.relation,Jsonb(body.conditions),body.evidence_id)).fetchone()
+            conn.execute("INSERT INTO review_events(entity_type,entity_id,action,actor,note,changes) VALUES('relation',%s,'create',%s,%s,%s)",
+                (row['id'],body.actor,body.note,Jsonb({'after':dict(row)},dumps=lambda v:__import__('json').dumps(v,default=str))))
+            return get_record(conn,'relation',row['id'])
+    except IntegrityError: raise HTTPException(422,'Invalid or duplicate relation; no changes saved')
+
+@app.post('/review/assessments')
+def new_assessment(body:NewAssessment,request:Request):
+    require_local_review(request)
+    if not body.actor.strip() or not body.note.strip(): raise HTTPException(422,'Reviewer and reason are required')
+    if set(body.scope)!={'request','products'}: raise HTTPException(422,'Use exact scope from a selection report')
+    try:
+        with connect() as conn:
+            row=conn.execute('''INSERT INTO assembly_assessments(check_code,scope,findings,evidence_id)
+                VALUES(%s,%s,%s,%s) RETURNING *''',(body.check_code,Jsonb(body.scope),Jsonb(body.findings),body.evidence_id)).fetchone()
+            conn.execute("INSERT INTO review_events(entity_type,entity_id,action,actor,note,changes) VALUES('assessment',%s,'create',%s,%s,%s)",
+                (row['id'],body.actor,body.note,Jsonb({'after':dict(row)},dumps=lambda v:__import__('json').dumps(v,default=str))))
+            return get_record(conn,'assessment',row['id'])
+    except IntegrityError: raise HTTPException(422,'Invalid assessment evidence; no changes saved')
 
 @app.get('/',include_in_schema=False)
 def review_page():
@@ -44,9 +103,7 @@ def review_record(kind:str,entity_id:int):
 @app.post('/review/{kind}/{entity_id}')
 def save_review(kind:str,entity_id:int,action:ReviewAction,request:Request):
     # Local tool, not an authenticated multi-user deployment. Block cross-origin browser mutations.
-    origin=request.headers.get('origin')
-    if request.headers.get('x-wain-review')!='1' or (origin and origin.rstrip('/')!=str(request.base_url).rstrip('/')):
-        raise HTTPException(403,'Same-origin review header is required')
+    require_local_review(request)
     try:
         with connect() as conn: return apply_review(conn,kind,entity_id,action)
     except ReviewError as exc: raise HTTPException(exc.status,str(exc))

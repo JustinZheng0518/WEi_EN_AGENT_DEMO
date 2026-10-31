@@ -8,9 +8,10 @@ from psycopg import sql
 from psycopg.types.json import Jsonb
 from pydantic import BaseModel, Field, ConfigDict
 
-TABLES={'product':'products','specification':'product_specifications','relation':'product_relations',
+TABLES={'assessment':'assembly_assessments','product':'products','specification':'product_specifications','relation':'product_relations',
         'evidence':'evidence','candidate':'product_candidates'}
 FIELDS={
+ 'assessment':{'scope','findings'},
  'product':{'model','order_number','category','gender','termination','contact_count','pe_contacts','housing_size'},
  'specification':{'parameter','value_number','value_text','unit','conditions'},
  'relation':{'relation','conditions'},
@@ -68,9 +69,14 @@ def invalidate(conn,kind,row,actor,note):
         new=conn.execute(sql.SQL("UPDATE {} SET review_status='pending' WHERE id=%s RETURNING *").format(sql.Identifier(TABLES[child])),(old['id'],)).fetchone()
         event(conn,child,old,actor,'Dependency changed: '+note,'invalidate',new)
         if child=='product': invalidate(conn,child,old,actor,note)
+    if kind in {'evidence','product','specification','relation'}:
+        # A reviewed engineering conclusion must never outlive an edited supporting catalog fact.
+        for old in conn.execute("SELECT * FROM assembly_assessments WHERE review_status='reviewed' FOR UPDATE").fetchall():
+            new=conn.execute("UPDATE assembly_assessments SET review_status='pending' WHERE id=%s RETURNING *",(old['id'],)).fetchone()
+            event(conn,'assessment',old,actor,'Catalog fact changed: '+note,'invalidate',new)
 
 def validate_values(kind,row):
-    for key in FIELDS[kind]-{'contact_count','pe_contacts','value_number','conditions','region'}:
+    for key in FIELDS[kind]-{'contact_count','pe_contacts','value_number','conditions','region','scope','findings'}:
         if row[key] is not None and not isinstance(row[key],str): raise ReviewError(f'{key} must be text')
     if kind=='product':
         if not str(row['model'] or '').strip() or not re.fullmatch(r'\d{13}',str(row['order_number'])):
@@ -98,6 +104,9 @@ def validate_values(kind,row):
             raise ReviewError('Region must be [x0,y0,x1,y1] within 0–1')
     if kind=='candidate' and not re.fullmatch(r'\d{13}',str(row['order_number_candidate'])):
         raise ReviewError('Candidate order number must have 13 digits')
+    if kind=='assessment':
+        if not isinstance(row['scope'],dict) or not isinstance(row['findings'],dict):
+            raise ReviewError('Assessment scope and findings must be JSON objects')
 
 def apply_review(conn,kind,entity_id,action):
     table=table_for(kind)
@@ -128,7 +137,7 @@ def apply_review(conn,kind,entity_id,action):
             updates['reviewed_by']=action.actor.strip() if status=='reviewed' else None
             updates['reviewed_at']=conn.execute('SELECT now() AS t').fetchone()['t'] if status=='reviewed' else None
         changed=any(proposed[k]!=old[k] for k in action.edits)
-        if (changed or status!='reviewed') and kind in {'evidence','product'}:
+        if (changed or status!='reviewed') and kind in {'evidence','product','specification','relation'}:
             invalidate(conn,kind,old,action.actor.strip(),action.note)
         columns=list(updates)
         values=[Jsonb(updates[k]) if isinstance(updates[k],(dict,list)) else updates[k] for k in columns]

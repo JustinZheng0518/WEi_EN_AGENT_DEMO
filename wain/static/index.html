@@ -2,9 +2,9 @@
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WAIN 产品审核与选型</title><link rel="stylesheet" href="/static/style.css"></head>
 <body><header><div><b>WAIN</b> 产品资料工作台</div><span>原文可追溯 · 未知条件不默认通过</span></header>
-<nav><button id="reviewTab">资料审核</button><button id="selectionTab" disabled>HA-010 选型试验（下一步）</button></nav>
+<nav><button id="reviewTab">资料审核</button><button id="selectionTab">HA-010 选型试验</button></nav>
 <main id="reviewPanel"><section class="toolbar">
-<label>数据类型<select id="kind"><option value="product">产品身份</option><option value="specification">产品参数</option><option value="relation">适配关系</option><option value="evidence">原文证据</option><option value="candidate">OCR 候选</option></select></label>
+<label>数据类型<select id="kind"><option value="product">产品身份</option><option value="specification">产品参数</option><option value="relation">适配关系</option><option value="assessment">工况工程核对</option><option value="evidence">原文证据</option><option value="candidate">OCR 候选</option></select></label>
 <label>状态<select id="status"><option value="pending">待审核</option><option value="all">全部</option><option value="reviewed">已确认</option><option value="conflict">有冲突</option><option value="accepted">候选文字已确认</option><option value="rejected">候选已拒绝</option></select></label>
 <label>搜索<input id="query" placeholder="型号、订货号或字段内容"></label><button id="load">查询</button>
 </section><p class="notice">请先确认原文证据，再审核引用它的产品或参数。确认产品身份不代表参数和搭配也已通过。OCR 候选确认仅确认文字，不会自动创建产品。</p>
@@ -15,7 +15,7 @@
 <label>修改或确认依据<textarea id="note" maxlength="2000" placeholder="例如：已对照文件第 76 页订货表逐项核对"></textarea></label>
 <div class="actions"><button id="save">保存为待审核</button><button id="approve">确认当前记录</button><button id="conflict">标记冲突 / 拒绝</button></div>
 <p id="message" role="status" aria-live="polite"></p><h3>审核历史</h3><div id="history"></div></section></section></main>
-<main id="selectionPanel" hidden><h1>HA-010 选型试验</h1><p>输入工况，生成候选 BOM 和逐项检查。缺少证据、组件或工况时会保持待确认。</p>
+<main id="selectionPanel" hidden><h1>HA-010 选型试验</h1><p>范围：电缆到面板的连接器组件，线缆由用户提供。输入工况，生成候选 BOM 和逐项检查。缺少证据、组件或工况时会保持待确认。</p>
 <form id="selectionForm"><label>电压 V<input name="voltage" type="number" min="0.01" step="any" value="24" required></label>
 <label>每接点电流 A<input name="current" type="number" min="0.01" step="any" value="3" required></label>
 <label>普通接点数量（PE 单独计算）<input name="contacts" type="number" min="1" max="100" value="10" required></label>

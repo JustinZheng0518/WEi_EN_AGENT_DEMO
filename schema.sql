@@ -112,3 +112,11 @@ CREATE TABLE IF NOT EXISTS product_candidates (
  UNIQUE(page_id,line_hash,order_number_candidate,extractor_version)
 );
 ALTER TABLE review_events ADD COLUMN IF NOT EXISTS changes jsonb NOT NULL DEFAULT '{}';
+CREATE TABLE IF NOT EXISTS assembly_assessments (
+ id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+ check_code text NOT NULL CHECK(check_code IN ('derating','mechanical_sealing','pe_termination','pinout_mounting')),
+ scope jsonb NOT NULL CHECK(jsonb_typeof(scope)='object'),
+ findings jsonb NOT NULL CHECK(jsonb_typeof(findings)='object'),
+ evidence_id bigint NOT NULL REFERENCES evidence(id),
+ review_status text NOT NULL DEFAULT 'pending' CHECK(review_status IN ('pending','reviewed','conflict'))
+);
