@@ -1,0 +1,6 @@
+[
+  {"name":"normal_pending_review","request":{"voltage":24,"current":3,"contacts":10,"termination":"screw","wire_mm2":1,"cable_diameter_mm":8,"ambient_c":25,"quantity":1},"expected_status":"needs_confirmation","expected_bom_rows":5},
+  {"name":"overcurrent","request":{"voltage":24,"current":17,"contacts":10,"termination":"screw","wire_mm2":1,"cable_diameter_mm":8,"ambient_c":25,"quantity":1},"expected_status":"failed","expected_bom_rows":5},
+  {"name":"missing_wire_and_diameter","request":{"voltage":24,"current":3,"contacts":10,"termination":"crimp","quantity":1},"expected_status":"needs_confirmation","expected_bom_rows":7},
+  {"name":"crimp_two_sets","request":{"voltage":24,"current":3,"contacts":10,"termination":"crimp","wire_mm2":1,"cable_diameter_mm":8,"ambient_c":25,"quantity":2},"expected_status":"needs_confirmation","expected_bom_rows":7}
+]

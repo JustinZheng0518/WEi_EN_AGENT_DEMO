@@ -14,7 +14,12 @@
 <label>审核人<input id="actor" maxlength="100" placeholder="填写实际审核人或明确的自动审核标识"></label>
 <label>修改或确认依据<textarea id="note" maxlength="2000" placeholder="例如：已对照文件第 76 页订货表逐项核对"></textarea></label>
 <div class="actions"><button id="save">保存为待审核</button><button id="approve">确认当前记录</button><button id="conflict">标记冲突 / 拒绝</button></div>
-<p id="message" role="status" aria-live="polite"></p><h3>审核历史</h3><div id="history"></div></section></section></main>
+<p id="message" role="status" aria-live="polite"></p><h3>审核历史</h3><div id="history"></div>
+<details><summary>补充适配关系（需明确原文依据）</summary><p>填写产品与证据记录的编号；新记录只会保存为待审核。</p>
+<label>来源产品编号<input id="relationSource" type="number" min="1"></label><label>目标产品编号<input id="relationTarget" type="number" min="1"></label>
+<label>关系<select id="relationType"><option value="mates_with">两端配对</option><option value="uses_housing">适用外壳或底座</option><option value="uses_contact">适用端子</option><option value="requires_accessory">必需附件</option><option value="optional_accessory">可选附件</option></select></label>
+<label>来源证据编号<input id="relationEvidence" type="number" min="1"></label><label>适用条件（JSON）<textarea id="relationConditions">{}</textarea></label>
+<button id="createRelation">使用上述审核人及依据，保存待审核关系</button></details></section></section></main>
 <main id="selectionPanel" hidden><h1>HA-010 选型试验</h1><p>范围：电缆到面板的连接器组件，线缆由用户提供。输入工况，生成候选 BOM 和逐项检查。缺少证据、组件或工况时会保持待确认。</p>
 <form id="selectionForm"><label>电压 V<input name="voltage" type="number" min="0.01" step="any" value="24" required></label>
 <label>每接点电流 A<input name="current" type="number" min="0.01" step="any" value="3" required></label>
@@ -23,5 +28,10 @@
 <label>线径 mm²<input name="wire_mm2" type="number" min="0.01" step="any" placeholder="未知可留空"></label>
 <label>线缆外径 mm<input name="cable_diameter_mm" type="number" min="0.01" step="any" placeholder="未知可留空"></label>
 <label>环境温度 °C<input name="ambient_c" type="number" step="any" placeholder="未知可留空"></label>
-<label>连接套数<input name="quantity" type="number" min="1" max="10000" value="1" required></label><button type="submit">生成检查报告</button></form><div id="selectionResult" role="status"></div></main>
+<label>连接套数<input name="quantity" type="number" min="1" max="10000" value="1" required></label><button type="submit">生成检查报告</button></form><div id="selectionResult" role="status"></div>
+<details class="engineering"><summary>为当前组合记录有来源的工程核对</summary><p>先生成报告。记录仅适用于报告中的组件和工况，不会自动确认。修改输入后须重新生成报告。</p>
+<label>核对类型<select id="assessmentCode"><option value="derating">实际工况下的降额能力</option><option value="mechanical_sealing">螺纹、密封、锁扣和附件</option><option value="pe_termination">PE 接地结构</option><option value="pinout_mounting">针位、防呆和安装空间</option></select></label>
+<label>来源证据编号<input id="assessmentEvidence" type="number" min="1"></label><label>核对结论（JSON，必须有真实依据）<textarea id="assessmentFindings">{"capacity_a": null, "voltage_v": null}</textarea></label>
+<label>核对人<input id="assessmentActor" maxlength="100"></label><label>依据和适用条件<textarea id="assessmentNote" maxlength="2000"></textarea></label>
+<button id="createAssessment">保存为待审核工程记录</button><p id="assessmentMessage" role="status"></p></details></main>
 <script src="/static/app.js" defer></script></body></html>

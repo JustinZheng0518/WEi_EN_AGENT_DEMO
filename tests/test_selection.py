@@ -1,4 +1,6 @@
 from contextlib import contextmanager
+import json
+from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 from psycopg.types.json import Jsonb
@@ -121,3 +123,17 @@ def test_http_selection_and_creation_safety(catalog,monkeypatch):
     assert c.post('/review/assessments',json=body).status_code==403
     saved=c.post('/review/assessments',json=body,headers={'X-Wain-Review':'1'})
     assert saved.status_code==200 and saved.json()['record']['review_status']=='pending'
+    ids=r.json()['scope']['products']
+    relation={'source_product_id':ids['male_insert'],'target_product_id':ids['female_insert'],'relation':'mates_with',
+              'evidence_id':eid,'actor':'test-reviewer','note':'Candidate relation, not yet approved'}
+    assert c.post('/review/relations',json=relation).status_code==403
+    created=c.post('/review/relations',json=relation,headers={'X-Wain-Review':'1'})
+    assert created.status_code==200 and created.json()['record']['review_status']=='pending'
+    assert c.post('/review/relations',json=relation,headers={'X-Wain-Review':'1'}).status_code==422
+
+@pytest.mark.parametrize('case',json.loads((Path(__file__).resolve().parents[1]/'examples/ha010_cases.json').read_text()))
+def test_documented_catalog_cases(catalog,case):
+    report=select(catalog,SelectionRequest(**case['request']))
+    assert report['status']==case['expected_status']
+    assert len(report['bom'])==case['expected_bom_rows']
+    assert report['can_finalize'] is False

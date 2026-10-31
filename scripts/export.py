@@ -20,7 +20,7 @@ def csv_value(value):
     return value
 
 with connect() as conn:
-    for table in ['documents','pages','products','product_specifications','evidence','product_relations','product_candidates']:
+    for table in ['documents','pages','products','product_specifications','evidence','product_relations','product_candidates','assembly_assessments','review_events']:
         rows=conn.execute(f'SELECT * FROM {table} ORDER BY id').fetchall()
         if rows:
             with (folder/f'{table}.csv').open('w',newline='',encoding='utf-8-sig') as stream:
@@ -60,7 +60,7 @@ with connect() as conn:
     <h2>样板产品</h2><p>global_page 为整本文件页序，printed_page 为原文印刷编号；两者不能互换。</p><table>'''+table+'''</table>
     <h2>样板 OCR 对照</h2><p>对照基准为本次视觉转录，不是独立专家审核；该结果不能代表全目录准确率。</p><pre>'''+escape(json.dumps(audit,indent=2))+'''</pre>
     <h2>原文页面</h2>'''+sources+'''<h2>下一步</h2><p>核验型号与订货号；审核额定参数及降额条件；补齐外壳、进线附件、配对证据，
-    然后实现方案求解及完整性校验。当前 API 为只读查询接口，尚未接入大模型。</p></html>'''
+    继续完成真实组合的工程审核。当前已提供资料审核和 HA-010 候选 BOM 检查，实际组合仍待确认，尚未接入大模型。</p></html>'''
     (folder/'report.html').write_text(report,encoding='utf-8')
 (folder/'openapi.json').write_text(json.dumps(app.openapi(),indent=2))
 print(folder)

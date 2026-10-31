@@ -12,9 +12,9 @@
 - `pages.global_page` 是整本文件页序；`printed_page` 是人工确认的印刷编号（例如 `01-04`），未确认时为空。
 - `pages.ocr_status='done'` 只代表 OCR 得到文字，不代表文字准确或该页产品已建库。
 - `product_candidates` 是自动识别的来源行；重复出现在多页会保留多条，不能当作不同型号计数。
-- `products` 中的 48 条样板记录为对第 73、76、77 页的视觉转录，全部 `pending`。
-  包括 14 条 HA-010/016 芯体、32 条压接端子、2 条工具。
-- 216 条参数记录保留独立证据；64 条端子适用关系仍待审核。
+- 最初 48 条样板记录来自第 73、76、77 页，包括 14 条 HA-010/016 芯体、32 条压接端子、2 条工具。
+  加上第 469、470、1401 页的 6 条配套产品，当前共 54 条，全部仍待独立审核。
+- 当前 283 条参数记录保留独立证据；64 条端子适用关系仍待审核。
 - 当前没有审核通过的完整搭配，不提供自动通过的 BOM。额定值筛选只是候选筛选，必须继续核验降额、温度、线径等条件。
 - 目录没有声明的配对关系不推断为事实；没有自动添加 `mates_with` 关系。
 
@@ -110,6 +110,13 @@ bash scripts/postgres.sh backup
 ```
 
 集成测试在事务内的新 schema 运行，结束后回滚，不修改业务表。
+浏览器验收另用系统 Chromium（默认 `/usr/bin/chromium`），启动 API 后运行：
+
+```bash
+WAIN_TEST_URL=http://127.0.0.1:8000 uv run --no-project --with playwright python -m scripts.check_ui
+```
+
+检查过程不写入业务审核结论，截图输出至 `.local/`。可用 `WAIN_CHROMIUM` 指定其他 Chromium 可执行文件。
 导出位于 `.local/exports/`：CSV、统计、OpenAPI JSON 和中文 HTML 报告；
 数据库备份为 `.local/backups/wain.dump`，还原需同时保留原始 PDF 与 `.local/ocr`。
 CSV 包含未经审核的资料文字，使用 Excel 时按文本导入，避免执行单元格公式。
