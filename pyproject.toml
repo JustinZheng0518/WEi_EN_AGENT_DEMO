@@ -1,0 +1,18 @@
+[project]
+name = "wain-catalog"
+version = "0.1.0"
+description = "Evidence-backed WAIN catalog ingestion and product database"
+requires-python = ">=3.12"
+dependencies = [
+  "psycopg[binary]>=3.2,<4",
+  "pymupdf>=1.26,<2",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.34,<1",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "httpx>=0.28,<1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
