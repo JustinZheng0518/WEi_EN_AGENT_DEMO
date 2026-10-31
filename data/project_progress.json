@@ -1,10 +1,10 @@
 {
   "updated_on": "2026-10-31",
-  "timezone": "Etc/UTC",
-  "baseline_commit": "930cad1c31dee1b50482429b241f0599fa8328c3",
+  "timezone": "America/Denver",
+  "baseline_commit": "e2a307a5aee16a5d54c7021c40f7e924b5ff53a4",
   "release_stage": "development",
   "goal": "根据中英文自然语言需求，基于可追溯产品数据生成完整搭配和 BOM；未知、冲突、缺件或未经审核的工程条件不能判定通过。当前优先英文目录。",
-  "snapshot_basis": "本批只新增网页原型，未重新导入产品。已查询实际业务库：80 条产品全部待审核，1039 条参数、102 条关系。67 项 pytest、7 项参数识别测试及新旧 Chromium 网页验收通过；单文件通过 HTTP 验证且无后续请求，file:// 因管理员策略未测试。",
+  "snapshot_basis": "本批只保存关机前交接、国内企业服务方向与下一步计划，未重查数据库或重跑应用测试。数据快照和最近验证沿用功能提交 e2a307a：80 个产品全部待审核、1039 条参数、102 条关系；67 项 pytest、7 项参数识别及新旧 Chromium 验收通过。模型 API 与公开部署仍未完成。",
   "snapshot": {
     "pdf_files": 32, "pdf_pages": 1424, "ocr_pages": 1424,
     "catalog_entries": 73, "catalog_groups": 13,
@@ -17,8 +17,9 @@
     "llm_connected": false, "public_deployment": false, "all_catalog_products_entered": false,
     "real_engineering_approved_bom": false
   },
-  "next_tasks": ["APP-02", "AGENT-01", "AGENT-02", "HA-02", "REVIEW-04"],
+  "next_tasks": ["AGENT-01", "AGENT-03", "AGENT-02", "AGENT-04", "APP-02", "HA-02", "REVIEW-04"],
   "known_gaps": [
+    "面向中国企业使用，当前推荐百炼＋Qwen-Plus 系列；实际地域、模型、账号和费用未确认，未提供密钥或联调；建议预算不视为付费授权。",
     "网页仅为 HA-010 交互原型；模型 API、多轮追问及公开部署尚未接入，Windows 下载试用仍待用户验收。",
     "HA-002 普通接点与 PE 定义未确认，不能按型号数字猜测。",
     "HA-004-V2 线径范围未明确，不套用其他款的上限。",
@@ -96,7 +97,7 @@
     {"id":"REVIEW-05","status":"todo","title":"取得首个真实 HA-010 完整方案验收","acceptance":"在明确工况下，配对、PE、降额、密封、螺纹、安装和所有附件有依据，真实用例通过；测试假数据不算。","depends_on":["HA-05","REVIEW-04","RULE-02","RULE-03"]},
     {"id":"REVIEW-06","status":"todo","title":"按系列和场景扩展真实批准范围","acceptance":"每个上线范围有真实批准用例和限制；不把一个方案通过推广到所有型号或工况。","depends_on":["REVIEW-05","RULE-06"]},
 
-    {"id":"AGENT-01","status":"todo","title":"选择模型 API 与安全配置","acceptance":"确认供应商、模型、费用预算和数据发送范围；凭证只通过安全配置提供，不能入聊天或 Git。"},
+    {"id":"AGENT-01","status":"in_progress","title":"选择模型 API 与安全配置","acceptance":"确认供应商、模型、费用预算和数据发送范围；凭证只通过安全配置提供，不能入聊天或 Git。","evidence":["docs/NEXT_SESSION.md","docs/PROJECT_MEMORY.md"]},
     {"id":"AGENT-02","status":"todo","title":"中英文自然语言转结构化需求","acceptance":"处理单位、针数/芯数/PE、AC/DC、电流语义、场景和硬约束；歧义保持未知。","depends_on":["DATA-02","AGENT-01"]},
     {"id":"AGENT-03","status":"todo","title":"封装模型工具调用接口","acceptance":"检索、产品详情、搭配求解、完整性校验、证据查询工具有固定 schema；模型不直接执行 SQL。","depends_on":["AGENT-01","RULE-01","RULE-03"]},
     {"id":"AGENT-04","status":"todo","title":"多轮追问与需求修订","acceptance":"只追问影响决策的未知项，保留用户回答和偏好；修改需求后重算方案。","depends_on":["AGENT-02","AGENT-03"]},
