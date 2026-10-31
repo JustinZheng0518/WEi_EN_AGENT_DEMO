@@ -19,6 +19,8 @@
 包括系列、规格、附件、服务与参考内容，不等于 73 个独立产品系列。每项带有总目录来源、
 印刷页码及部分样板覆盖情况；业务重要性和销量优先级仍未知。
 
+HA 全章资料包：[36 个型号与 18 条候选链路](docs/ha-series-dossier.md) · [型号参数 CSV](docs/ha-series-models.csv) · [链路 CSV](docs/ha-series-routes.csv) · [附件 CSV](docs/ha-series-accessories.csv) · [未解事项](docs/ha-series-issues.csv)。资料包不扩展当前 HA-010 网页选型范围，未完成尺寸全数值转录或真实工程批准。
+
 第一条连接链路资料包：[HA-010 螺钉端接，电缆端到面板端](docs/ha010-line01.md) · [主件及缺项 CSV](docs/ha010-line01-bom.csv)。含 5 类候选主件及 G01–G10 确认事项，尚非工程批准或完整线束。
 
 ## 数据边界
@@ -169,6 +171,16 @@ CSV 包含未经审核的资料文字，使用 Excel 时按文本导入，避免
 docker exec wain-catalog-postgres createdb -h /run/wain -U wain wain_restore
 docker exec -i wain-catalog-postgres pg_restore -h /run/wain -U wain -d wain_restore < .local/backups/wain.dump
 ```
+
+## HA 全章资料包生成
+
+```bash
+python scripts/ha_dossier.py
+python scripts/ha_dossier.py --check
+.venv/bin/python -m pytest -q tests/test_ha_dossier.py
+```
+
+生成器只读取版本化转录，不连接数据库。`data/ha_series.json` 保留原型号身份基准；补充参数、壳体与问题来自 `data/ha_dossier_supplement.json`。生成资料需要单独审核后才能设计数据库导入，不覆盖现有人工审核。
 
 ## 后续工作
 

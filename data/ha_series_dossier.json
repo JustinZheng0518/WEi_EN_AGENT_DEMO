@@ -1,0 +1,6087 @@
+{
+  "version": 1,
+  "prepared_on": "2026-10-31",
+  "scope": "2025英文目录HA本章72–79页的全部芯体及18种变体链路资料；标准金属侧进线到面板壳体候选；非全部壳体SKU或工程批准",
+  "database_changed": false,
+  "all_parameters_complete": false,
+  "all_pairs_verified": false,
+  "can_finalize": false,
+  "models": [
+    {
+      "model": "HA-003-M",
+      "order": "1210030110001",
+      "count": 3,
+      "pe": 1,
+      "gender": "male",
+      "termination": "screw",
+      "profile": "small_screw",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        74
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          1.5
+        ],
+        "awg": "18–16",
+        "torque_nm": 0.25,
+        "stripping_mm": 4.5,
+        "stripping_source_page": 64,
+        "notes": "小规格专用技术页0.25 N·m优先于通用工艺表；不是安装螺钉或PE未知紧固点扭矩",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 74,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.85
+          ],
+          "row_label": "HA-003-M",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-003-F",
+      "order": "1210030210001",
+      "count": 3,
+      "pe": 1,
+      "gender": "female",
+      "termination": "screw",
+      "profile": "small_screw",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        74
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          1.5
+        ],
+        "awg": "18–16",
+        "torque_nm": 0.25,
+        "stripping_mm": 4.5,
+        "stripping_source_page": 64,
+        "notes": "小规格专用技术页0.25 N·m优先于通用工艺表；不是安装螺钉或PE未知紧固点扭矩",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 74,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.85
+          ],
+          "row_label": "HA-003-F",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-003-M-V2",
+      "order": "1210030110505",
+      "count": 3,
+      "pe": 1,
+      "gender": "male",
+      "termination": "screw",
+      "profile": "small_screw_v2_003",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        74
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": null,
+        "torque_nm": null,
+        "stripping_mm": null,
+        "stripping_source_page": null,
+        "notes": "V2线径明确；通用螺钉工艺表未单列V2，剥线、AWG及0.25 N·m适用性待确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [
+        {
+          "model": "CODE-Q3",
+          "order": "1980020050034",
+          "pack": 100,
+          "pages": [
+            74,
+            75
+          ],
+          "suitable": [
+            "HA-003-M-V2",
+            "HA-003-F-V2",
+            "HA-003-MQ",
+            "HA-003-FQ"
+          ]
+        }
+      ],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 74,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.85
+          ],
+          "row_label": "HA-003-M-V2",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "V2-PROCESS",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-003-F-V2",
+      "order": "1210030210505",
+      "count": 3,
+      "pe": 1,
+      "gender": "female",
+      "termination": "screw",
+      "profile": "small_screw_v2_003",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        74
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": null,
+        "torque_nm": null,
+        "stripping_mm": null,
+        "stripping_source_page": null,
+        "notes": "V2线径明确；通用螺钉工艺表未单列V2，剥线、AWG及0.25 N·m适用性待确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [
+        {
+          "model": "CODE-Q3",
+          "order": "1980020050034",
+          "pack": 100,
+          "pages": [
+            74,
+            75
+          ],
+          "suitable": [
+            "HA-003-M-V2",
+            "HA-003-F-V2",
+            "HA-003-MQ",
+            "HA-003-FQ"
+          ]
+        }
+      ],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 74,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.85
+          ],
+          "row_label": "HA-003-F-V2",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "V2-PROCESS",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-004-M-V2",
+      "order": "1210040110002",
+      "count": 4,
+      "pe": 1,
+      "gender": "male",
+      "termination": "screw",
+      "profile": "small_screw_v2_004_unresolved_wire",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        74
+      ],
+      "parameters": {
+        "wire_mm2": null,
+        "awg": null,
+        "torque_nm": null,
+        "stripping_mm": null,
+        "stripping_source_page": null,
+        "notes": "HA-004-V2线径未单独明确；不可套用HA-003-V2的2.5 mm²；扭矩/剥线也待变体核实",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 74,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.85
+          ],
+          "row_label": "HA-004-M-V2",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA004V2-WIRE",
+        "V2-PROCESS",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-004-F-V2",
+      "order": "1210040210002",
+      "count": 4,
+      "pe": 1,
+      "gender": "female",
+      "termination": "screw",
+      "profile": "small_screw_v2_004_unresolved_wire",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        74
+      ],
+      "parameters": {
+        "wire_mm2": null,
+        "awg": null,
+        "torque_nm": null,
+        "stripping_mm": null,
+        "stripping_source_page": null,
+        "notes": "HA-004-V2线径未单独明确；不可套用HA-003-V2的2.5 mm²；扭矩/剥线也待变体核实",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 74,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.85
+          ],
+          "row_label": "HA-004-F-V2",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA004V2-WIRE",
+        "V2-PROCESS",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-002-MS",
+      "order": "1210020120001",
+      "count": null,
+      "pe": null,
+      "gender": "male",
+      "termination": "spring",
+      "profile": "small_spring",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        74
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          2.5
+        ],
+        "awg": "26–14",
+        "torque_nm": null,
+        "stripping_mm": null,
+        "stripping_source_page": null,
+        "notes": "不适合连接端头的原文限制需核实；工艺页69未明确列HA剥线长度，不能套用HE/HVE",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 74,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.85
+          ],
+          "row_label": "HA-002-MS",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA002-CONTACTS",
+        "HA-SPRING-STRIP",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-002-FS",
+      "order": "1210020220001",
+      "count": null,
+      "pe": null,
+      "gender": "female",
+      "termination": "spring",
+      "profile": "small_spring",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        74
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          2.5
+        ],
+        "awg": "26–14",
+        "torque_nm": null,
+        "stripping_mm": null,
+        "stripping_source_page": null,
+        "notes": "不适合连接端头的原文限制需核实；工艺页69未明确列HA剥线长度，不能套用HE/HVE",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 74,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.85
+          ],
+          "row_label": "HA-002-FS",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA002-CONTACTS",
+        "HA-SPRING-STRIP",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-003-MS",
+      "order": "1210030120001",
+      "count": 3,
+      "pe": 1,
+      "gender": "male",
+      "termination": "spring",
+      "profile": "small_spring",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        74
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          2.5
+        ],
+        "awg": "26–14",
+        "torque_nm": null,
+        "stripping_mm": null,
+        "stripping_source_page": null,
+        "notes": "不适合连接端头的原文限制需核实；工艺页69未明确列HA剥线长度，不能套用HE/HVE",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 74,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.85
+          ],
+          "row_label": "HA-003-MS",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA-SPRING-STRIP",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-003-FS",
+      "order": "1210030220001",
+      "count": 3,
+      "pe": 1,
+      "gender": "female",
+      "termination": "spring",
+      "profile": "small_spring",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        74
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          2.5
+        ],
+        "awg": "26–14",
+        "torque_nm": null,
+        "stripping_mm": null,
+        "stripping_source_page": null,
+        "notes": "不适合连接端头的原文限制需核实；工艺页69未明确列HA剥线长度，不能套用HE/HVE",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 74,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.85
+          ],
+          "row_label": "HA-003-FS",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA-SPRING-STRIP",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-004-MS",
+      "order": "1210040120001",
+      "count": 4,
+      "pe": 1,
+      "gender": "male",
+      "termination": "spring",
+      "profile": "small_spring",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        74
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          2.5
+        ],
+        "awg": "26–14",
+        "torque_nm": null,
+        "stripping_mm": null,
+        "stripping_source_page": null,
+        "notes": "不适合连接端头的原文限制需核实；工艺页69未明确列HA剥线长度，不能套用HE/HVE",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 74,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.85
+          ],
+          "row_label": "HA-004-MS",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA-SPRING-STRIP",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-004-FS",
+      "order": "1210040220001",
+      "count": 4,
+      "pe": 1,
+      "gender": "female",
+      "termination": "spring",
+      "profile": "small_spring",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        74
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          2.5
+        ],
+        "awg": "26–14",
+        "torque_nm": null,
+        "stripping_mm": null,
+        "stripping_source_page": null,
+        "notes": "不适合连接端头的原文限制需核实；工艺页69未明确列HA剥线长度，不能套用HE/HVE",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 74,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.85
+          ],
+          "row_label": "HA-004-FS",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA-SPRING-STRIP",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-003-MQ",
+      "order": "1210030010001",
+      "count": 3,
+      "pe": 1,
+      "gender": "male",
+      "termination": "spring_quick_in",
+      "profile": "small_quick_in",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        75
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.5,
+          2.5
+        ],
+        "awg": "20–14",
+        "torque_nm": null,
+        "stripping_mm": 10,
+        "stripping_source_page": 73,
+        "notes": "剥线10±0.5 mm；接触电阻≤3 mΩ；与普通弹簧分开",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 3,
+      "optional_coding": [
+        {
+          "model": "CODE-Q3",
+          "order": "1980020050034",
+          "pack": 100,
+          "pages": [
+            74,
+            75
+          ],
+          "suitable": [
+            "HA-003-M-V2",
+            "HA-003-F-V2",
+            "HA-003-MQ",
+            "HA-003-FQ"
+          ]
+        }
+      ],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 75,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-003-MQ",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-003-FQ",
+      "order": "1210030020001",
+      "count": 3,
+      "pe": 1,
+      "gender": "female",
+      "termination": "spring_quick_in",
+      "profile": "small_quick_in",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        75
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.5,
+          2.5
+        ],
+        "awg": "20–14",
+        "torque_nm": null,
+        "stripping_mm": 10,
+        "stripping_source_page": 73,
+        "notes": "剥线10±0.5 mm；接触电阻≤3 mΩ；与普通弹簧分开",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 3,
+      "optional_coding": [
+        {
+          "model": "CODE-Q3",
+          "order": "1980020050034",
+          "pack": 100,
+          "pages": [
+            74,
+            75
+          ],
+          "suitable": [
+            "HA-003-M-V2",
+            "HA-003-F-V2",
+            "HA-003-MQ",
+            "HA-003-FQ"
+          ]
+        }
+      ],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 75,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-003-FQ",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-004-MQ",
+      "order": "1210040010001",
+      "count": 4,
+      "pe": 1,
+      "gender": "male",
+      "termination": "spring_quick_in",
+      "profile": "small_quick_in",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        75
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.5,
+          2.5
+        ],
+        "awg": "20–14",
+        "torque_nm": null,
+        "stripping_mm": 10,
+        "stripping_source_page": 73,
+        "notes": "剥线10±0.5 mm；接触电阻≤3 mΩ；与普通弹簧分开",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 3,
+      "optional_coding": [
+        {
+          "model": "CODE-Q5",
+          "order": "1980020050036",
+          "pack": 100,
+          "pages": [
+            75
+          ],
+          "suitable": [
+            "HA-004-MQ",
+            "HA-004-FQ"
+          ]
+        }
+      ],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 75,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-004-MQ",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-004-FQ",
+      "order": "1210040020001",
+      "count": 4,
+      "pe": 1,
+      "gender": "female",
+      "termination": "spring_quick_in",
+      "profile": "small_quick_in",
+      "housing": "3A",
+      "pack": 10,
+      "pages": [
+        75
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.5,
+          2.5
+        ],
+        "awg": "20–14",
+        "torque_nm": null,
+        "stripping_mm": 10,
+        "stripping_source_page": 73,
+        "notes": "剥线10±0.5 mm；接触电阻≤3 mΩ；与普通弹簧分开",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 10,
+        "rated_voltage_v": null,
+        "conductor_ground_v": 230,
+        "conductor_conductor_v": 400,
+        "alternative_marking": "10A 250V 4kV 3",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 3,
+      "optional_coding": [
+        {
+          "model": "CODE-Q5",
+          "order": "1980020050036",
+          "pack": 100,
+          "pages": [
+            75
+          ],
+          "suitable": [
+            "HA-004-MQ",
+            "HA-004-FQ"
+          ]
+        }
+      ],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 75,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-004-FQ",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-010-M",
+      "order": "1210100110001",
+      "count": 10,
+      "pe": 1,
+      "gender": "male",
+      "termination": "screw",
+      "profile": "large_screw",
+      "housing": "10A",
+      "pack": 5,
+      "pages": [
+        76
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": "18–14",
+        "torque_nm": 0.5,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 64,
+        "notes": "/B为带导线保护结构；具体端头和PE工艺仍需确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 76,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-010-M",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-010-F",
+      "order": "1210100210001",
+      "count": 10,
+      "pe": 1,
+      "gender": "female",
+      "termination": "screw",
+      "profile": "large_screw",
+      "housing": "10A",
+      "pack": 5,
+      "pages": [
+        76
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": "18–14",
+        "torque_nm": 0.5,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 64,
+        "notes": "/B为带导线保护结构；具体端头和PE工艺仍需确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 76,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-010-F",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-010-M/B",
+      "order": "1210100110503",
+      "count": 10,
+      "pe": 1,
+      "gender": "male",
+      "termination": "screw",
+      "profile": "large_screw",
+      "housing": "10A",
+      "pack": 5,
+      "pages": [
+        76
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": "18–14",
+        "torque_nm": 0.5,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 64,
+        "notes": "/B为带导线保护结构；具体端头和PE工艺仍需确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 76,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-010-M/B",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-010-F/B",
+      "order": "1210100210503",
+      "count": 10,
+      "pe": 1,
+      "gender": "female",
+      "termination": "screw",
+      "profile": "large_screw",
+      "housing": "10A",
+      "pack": 5,
+      "pages": [
+        76
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": "18–14",
+        "torque_nm": 0.5,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 64,
+        "notes": "/B为带导线保护结构；具体端头和PE工艺仍需确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 76,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-010-F/B",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-010-MC",
+      "order": "1210100100001",
+      "count": 10,
+      "pe": 1,
+      "gender": "male",
+      "termination": "crimp",
+      "profile": "large_crimp",
+      "housing": "10A",
+      "pack": 5,
+      "pages": [
+        76
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          4
+        ],
+        "awg": "26–12",
+        "torque_nm": null,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 76,
+        "notes": "剥线值来自另购接触件表；实际线径必须再匹配具体接触件",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [
+        "CESM-0.37",
+        "CESM-0.50",
+        "CESM-0.75",
+        "CESM-1.0",
+        "CESM-1.5",
+        "CESM-2.5",
+        "CESM-3.0",
+        "CESM-4.0",
+        "CEGM-0.37",
+        "CEGM-0.50",
+        "CEGM-0.75",
+        "CEGM-1.0",
+        "CEGM-1.5",
+        "CEGM-2.5",
+        "CEGM-3.0",
+        "CEGM-4.0"
+      ],
+      "drawing_references": [
+        {
+          "page": 76,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-010-MC",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "CRIMP-PROCESS",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-010-FC",
+      "order": "1210100200001",
+      "count": 10,
+      "pe": 1,
+      "gender": "female",
+      "termination": "crimp",
+      "profile": "large_crimp",
+      "housing": "10A",
+      "pack": 5,
+      "pages": [
+        76
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          4
+        ],
+        "awg": "26–12",
+        "torque_nm": null,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 76,
+        "notes": "剥线值来自另购接触件表；实际线径必须再匹配具体接触件",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [
+        "CESF-0.37",
+        "CESF-0.50",
+        "CESF-0.75",
+        "CESF-1.0",
+        "CESF-1.5",
+        "CESF-2.5",
+        "CESF-3.0",
+        "CESF-4.0",
+        "CEGF-0.37",
+        "CEGF-0.50",
+        "CEGF-0.75",
+        "CEGF-1.0",
+        "CEGF-1.5",
+        "CEGF-2.5",
+        "CEGF-3.0",
+        "CEGF-4.0"
+      ],
+      "drawing_references": [
+        {
+          "page": 76,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-010-FC",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "CRIMP-PROCESS",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-010-MS",
+      "order": "1210100120001",
+      "count": 10,
+      "pe": 1,
+      "gender": "male",
+      "termination": "spring",
+      "profile": "large_spring",
+      "housing": "10A",
+      "pack": 5,
+      "pages": [
+        76
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          2.5
+        ],
+        "awg": "26–14",
+        "torque_nm": null,
+        "stripping_mm": null,
+        "stripping_source_page": null,
+        "notes": "不适合连接端头的原文限制需核实；工艺页69未明确列HA剥线长度，不能套用HE/HVE",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 76,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-010-MS",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA-SPRING-STRIP",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-010-FS",
+      "order": "1210100220001",
+      "count": 10,
+      "pe": 1,
+      "gender": "female",
+      "termination": "spring",
+      "profile": "large_spring",
+      "housing": "10A",
+      "pack": 5,
+      "pages": [
+        76
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          2.5
+        ],
+        "awg": "26–14",
+        "torque_nm": null,
+        "stripping_mm": null,
+        "stripping_source_page": null,
+        "notes": "不适合连接端头的原文限制需核实；工艺页69未明确列HA剥线长度，不能套用HE/HVE",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 76,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-010-FS",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA-SPRING-STRIP",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-016-M",
+      "order": "1210160110001",
+      "count": 16,
+      "pe": 1,
+      "gender": "male",
+      "termination": "screw",
+      "profile": "large_screw",
+      "housing": "16A",
+      "pack": 5,
+      "pages": [
+        77,
+        78
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": "18–14",
+        "torque_nm": 0.5,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 64,
+        "notes": "/B为带导线保护结构；具体端头和PE工艺仍需确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 77,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-M",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        },
+        {
+          "page": 78,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-M",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-016-F",
+      "order": "1210160210001",
+      "count": 16,
+      "pe": 1,
+      "gender": "female",
+      "termination": "screw",
+      "profile": "large_screw",
+      "housing": "16A",
+      "pack": 5,
+      "pages": [
+        77,
+        78
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": "18–14",
+        "torque_nm": 0.5,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 64,
+        "notes": "/B为带导线保护结构；具体端头和PE工艺仍需确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 77,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-F",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        },
+        {
+          "page": 78,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-F",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-016-M/B",
+      "order": "1210160110505",
+      "count": 16,
+      "pe": 1,
+      "gender": "male",
+      "termination": "screw",
+      "profile": "large_screw",
+      "housing": "16A",
+      "pack": 5,
+      "pages": [
+        77,
+        78
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": "18–14",
+        "torque_nm": 0.5,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 64,
+        "notes": "/B为带导线保护结构；具体端头和PE工艺仍需确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 77,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-M/B",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        },
+        {
+          "page": 78,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-M/B",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-016-F/B",
+      "order": "1210160210505",
+      "count": 16,
+      "pe": 1,
+      "gender": "female",
+      "termination": "screw",
+      "profile": "large_screw",
+      "housing": "16A",
+      "pack": 5,
+      "pages": [
+        77,
+        78
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": "18–14",
+        "torque_nm": 0.5,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 64,
+        "notes": "/B为带导线保护结构；具体端头和PE工艺仍需确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 77,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-F/B",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        },
+        {
+          "page": 78,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-F/B",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-016-MC",
+      "order": "1210160100001",
+      "count": 16,
+      "pe": 1,
+      "gender": "male",
+      "termination": "crimp",
+      "profile": "large_crimp",
+      "housing": "16A",
+      "pack": 5,
+      "pages": [
+        77,
+        78
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          4
+        ],
+        "awg": "26–12",
+        "torque_nm": null,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 76,
+        "notes": "剥线值来自另购接触件表；实际线径必须再匹配具体接触件",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [
+        "CESM-0.37",
+        "CESM-0.50",
+        "CESM-0.75",
+        "CESM-1.0",
+        "CESM-1.5",
+        "CESM-2.5",
+        "CESM-3.0",
+        "CESM-4.0",
+        "CEGM-0.37",
+        "CEGM-0.50",
+        "CEGM-0.75",
+        "CEGM-1.0",
+        "CEGM-1.5",
+        "CEGM-2.5",
+        "CEGM-3.0",
+        "CEGM-4.0"
+      ],
+      "drawing_references": [
+        {
+          "page": 77,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-MC",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        },
+        {
+          "page": 78,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-MC",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "CRIMP-PROCESS",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-016-FC",
+      "order": "1210160200001",
+      "count": 16,
+      "pe": 1,
+      "gender": "female",
+      "termination": "crimp",
+      "profile": "large_crimp",
+      "housing": "16A",
+      "pack": 5,
+      "pages": [
+        77,
+        78
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          4
+        ],
+        "awg": "26–12",
+        "torque_nm": null,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 76,
+        "notes": "剥线值来自另购接触件表；实际线径必须再匹配具体接触件",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [
+        "CESF-0.37",
+        "CESF-0.50",
+        "CESF-0.75",
+        "CESF-1.0",
+        "CESF-1.5",
+        "CESF-2.5",
+        "CESF-3.0",
+        "CESF-4.0",
+        "CEGF-0.37",
+        "CEGF-0.50",
+        "CEGF-0.75",
+        "CEGF-1.0",
+        "CEGF-1.5",
+        "CEGF-2.5",
+        "CEGF-3.0",
+        "CEGF-4.0"
+      ],
+      "drawing_references": [
+        {
+          "page": 77,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-FC",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        },
+        {
+          "page": 78,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-FC",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "CRIMP-PROCESS",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-016-M(17-32)",
+      "order": "1210160110002",
+      "count": 16,
+      "pe": 1,
+      "gender": "male",
+      "termination": "screw",
+      "profile": "large_screw",
+      "housing": null,
+      "pack": 5,
+      "pages": [
+        78
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": "18–14",
+        "torque_nm": 0.5,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 64,
+        "notes": "/B为带导线保护结构；具体端头和PE工艺仍需确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 78,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-M(17-32)",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA032-PE",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-016-F(17-32)",
+      "order": "1210160210002",
+      "count": 16,
+      "pe": 1,
+      "gender": "female",
+      "termination": "screw",
+      "profile": "large_screw",
+      "housing": null,
+      "pack": 5,
+      "pages": [
+        78
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": "18–14",
+        "torque_nm": 0.5,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 64,
+        "notes": "/B为带导线保护结构；具体端头和PE工艺仍需确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 78,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-F(17-32)",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA032-PE",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-016-M/B(17-32)",
+      "order": "1210160110504",
+      "count": 16,
+      "pe": 1,
+      "gender": "male",
+      "termination": "screw",
+      "profile": "large_screw",
+      "housing": null,
+      "pack": 5,
+      "pages": [
+        78
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": "18–14",
+        "torque_nm": 0.5,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 64,
+        "notes": "/B为带导线保护结构；具体端头和PE工艺仍需确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 78,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-M/B(17-32)",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA032-PE",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-016-F/B(17-32)",
+      "order": "1210160210504",
+      "count": 16,
+      "pe": 1,
+      "gender": "female",
+      "termination": "screw",
+      "profile": "large_screw",
+      "housing": null,
+      "pack": 5,
+      "pages": [
+        78
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.75,
+          2.5
+        ],
+        "awg": "18–14",
+        "torque_nm": 0.5,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 64,
+        "notes": "/B为带导线保护结构；具体端头和PE工艺仍需确认",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [],
+      "drawing_references": [
+        {
+          "page": 78,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-F/B(17-32)",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA032-PE",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-016-MC(17-32)",
+      "order": "1210160100002",
+      "count": 16,
+      "pe": 1,
+      "gender": "male",
+      "termination": "crimp",
+      "profile": "large_crimp",
+      "housing": null,
+      "pack": 5,
+      "pages": [
+        78
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          4
+        ],
+        "awg": "26–12",
+        "torque_nm": null,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 76,
+        "notes": "剥线值来自另购接触件表；实际线径必须再匹配具体接触件",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [
+        "CESM-0.37",
+        "CESM-0.50",
+        "CESM-0.75",
+        "CESM-1.0",
+        "CESM-1.5",
+        "CESM-2.5",
+        "CESM-3.0",
+        "CESM-4.0",
+        "CEGM-0.37",
+        "CEGM-0.50",
+        "CEGM-0.75",
+        "CEGM-1.0",
+        "CEGM-1.5",
+        "CEGM-2.5",
+        "CEGM-3.0",
+        "CEGM-4.0"
+      ],
+      "drawing_references": [
+        {
+          "page": 78,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-MC(17-32)",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA032-PE",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "CRIMP-PROCESS",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    },
+    {
+      "model": "HA-016-FC(17-32)",
+      "order": "1210160200002",
+      "count": 16,
+      "pe": 1,
+      "gender": "female",
+      "termination": "crimp",
+      "profile": "large_crimp",
+      "housing": null,
+      "pack": 5,
+      "pages": [
+        78
+      ],
+      "parameters": {
+        "wire_mm2": [
+          0.14,
+          4
+        ],
+        "awg": "26–12",
+        "torque_nm": null,
+        "stripping_mm": 7.5,
+        "stripping_source_page": 76,
+        "notes": "剥线值来自另购接触件表；实际线径必须再匹配具体接触件",
+        "source_page": 73
+      },
+      "electrical": {
+        "source_page": 73,
+        "standard": "EN 61984",
+        "pollution_degree": 3,
+        "rated_current_a": 16,
+        "rated_voltage_v": 250,
+        "conductor_ground_v": null,
+        "conductor_conductor_v": null,
+        "alternative_marking": "16A 250V/400V 4kV 2 (污染等级2)",
+        "ul_voltage_v": 600,
+        "impulse_voltage_kv": 4,
+        "condition": "IEC电位关系、替代标识、污染等级2和UL额定分开；AC/DC及降额未批准"
+      },
+      "material": {
+        "insert": "polycarbonate",
+        "contact": "copper alloy",
+        "ul94": "V0",
+        "limiting_temperature_c": [
+          -40,
+          125
+        ],
+        "mating_cycles_min": 500,
+        "insulation_resistance_min_ohm": 10000000000,
+        "source_page": 73
+      },
+      "contact_resistance_max_mohm": 1,
+      "optional_coding": [],
+      "contact_candidates": [
+        "CESF-0.37",
+        "CESF-0.50",
+        "CESF-0.75",
+        "CESF-1.0",
+        "CESF-1.5",
+        "CESF-2.5",
+        "CESF-3.0",
+        "CESF-4.0",
+        "CEGF-0.37",
+        "CEGF-0.50",
+        "CEGF-0.75",
+        "CEGF-1.0",
+        "CEGF-1.5",
+        "CEGF-2.5",
+        "CEGF-3.0",
+        "CEGF-4.0"
+      ],
+      "drawing_references": [
+        {
+          "page": 78,
+          "region": [
+            0.68,
+            0.14,
+            0.95,
+            0.54
+          ],
+          "row_label": "HA-016-FC(17-32)",
+          "view": "目录该订货行对应视图；大规格含接线端观察的针位及裸芯体开孔",
+          "all_numeric_dimensions_transcribed": false,
+          "condition": "裸芯体开孔不是底座开孔；需逐视图核对，不从图中比例量取"
+        }
+      ],
+      "open_issue_ids": [
+        "HA032-PE",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "THREAD-SEAL",
+        "PE-WIRING",
+        "CRIMP-PROCESS",
+        "OPTIONAL-SUPPLY"
+      ],
+      "review_status": "pending",
+      "engineering_status": "needs_confirmation"
+    }
+  ],
+  "routes": [
+    {
+      "id": "HA003-SCREW",
+      "male_models": [
+        "HA-003-M"
+      ],
+      "female_models": [
+        "HA-003-F"
+      ],
+      "housing_size": "3A",
+      "ordinary_contacts_per_endpoint": 3,
+      "termination": "screw",
+      "insert_components": [
+        {
+          "model": "HA-003-M",
+          "order": "1210030110001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            74
+          ]
+        },
+        {
+          "model": "HA-003-F",
+          "order": "1210030210001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            74
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "3A",
+        "hood": {
+          "model": "H3A-SE-2B-M20",
+          "order": "1100035101002",
+          "source_page": 454,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H3A-BK-1L/W",
+          "order": "1100033241001",
+          "source_page": 454
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA003-V2",
+      "male_models": [
+        "HA-003-M-V2"
+      ],
+      "female_models": [
+        "HA-003-F-V2"
+      ],
+      "housing_size": "3A",
+      "ordinary_contacts_per_endpoint": 3,
+      "termination": "screw",
+      "insert_components": [
+        {
+          "model": "HA-003-M-V2",
+          "order": "1210030110505",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            74
+          ]
+        },
+        {
+          "model": "HA-003-F-V2",
+          "order": "1210030210505",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            74
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "3A",
+        "hood": {
+          "model": "H3A-SE-2B-M20",
+          "order": "1100035101002",
+          "source_page": 454,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H3A-BK-1L/W",
+          "order": "1100033241001",
+          "source_page": 454
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [
+        "CODE-Q3"
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL",
+        "V2-PROCESS"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA004-V2",
+      "male_models": [
+        "HA-004-M-V2"
+      ],
+      "female_models": [
+        "HA-004-F-V2"
+      ],
+      "housing_size": "3A",
+      "ordinary_contacts_per_endpoint": 4,
+      "termination": "screw",
+      "insert_components": [
+        {
+          "model": "HA-004-M-V2",
+          "order": "1210040110002",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            74
+          ]
+        },
+        {
+          "model": "HA-004-F-V2",
+          "order": "1210040210002",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            74
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "3A",
+        "hood": {
+          "model": "H3A-SE-2B-M20",
+          "order": "1100035101002",
+          "source_page": 454,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H3A-BK-1L/W",
+          "order": "1100033241001",
+          "source_page": 454
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "HA004V2-WIRE",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL",
+        "V2-PROCESS"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA002-SPRING",
+      "male_models": [
+        "HA-002-MS"
+      ],
+      "female_models": [
+        "HA-002-FS"
+      ],
+      "housing_size": "3A",
+      "ordinary_contacts_per_endpoint": null,
+      "termination": "spring",
+      "insert_components": [
+        {
+          "model": "HA-002-MS",
+          "order": "1210020120001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            74
+          ]
+        },
+        {
+          "model": "HA-002-FS",
+          "order": "1210020220001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            74
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "3A",
+        "hood": {
+          "model": "H3A-SE-2B-M20",
+          "order": "1100035101002",
+          "source_page": 454,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H3A-BK-1L/W",
+          "order": "1100033241001",
+          "source_page": 454
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "HA-SPRING-STRIP",
+        "HA002-CONTACTS",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA003-SPRING",
+      "male_models": [
+        "HA-003-MS"
+      ],
+      "female_models": [
+        "HA-003-FS"
+      ],
+      "housing_size": "3A",
+      "ordinary_contacts_per_endpoint": 3,
+      "termination": "spring",
+      "insert_components": [
+        {
+          "model": "HA-003-MS",
+          "order": "1210030120001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            74
+          ]
+        },
+        {
+          "model": "HA-003-FS",
+          "order": "1210030220001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            74
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "3A",
+        "hood": {
+          "model": "H3A-SE-2B-M20",
+          "order": "1100035101002",
+          "source_page": 454,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H3A-BK-1L/W",
+          "order": "1100033241001",
+          "source_page": 454
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "HA-SPRING-STRIP",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA004-SPRING",
+      "male_models": [
+        "HA-004-MS"
+      ],
+      "female_models": [
+        "HA-004-FS"
+      ],
+      "housing_size": "3A",
+      "ordinary_contacts_per_endpoint": 4,
+      "termination": "spring",
+      "insert_components": [
+        {
+          "model": "HA-004-MS",
+          "order": "1210040120001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            74
+          ]
+        },
+        {
+          "model": "HA-004-FS",
+          "order": "1210040220001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            74
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "3A",
+        "hood": {
+          "model": "H3A-SE-2B-M20",
+          "order": "1100035101002",
+          "source_page": 454,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H3A-BK-1L/W",
+          "order": "1100033241001",
+          "source_page": 454
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "HA-SPRING-STRIP",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA003-QUICK",
+      "male_models": [
+        "HA-003-MQ"
+      ],
+      "female_models": [
+        "HA-003-FQ"
+      ],
+      "housing_size": "3A",
+      "ordinary_contacts_per_endpoint": 3,
+      "termination": "spring_quick_in",
+      "insert_components": [
+        {
+          "model": "HA-003-MQ",
+          "order": "1210030010001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            75
+          ]
+        },
+        {
+          "model": "HA-003-FQ",
+          "order": "1210030020001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            75
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "3A",
+        "hood": {
+          "model": "H3A-SE-2B-M20",
+          "order": "1100035101002",
+          "source_page": 454,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H3A-BK-1L/W",
+          "order": "1100033241001",
+          "source_page": 454
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [
+        "CODE-Q3"
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA004-QUICK",
+      "male_models": [
+        "HA-004-MQ"
+      ],
+      "female_models": [
+        "HA-004-FQ"
+      ],
+      "housing_size": "3A",
+      "ordinary_contacts_per_endpoint": 4,
+      "termination": "spring_quick_in",
+      "insert_components": [
+        {
+          "model": "HA-004-MQ",
+          "order": "1210040010001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            75
+          ]
+        },
+        {
+          "model": "HA-004-FQ",
+          "order": "1210040020001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            75
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "3A",
+        "hood": {
+          "model": "H3A-SE-2B-M20",
+          "order": "1100035101002",
+          "source_page": 454,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H3A-BK-1L/W",
+          "order": "1100033241001",
+          "source_page": 454
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [
+        "CODE-Q5"
+      ],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA010-SCREW",
+      "male_models": [
+        "HA-010-M"
+      ],
+      "female_models": [
+        "HA-010-F"
+      ],
+      "housing_size": "10A",
+      "ordinary_contacts_per_endpoint": 10,
+      "termination": "screw",
+      "insert_components": [
+        {
+          "model": "HA-010-M",
+          "order": "1210100110001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            76
+          ]
+        },
+        {
+          "model": "HA-010-F",
+          "order": "1210100210001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            76
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "10A",
+        "hood": {
+          "model": "H10A-SE-2B-M20",
+          "order": "1100105101002",
+          "source_page": 469,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H10A-BK-1L/SC",
+          "order": "1100103211001",
+          "source_page": 470
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": true
+    },
+    {
+      "id": "HA010-PROTECT",
+      "male_models": [
+        "HA-010-M/B"
+      ],
+      "female_models": [
+        "HA-010-F/B"
+      ],
+      "housing_size": "10A",
+      "ordinary_contacts_per_endpoint": 10,
+      "termination": "screw",
+      "insert_components": [
+        {
+          "model": "HA-010-M/B",
+          "order": "1210100110503",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            76
+          ]
+        },
+        {
+          "model": "HA-010-F/B",
+          "order": "1210100210503",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            76
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "10A",
+        "hood": {
+          "model": "H10A-SE-2B-M20",
+          "order": "1100105101002",
+          "source_page": 469,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H10A-BK-1L/SC",
+          "order": "1100103211001",
+          "source_page": 470
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA010-CRIMP",
+      "male_models": [
+        "HA-010-MC"
+      ],
+      "female_models": [
+        "HA-010-FC"
+      ],
+      "housing_size": "10A",
+      "ordinary_contacts_per_endpoint": 10,
+      "termination": "crimp",
+      "insert_components": [
+        {
+          "model": "HA-010-MC",
+          "order": "1210100100001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            76
+          ]
+        },
+        {
+          "model": "HA-010-FC",
+          "order": "1210100200001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            76
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "10A",
+        "hood": {
+          "model": "H10A-SE-2B-M20",
+          "order": "1100105101002",
+          "source_page": 469,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H10A-BK-1L/SC",
+          "order": "1100103211001",
+          "source_page": 470
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": 10,
+      "crimp_rule": "仅普通接点全装时按每性别数量；不含PE；接触件型号须按线径/镀层选定",
+      "tool_models": [
+        "TL02G",
+        "TL02",
+        "TL01",
+        "TL15"
+      ],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "CRIMP-PROCESS",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": true
+    },
+    {
+      "id": "HA010-SPRING",
+      "male_models": [
+        "HA-010-MS"
+      ],
+      "female_models": [
+        "HA-010-FS"
+      ],
+      "housing_size": "10A",
+      "ordinary_contacts_per_endpoint": 10,
+      "termination": "spring",
+      "insert_components": [
+        {
+          "model": "HA-010-MS",
+          "order": "1210100120001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            76
+          ]
+        },
+        {
+          "model": "HA-010-FS",
+          "order": "1210100220001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            76
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "10A",
+        "hood": {
+          "model": "H10A-SE-2B-M20",
+          "order": "1100105101002",
+          "source_page": 469,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H10A-BK-1L/SC",
+          "order": "1100103211001",
+          "source_page": 470
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "HA-SPRING-STRIP",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": true
+    },
+    {
+      "id": "HA016-SCREW",
+      "male_models": [
+        "HA-016-M"
+      ],
+      "female_models": [
+        "HA-016-F"
+      ],
+      "housing_size": "16A",
+      "ordinary_contacts_per_endpoint": 16,
+      "termination": "screw",
+      "insert_components": [
+        {
+          "model": "HA-016-M",
+          "order": "1210160110001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            77,
+            78
+          ]
+        },
+        {
+          "model": "HA-016-F",
+          "order": "1210160210001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            77,
+            78
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "16A",
+        "hood": {
+          "model": "H16A-SE-2B-M20",
+          "order": "1100165101002",
+          "source_page": 472,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H16A-BK-1L/SC",
+          "order": "1100163211001",
+          "source_page": 473
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA016-PROTECT",
+      "male_models": [
+        "HA-016-M/B"
+      ],
+      "female_models": [
+        "HA-016-F/B"
+      ],
+      "housing_size": "16A",
+      "ordinary_contacts_per_endpoint": 16,
+      "termination": "screw",
+      "insert_components": [
+        {
+          "model": "HA-016-M/B",
+          "order": "1210160110505",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            77,
+            78
+          ]
+        },
+        {
+          "model": "HA-016-F/B",
+          "order": "1210160210505",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            77,
+            78
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "16A",
+        "hood": {
+          "model": "H16A-SE-2B-M20",
+          "order": "1100165101002",
+          "source_page": 472,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H16A-BK-1L/SC",
+          "order": "1100163211001",
+          "source_page": 473
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA016-CRIMP",
+      "male_models": [
+        "HA-016-MC"
+      ],
+      "female_models": [
+        "HA-016-FC"
+      ],
+      "housing_size": "16A",
+      "ordinary_contacts_per_endpoint": 16,
+      "termination": "crimp",
+      "insert_components": [
+        {
+          "model": "HA-016-MC",
+          "order": "1210160100001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            77,
+            78
+          ]
+        },
+        {
+          "model": "HA-016-FC",
+          "order": "1210160200001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            77,
+            78
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "16A",
+        "hood": {
+          "model": "H16A-SE-2B-M20",
+          "order": "1100165101002",
+          "source_page": 472,
+          "thread_marking": "M20"
+        },
+        "housing": {
+          "model": "H16A-BK-1L/SC",
+          "order": "1100163211001",
+          "source_page": 473
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M20(D4-8)",
+        "WNA-M20(D6-12)",
+        "WNA-M20(D8-14)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": 16,
+      "crimp_rule": "仅普通接点全装时按每性别数量；不含PE；接触件型号须按线径/镀层选定",
+      "tool_models": [
+        "TL02G",
+        "TL02",
+        "TL01",
+        "TL15"
+      ],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "CRIMP-PROCESS",
+        "DERATING",
+        "DRAWINGS",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA032-SCREW",
+      "male_models": [
+        "HA-016-M",
+        "HA-016-M(17-32)"
+      ],
+      "female_models": [
+        "HA-016-F",
+        "HA-016-F(17-32)"
+      ],
+      "housing_size": "32A",
+      "ordinary_contacts_per_endpoint": 32,
+      "termination": "screw",
+      "insert_components": [
+        {
+          "model": "HA-016-M",
+          "order": "1210160110001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            77,
+            78
+          ]
+        },
+        {
+          "model": "HA-016-M(17-32)",
+          "order": "1210160110002",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            78
+          ]
+        },
+        {
+          "model": "HA-016-F",
+          "order": "1210160210001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            77,
+            78
+          ]
+        },
+        {
+          "model": "HA-016-F(17-32)",
+          "order": "1210160210002",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            78
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "32A",
+        "hood": {
+          "model": "H32A-SE-4B-M25",
+          "order": "1100325301003",
+          "source_page": 474,
+          "thread_marking": "M25"
+        },
+        "housing": {
+          "model": "H32A-BK-2L/SC",
+          "order": "1100323411001",
+          "source_page": 474
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M25(D9-16)",
+        "WNA-M25(D13-18)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "HA032-PE",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA032-PROTECT",
+      "male_models": [
+        "HA-016-M/B",
+        "HA-016-M/B(17-32)"
+      ],
+      "female_models": [
+        "HA-016-F/B",
+        "HA-016-F/B(17-32)"
+      ],
+      "housing_size": "32A",
+      "ordinary_contacts_per_endpoint": 32,
+      "termination": "screw",
+      "insert_components": [
+        {
+          "model": "HA-016-M/B",
+          "order": "1210160110505",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            77,
+            78
+          ]
+        },
+        {
+          "model": "HA-016-M/B(17-32)",
+          "order": "1210160110504",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            78
+          ]
+        },
+        {
+          "model": "HA-016-F/B",
+          "order": "1210160210505",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            77,
+            78
+          ]
+        },
+        {
+          "model": "HA-016-F/B(17-32)",
+          "order": "1210160210504",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            78
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "32A",
+        "hood": {
+          "model": "H32A-SE-4B-M25",
+          "order": "1100325301003",
+          "source_page": 474,
+          "thread_marking": "M25"
+        },
+        "housing": {
+          "model": "H32A-BK-2L/SC",
+          "order": "1100323411001",
+          "source_page": 474
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M25(D9-16)",
+        "WNA-M25(D13-18)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": null,
+      "crimp_rule": "不另购压接接触件；PE及导线端头工艺另核对",
+      "tool_models": [],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "DERATING",
+        "DRAWINGS",
+        "HA032-PE",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    },
+    {
+      "id": "HA032-CRIMP",
+      "male_models": [
+        "HA-016-MC",
+        "HA-016-MC(17-32)"
+      ],
+      "female_models": [
+        "HA-016-FC",
+        "HA-016-FC(17-32)"
+      ],
+      "housing_size": "32A",
+      "ordinary_contacts_per_endpoint": 32,
+      "termination": "crimp",
+      "insert_components": [
+        {
+          "model": "HA-016-MC",
+          "order": "1210160100001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            77,
+            78
+          ]
+        },
+        {
+          "model": "HA-016-MC(17-32)",
+          "order": "1210160100002",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            78
+          ]
+        },
+        {
+          "model": "HA-016-FC",
+          "order": "1210160200001",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            77,
+            78
+          ]
+        },
+        {
+          "model": "HA-016-FC(17-32)",
+          "order": "1210160200002",
+          "quantity_per_connection": 1,
+          "source_pages": [
+            78
+          ]
+        }
+      ],
+      "shell_candidates": {
+        "size": "32A",
+        "hood": {
+          "model": "H32A-SE-4B-M25",
+          "order": "1100325301003",
+          "source_page": 474,
+          "thread_marking": "M25"
+        },
+        "housing": {
+          "model": "H32A-BK-2L/SC",
+          "order": "1100323411001",
+          "source_page": 474
+        },
+        "status": "catalog_candidates_not_verified_fit",
+        "ip_marking": "IP65",
+        "pack": 1,
+        "conditions": [
+          "标准金属侧进线到面板候选；不是全部壳体变体",
+          "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+          "不得仅凭规格代号认定已批准配对"
+        ]
+      },
+      "gland_candidates": [
+        "WNA-M25(D9-16)",
+        "WNA-M25(D13-18)"
+      ],
+      "selected_gland": null,
+      "crimp_contacts_per_gender": 32,
+      "crimp_rule": "仅普通接点全装时按每性别数量；不含PE；接触件型号须按线径/镀层选定",
+      "tool_models": [
+        "TL02G",
+        "TL02",
+        "TL01",
+        "TL15"
+      ],
+      "pe_assembly_count_verified": null,
+      "optional_coding": [],
+      "open_issue_ids": [
+        "CRIMP-PROCESS",
+        "DERATING",
+        "DRAWINGS",
+        "HA032-PE",
+        "MATING",
+        "OPTIONAL-SUPPLY",
+        "PE-WIRING",
+        "THREAD-SEAL"
+      ],
+      "unselected_supply": [
+        "外部线缆",
+        "面板内导线",
+        "设备端子",
+        "PE接地材料",
+        "安装紧固件",
+        "密封/接头随件",
+        "按需求的保护盖/编码件"
+      ],
+      "status": "needs_confirmation",
+      "can_finalize": false,
+      "grouping_basis": "目录同变体订货行分组与规格引用；不是已审核配对关系",
+      "public_selection_supported": false
+    }
+  ],
+  "contacts": [
+    {
+      "model": "CESM-0.37",
+      "order": "1010191100301",
+      "gender": "male",
+      "plating": "silver",
+      "wire_mm2": [
+        0.14,
+        0.37
+      ],
+      "awg": "26–22",
+      "grooves": "无槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESF-0.37",
+      "order": "1010191200301",
+      "gender": "female",
+      "plating": "silver",
+      "wire_mm2": [
+        0.14,
+        0.37
+      ],
+      "awg": "26–22",
+      "grooves": "无槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESM-0.50",
+      "order": "1010191100401",
+      "gender": "male",
+      "plating": "silver",
+      "wire_mm2": [
+        0.5,
+        0.5
+      ],
+      "awg": "20",
+      "grooves": "无槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESF-0.50",
+      "order": "1010191200401",
+      "gender": "female",
+      "plating": "silver",
+      "wire_mm2": [
+        0.5,
+        0.5
+      ],
+      "awg": "20",
+      "grooves": "无槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESM-0.75",
+      "order": "1010191100601",
+      "gender": "male",
+      "plating": "silver",
+      "wire_mm2": [
+        0.75,
+        0.75
+      ],
+      "awg": "18",
+      "grooves": "1槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESF-0.75",
+      "order": "1010191200601",
+      "gender": "female",
+      "plating": "silver",
+      "wire_mm2": [
+        0.75,
+        0.75
+      ],
+      "awg": "18",
+      "grooves": "1槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESM-1.0",
+      "order": "1010191100801",
+      "gender": "male",
+      "plating": "silver",
+      "wire_mm2": [
+        1.0,
+        1.0
+      ],
+      "awg": "18",
+      "grooves": "1槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESF-1.0",
+      "order": "1010191200801",
+      "gender": "female",
+      "plating": "silver",
+      "wire_mm2": [
+        1.0,
+        1.0
+      ],
+      "awg": "18",
+      "grooves": "1槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESM-1.5",
+      "order": "1010191100901",
+      "gender": "male",
+      "plating": "silver",
+      "wire_mm2": [
+        1.5,
+        1.5
+      ],
+      "awg": "16",
+      "grooves": "2槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESF-1.5",
+      "order": "1010191200901",
+      "gender": "female",
+      "plating": "silver",
+      "wire_mm2": [
+        1.5,
+        1.5
+      ],
+      "awg": "16",
+      "grooves": "2槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESM-2.5",
+      "order": "1010191101001",
+      "gender": "male",
+      "plating": "silver",
+      "wire_mm2": [
+        2.5,
+        2.5
+      ],
+      "awg": "14",
+      "grooves": "3槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESF-2.5",
+      "order": "1010191201001",
+      "gender": "female",
+      "plating": "silver",
+      "wire_mm2": [
+        2.5,
+        2.5
+      ],
+      "awg": "14",
+      "grooves": "3槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESM-3.0",
+      "order": "1010191101101",
+      "gender": "male",
+      "plating": "silver",
+      "wire_mm2": [
+        3.0,
+        3.0
+      ],
+      "awg": "12",
+      "grooves": "宽槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESF-3.0",
+      "order": "1010191201101",
+      "gender": "female",
+      "plating": "silver",
+      "wire_mm2": [
+        3.0,
+        3.0
+      ],
+      "awg": "12",
+      "grooves": "宽槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESM-4.0",
+      "order": "1010191101201",
+      "gender": "male",
+      "plating": "silver",
+      "wire_mm2": [
+        4.0,
+        4.0
+      ],
+      "awg": "12",
+      "grooves": "无槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CESF-4.0",
+      "order": "1010191201201",
+      "gender": "female",
+      "plating": "silver",
+      "wire_mm2": [
+        4.0,
+        4.0
+      ],
+      "awg": "12",
+      "grooves": "无槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGM-0.37",
+      "order": "1010192100301",
+      "gender": "male",
+      "plating": "gold",
+      "wire_mm2": [
+        0.14,
+        0.37
+      ],
+      "awg": "26–22",
+      "grooves": "无槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGF-0.37",
+      "order": "1010192200301",
+      "gender": "female",
+      "plating": "gold",
+      "wire_mm2": [
+        0.14,
+        0.37
+      ],
+      "awg": "26–22",
+      "grooves": "无槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGM-0.50",
+      "order": "1010192100401",
+      "gender": "male",
+      "plating": "gold",
+      "wire_mm2": [
+        0.5,
+        0.5
+      ],
+      "awg": "20",
+      "grooves": "无槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGF-0.50",
+      "order": "1010192200401",
+      "gender": "female",
+      "plating": "gold",
+      "wire_mm2": [
+        0.5,
+        0.5
+      ],
+      "awg": "20",
+      "grooves": "无槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGM-0.75",
+      "order": "1010192100601",
+      "gender": "male",
+      "plating": "gold",
+      "wire_mm2": [
+        0.75,
+        0.75
+      ],
+      "awg": "18",
+      "grooves": "1槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGF-0.75",
+      "order": "1010192200601",
+      "gender": "female",
+      "plating": "gold",
+      "wire_mm2": [
+        0.75,
+        0.75
+      ],
+      "awg": "18",
+      "grooves": "1槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGM-1.0",
+      "order": "1010192100801",
+      "gender": "male",
+      "plating": "gold",
+      "wire_mm2": [
+        1.0,
+        1.0
+      ],
+      "awg": "18",
+      "grooves": "1槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGF-1.0",
+      "order": "1010192200801",
+      "gender": "female",
+      "plating": "gold",
+      "wire_mm2": [
+        1.0,
+        1.0
+      ],
+      "awg": "18",
+      "grooves": "1槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGM-1.5",
+      "order": "1010192100901",
+      "gender": "male",
+      "plating": "gold",
+      "wire_mm2": [
+        1.5,
+        1.5
+      ],
+      "awg": "16",
+      "grooves": "2槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGF-1.5",
+      "order": "1010192200901",
+      "gender": "female",
+      "plating": "gold",
+      "wire_mm2": [
+        1.5,
+        1.5
+      ],
+      "awg": "16",
+      "grooves": "2槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGM-2.5",
+      "order": "1010192101001",
+      "gender": "male",
+      "plating": "gold",
+      "wire_mm2": [
+        2.5,
+        2.5
+      ],
+      "awg": "14",
+      "grooves": "3槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGF-2.5",
+      "order": "1010192201001",
+      "gender": "female",
+      "plating": "gold",
+      "wire_mm2": [
+        2.5,
+        2.5
+      ],
+      "awg": "14",
+      "grooves": "3槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGM-3.0",
+      "order": "1010192101101",
+      "gender": "male",
+      "plating": "gold",
+      "wire_mm2": [
+        3.0,
+        3.0
+      ],
+      "awg": "12",
+      "grooves": "宽槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGF-3.0",
+      "order": "1010192201101",
+      "gender": "female",
+      "plating": "gold",
+      "wire_mm2": [
+        3.0,
+        3.0
+      ],
+      "awg": "12",
+      "grooves": "宽槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGM-4.0",
+      "order": "1010192101201",
+      "gender": "male",
+      "plating": "gold",
+      "wire_mm2": [
+        4.0,
+        4.0
+      ],
+      "awg": "12",
+      "grooves": "无槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    },
+    {
+      "model": "CEGF-4.0",
+      "order": "1010192201201",
+      "gender": "female",
+      "plating": "gold",
+      "wire_mm2": [
+        4.0,
+        4.0
+      ],
+      "awg": "12",
+      "grooves": "无槽",
+      "stripping_mm": 7.5,
+      "pack": 100,
+      "source_pages": [
+        76,
+        77,
+        78
+      ],
+      "rated_current_a": 16,
+      "status": "pending"
+    }
+  ],
+  "tools": [
+    {
+      "model": "TL02G",
+      "order": "1980010010011",
+      "role": "压接工具",
+      "source_pages": [
+        76,
+        77,
+        78,
+        1399
+      ],
+      "condition": "10A/16A名义0.14–4 mm²；工具页明确不适合16A的0.37 mm²接触件；HA页要求0.14–0.37 mm²选TL02；实际压模/定位和工艺待确认"
+    },
+    {
+      "model": "TL02",
+      "order": "1980010010001",
+      "role": "小线径压接工具候选",
+      "source_pages": [
+        1399
+      ],
+      "condition": "10A/16A，0.14–4 mm²；HA页对0.14–0.37 mm²指定此工具"
+    },
+    {
+      "model": "TL01",
+      "order": "1980010000002",
+      "role": "退针工具",
+      "source_pages": [
+        76,
+        77,
+        78,
+        1396
+      ],
+      "condition": "16A压接接触件拆卸；不计入成品BOM"
+    },
+    {
+      "model": "TL15",
+      "order": "1980010000026",
+      "role": "辅助装针工具",
+      "source_pages": [
+        1396
+      ],
+      "condition": "10A/16A辅助装针；HA页建议小于0.75 mm²时使用；不计入成品BOM"
+    }
+  ],
+  "coding": [
+    {
+      "model": "CODE-Q3",
+      "order": "1980020050034",
+      "pack": 100,
+      "pages": [
+        74,
+        75
+      ],
+      "suitable": [
+        "HA-003-M-V2",
+        "HA-003-F-V2",
+        "HA-003-MQ",
+        "HA-003-FQ"
+      ]
+    },
+    {
+      "model": "CODE-Q5",
+      "order": "1980020050036",
+      "pack": 100,
+      "pages": [
+        75
+      ],
+      "suitable": [
+        "HA-004-MQ",
+        "HA-004-FQ"
+      ]
+    }
+  ],
+  "shell_candidates": [
+    {
+      "size": "3A",
+      "hood": {
+        "model": "H3A-SE-2B-M20",
+        "order": "1100035101002",
+        "source_page": 454,
+        "thread_marking": "M20"
+      },
+      "housing": {
+        "model": "H3A-BK-1L/W",
+        "order": "1100033241001",
+        "source_page": 454
+      },
+      "status": "catalog_candidates_not_verified_fit",
+      "ip_marking": "IP65",
+      "pack": 1,
+      "conditions": [
+        "标准金属侧进线到面板候选；不是全部壳体变体",
+        "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+        "不得仅凭规格代号认定已批准配对"
+      ]
+    },
+    {
+      "size": "10A",
+      "hood": {
+        "model": "H10A-SE-2B-M20",
+        "order": "1100105101002",
+        "source_page": 469,
+        "thread_marking": "M20"
+      },
+      "housing": {
+        "model": "H10A-BK-1L/SC",
+        "order": "1100103211001",
+        "source_page": 470
+      },
+      "status": "catalog_candidates_not_verified_fit",
+      "ip_marking": "IP65",
+      "pack": 1,
+      "conditions": [
+        "标准金属侧进线到面板候选；不是全部壳体变体",
+        "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+        "不得仅凭规格代号认定已批准配对"
+      ]
+    },
+    {
+      "size": "16A",
+      "hood": {
+        "model": "H16A-SE-2B-M20",
+        "order": "1100165101002",
+        "source_page": 472,
+        "thread_marking": "M20"
+      },
+      "housing": {
+        "model": "H16A-BK-1L/SC",
+        "order": "1100163211001",
+        "source_page": 473
+      },
+      "status": "catalog_candidates_not_verified_fit",
+      "ip_marking": "IP65",
+      "pack": 1,
+      "conditions": [
+        "标准金属侧进线到面板候选；不是全部壳体变体",
+        "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+        "不得仅凭规格代号认定已批准配对"
+      ]
+    },
+    {
+      "size": "32A",
+      "hood": {
+        "model": "H32A-SE-4B-M25",
+        "order": "1100325301003",
+        "source_page": 474,
+        "thread_marking": "M25"
+      },
+      "housing": {
+        "model": "H32A-BK-2L/SC",
+        "order": "1100323411001",
+        "source_page": 474
+      },
+      "status": "catalog_candidates_not_verified_fit",
+      "ip_marking": "IP65",
+      "pack": 1,
+      "conditions": [
+        "标准金属侧进线到面板候选；不是全部壳体变体",
+        "芯体安装、供电侧方向、锁扣、随件、螺距、密封和空间需核实",
+        "不得仅凭规格代号认定已批准配对"
+      ]
+    }
+  ],
+  "gland_candidates": [
+    {
+      "model": "WNA-M20(D4-8)",
+      "order": "1021070181503",
+      "thread": "M20x1.5",
+      "cable_diameter_mm": [
+        4,
+        8
+      ],
+      "thread_length_mm": 8,
+      "wrench_sw_mm": 22,
+      "source_page": 1401,
+      "pack": 1,
+      "static_temperature_c": [
+        -40,
+        100
+      ],
+      "dynamic_temperature_c": [
+        -20,
+        80
+      ],
+      "ip_marking": "IP68 (with O-sealing)",
+      "status": "pending",
+      "condition": "只按名义螺纹和外径列候选；有效啮合、密封及实际线缆仍需确认"
+    },
+    {
+      "model": "WNA-M20(D6-12)",
+      "order": "1021070151001",
+      "thread": "M20x1.5",
+      "cable_diameter_mm": [
+        6,
+        12
+      ],
+      "thread_length_mm": 8,
+      "wrench_sw_mm": 22,
+      "source_page": 1401,
+      "pack": 1,
+      "static_temperature_c": [
+        -40,
+        100
+      ],
+      "dynamic_temperature_c": [
+        -20,
+        80
+      ],
+      "ip_marking": "IP68 (with O-sealing)",
+      "status": "pending",
+      "condition": "只按名义螺纹和外径列候选；有效啮合、密封及实际线缆仍需确认"
+    },
+    {
+      "model": "WNA-M20(D8-14)",
+      "order": "1021070151002",
+      "thread": "M20x1.5",
+      "cable_diameter_mm": [
+        8,
+        14
+      ],
+      "thread_length_mm": 8,
+      "wrench_sw_mm": 24,
+      "source_page": 1401,
+      "pack": 1,
+      "static_temperature_c": [
+        -40,
+        100
+      ],
+      "dynamic_temperature_c": [
+        -20,
+        80
+      ],
+      "ip_marking": "IP68 (with O-sealing)",
+      "status": "pending",
+      "condition": "只按名义螺纹和外径列候选；有效啮合、密封及实际线缆仍需确认"
+    },
+    {
+      "model": "WNA-M25(D9-16)",
+      "order": "1021070181002",
+      "thread": "M25x1.5",
+      "cable_diameter_mm": [
+        9,
+        16
+      ],
+      "thread_length_mm": 7.5,
+      "wrench_sw_mm": 27,
+      "source_page": 1401,
+      "pack": 1,
+      "static_temperature_c": [
+        -40,
+        100
+      ],
+      "dynamic_temperature_c": [
+        -20,
+        80
+      ],
+      "ip_marking": "IP68 (with O-sealing)",
+      "status": "pending",
+      "condition": "只按名义螺纹和外径列候选；有效啮合、密封及实际线缆仍需确认"
+    },
+    {
+      "model": "WNA-M25(D13-18)",
+      "order": "1021070181001",
+      "thread": "M25x1.5",
+      "cable_diameter_mm": [
+        13,
+        18
+      ],
+      "thread_length_mm": 7.5,
+      "wrench_sw_mm": 30,
+      "source_page": 1401,
+      "pack": 1,
+      "static_temperature_c": [
+        -40,
+        100
+      ],
+      "dynamic_temperature_c": [
+        -20,
+        80
+      ],
+      "ip_marking": "IP68 (with O-sealing)",
+      "status": "pending",
+      "condition": "只按名义螺纹和外径列候选；有效啮合、密封及实际线缆仍需确认"
+    }
+  ],
+  "issues": [
+    {
+      "id": "HA002-CONTACTS",
+      "models": [
+        "HA-002-MS",
+        "HA-002-FS"
+      ],
+      "title": "HA-002普通接点及PE定义",
+      "required_evidence": "订货行存在，但技术页接点清单无2且页头3/4+PE；需要厂家明确，数量不按型号数字推断",
+      "source_pages": [
+        73,
+        74
+      ],
+      "status": "open"
+    },
+    {
+      "id": "HA004V2-WIRE",
+      "models": [
+        "HA-004-M-V2",
+        "HA-004-F-V2"
+      ],
+      "title": "HA-004-V2线径",
+      "required_evidence": "需要V2专用线径范围，不能套HA-003-V2或HA-004普通款",
+      "source_pages": [
+        73,
+        75
+      ],
+      "status": "open"
+    },
+    {
+      "id": "V2-PROCESS",
+      "models": [
+        "HA-003-M-V2",
+        "HA-003-F-V2",
+        "HA-004-M-V2",
+        "HA-004-F-V2"
+      ],
+      "title": "V2端接工艺",
+      "required_evidence": "核实扭矩、剥线、导体和端头；通用工艺页未单列V2",
+      "source_pages": [
+        64,
+        73,
+        75
+      ],
+      "status": "open"
+    },
+    {
+      "id": "HA-SPRING-STRIP",
+      "models": [
+        "HA-002-MS",
+        "HA-002-FS",
+        "HA-003-MS",
+        "HA-003-FS",
+        "HA-004-MS",
+        "HA-004-FS",
+        "HA-010-MS",
+        "HA-010-FS"
+      ],
+      "title": "HA普通弹簧剥线与端头",
+      "required_evidence": "00-14工艺表只列HE/HVE等；需HA专用剥线长度，核对Not suitable for connecting terminal含义",
+      "source_pages": [
+        69,
+        73,
+        74,
+        76
+      ],
+      "status": "open"
+    },
+    {
+      "id": "HA032-PE",
+      "models": [
+        "HA-016-M(17-32)",
+        "HA-016-F(17-32)",
+        "HA-016-M/B(17-32)",
+        "HA-016-F/B(17-32)",
+        "HA-016-MC(17-32)",
+        "HA-016-FC(17-32)"
+      ],
+      "title": "HA-032组合PE与安装",
+      "required_evidence": "每端2个16接点半组；不能简单把两个PE相加当成已核实总成定义；核对方向、编号和32A安装",
+      "source_pages": [
+        73,
+        78,
+        474
+      ],
+      "status": "open"
+    },
+    {
+      "id": "DERATING",
+      "models": [],
+      "title": "降额与实际工况",
+      "required_evidence": "确认AC/DC、标准、电位关系、同时载流数量、线径和温度；HA032没有独立载流曲线，不直接照搬HA016",
+      "source_pages": [
+        73,
+        78
+      ],
+      "status": "open"
+    },
+    {
+      "id": "DRAWINGS",
+      "models": [],
+      "title": "尺寸、针位与安装审核",
+      "required_evidence": "已定位各款视图及开孔，但未完整数字化全部尺寸；核对基准、单位、板厚、紧固件、干涉；裸芯体开孔不能套给底座",
+      "source_pages": [
+        74,
+        75,
+        76,
+        77,
+        78,
+        454,
+        470,
+        473,
+        474
+      ],
+      "status": "open"
+    },
+    {
+      "id": "MATING",
+      "models": [],
+      "title": "真实配对与公母位置",
+      "required_evidence": "目录同行是候选分组，不是已批准mates_with；核实供电侧、防触电、编码、针位和芯体装壳",
+      "source_pages": [
+        74,
+        75,
+        76,
+        77,
+        78
+      ],
+      "status": "open"
+    },
+    {
+      "id": "THREAD-SEAL",
+      "models": [],
+      "title": "螺纹、锁扣与总成密封",
+      "required_evidence": "M20/M25字样不证明螺距和啮合长度；核实锁扣、O形圈、面板垫片、螺母和随件，再判断目标IP",
+      "source_pages": [
+        445,
+        454,
+        469,
+        470,
+        472,
+        473,
+        474,
+        1401
+      ],
+      "status": "open"
+    },
+    {
+      "id": "PE-WIRING",
+      "models": [],
+      "title": "PE、线缆和外部供料",
+      "required_evidence": "核实两侧PE端接及壳体接地连续性、导线长度/绝缘/线色/线序、设备端子和剥线；未知数量不记0",
+      "source_pages": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78
+      ],
+      "status": "open"
+    },
+    {
+      "id": "CRIMP-PROCESS",
+      "models": [
+        "HA-010-MC",
+        "HA-010-FC",
+        "HA-016-MC",
+        "HA-016-FC",
+        "HA-016-MC(17-32)",
+        "HA-016-FC(17-32)"
+      ],
+      "title": "压接接触件与工具工艺",
+      "required_evidence": "按线径/镀层选择接触件，普通孔位数量不含PE；小线径工具、压模定位、拉力与压接质量需确认",
+      "source_pages": [
+        76,
+        77,
+        78,
+        1396,
+        1399
+      ],
+      "status": "open"
+    },
+    {
+      "id": "OPTIONAL-SUPPLY",
+      "models": [],
+      "title": "选配、随件和采购",
+      "required_evidence": "编码/保护盖按需求选择；确认螺钉、垫片、锁扣等是否随件，缺失件补订货号/数量；确认MOQ及整包装规则",
+      "source_pages": [
+        74,
+        75,
+        445,
+        454,
+        470,
+        473,
+        474,
+        1401
+      ],
+      "status": "open"
+    }
+  ],
+  "sources": [
+    {
+      "global_page": 64,
+      "printed_page": "00-09",
+      "pdf_file": "2025 WAIN Complete Product Catalog_51-100.pdf",
+      "page_in_pdf": 14,
+      "pdf_sha256": "ca0c1da8ceb0381c08e8f8e6bb65f9f4a0665810341d30f64269e9503e5beb46",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 69,
+      "printed_page": "00-14",
+      "pdf_file": "2025 WAIN Complete Product Catalog_51-100.pdf",
+      "page_in_pdf": 19,
+      "pdf_sha256": "ca0c1da8ceb0381c08e8f8e6bb65f9f4a0665810341d30f64269e9503e5beb46",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 72,
+      "printed_page": "01-01",
+      "pdf_file": "2025 WAIN Complete Product Catalog_51-100.pdf",
+      "page_in_pdf": 22,
+      "pdf_sha256": "ca0c1da8ceb0381c08e8f8e6bb65f9f4a0665810341d30f64269e9503e5beb46",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 73,
+      "printed_page": "01-02",
+      "pdf_file": "2025 WAIN Complete Product Catalog_51-100.pdf",
+      "page_in_pdf": 23,
+      "pdf_sha256": "ca0c1da8ceb0381c08e8f8e6bb65f9f4a0665810341d30f64269e9503e5beb46",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 74,
+      "printed_page": "01-03",
+      "pdf_file": "2025 WAIN Complete Product Catalog_51-100.pdf",
+      "page_in_pdf": 24,
+      "pdf_sha256": "ca0c1da8ceb0381c08e8f8e6bb65f9f4a0665810341d30f64269e9503e5beb46",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 75,
+      "printed_page": "01-03.1",
+      "pdf_file": "2025 WAIN Complete Product Catalog_51-100.pdf",
+      "page_in_pdf": 25,
+      "pdf_sha256": "ca0c1da8ceb0381c08e8f8e6bb65f9f4a0665810341d30f64269e9503e5beb46",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 76,
+      "printed_page": "01-04",
+      "pdf_file": "2025 WAIN Complete Product Catalog_51-100.pdf",
+      "page_in_pdf": 26,
+      "pdf_sha256": "ca0c1da8ceb0381c08e8f8e6bb65f9f4a0665810341d30f64269e9503e5beb46",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 77,
+      "printed_page": "01-05",
+      "pdf_file": "2025 WAIN Complete Product Catalog_51-100.pdf",
+      "page_in_pdf": 27,
+      "pdf_sha256": "ca0c1da8ceb0381c08e8f8e6bb65f9f4a0665810341d30f64269e9503e5beb46",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 78,
+      "printed_page": "01-06",
+      "pdf_file": "2025 WAIN Complete Product Catalog_51-100.pdf",
+      "page_in_pdf": 28,
+      "pdf_sha256": "ca0c1da8ceb0381c08e8f8e6bb65f9f4a0665810341d30f64269e9503e5beb46",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 79,
+      "printed_page": "01-07",
+      "pdf_file": "2025 WAIN Complete Product Catalog_51-100.pdf",
+      "page_in_pdf": 29,
+      "pdf_sha256": "ca0c1da8ceb0381c08e8f8e6bb65f9f4a0665810341d30f64269e9503e5beb46",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 445,
+      "printed_page": "15-02",
+      "pdf_file": "2025 WAIN Complete Product Catalog_401-450.pdf",
+      "page_in_pdf": 45,
+      "pdf_sha256": "252db00874d23be696c8003c0e7a7df1eb3952578867f0fe169dac78766db087",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 454,
+      "printed_page": "15-08",
+      "pdf_file": "2025 WAIN Complete Product Catalog_451-500.pdf",
+      "page_in_pdf": 4,
+      "pdf_sha256": "ea5735707277cbd9d8eff08f2c7bf7f37c800bdeddd859f1ad65570694c3e768",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 469,
+      "printed_page": "15-17",
+      "pdf_file": "2025 WAIN Complete Product Catalog_451-500.pdf",
+      "page_in_pdf": 19,
+      "pdf_sha256": "ea5735707277cbd9d8eff08f2c7bf7f37c800bdeddd859f1ad65570694c3e768",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 470,
+      "printed_page": "15-18",
+      "pdf_file": "2025 WAIN Complete Product Catalog_451-500.pdf",
+      "page_in_pdf": 20,
+      "pdf_sha256": "ea5735707277cbd9d8eff08f2c7bf7f37c800bdeddd859f1ad65570694c3e768",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 472,
+      "printed_page": "15-19",
+      "pdf_file": "2025 WAIN Complete Product Catalog_451-500.pdf",
+      "page_in_pdf": 22,
+      "pdf_sha256": "ea5735707277cbd9d8eff08f2c7bf7f37c800bdeddd859f1ad65570694c3e768",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 473,
+      "printed_page": "15-20",
+      "pdf_file": "2025 WAIN Complete Product Catalog_451-500.pdf",
+      "page_in_pdf": 23,
+      "pdf_sha256": "ea5735707277cbd9d8eff08f2c7bf7f37c800bdeddd859f1ad65570694c3e768",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 474,
+      "printed_page": "15-21",
+      "pdf_file": "2025 WAIN Complete Product Catalog_451-500.pdf",
+      "page_in_pdf": 24,
+      "pdf_sha256": "ea5735707277cbd9d8eff08f2c7bf7f37c800bdeddd859f1ad65570694c3e768",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 1396,
+      "printed_page": "32-03",
+      "pdf_file": "2025 WAIN Complete Product Catalog_1351-1400.pdf",
+      "page_in_pdf": 46,
+      "pdf_sha256": "9611e7a5552b48a9cbeffbe7c26819b3b9dba348cfe454fa77338efc4da7c45f",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 1399,
+      "printed_page": "32-05",
+      "pdf_file": "2025 WAIN Complete Product Catalog_1351-1400.pdf",
+      "page_in_pdf": 49,
+      "pdf_sha256": "9611e7a5552b48a9cbeffbe7c26819b3b9dba348cfe454fa77338efc4da7c45f",
+      "verification": "visual_catalog_check_not_independent_approval"
+    },
+    {
+      "global_page": 1401,
+      "printed_page": "32-07",
+      "pdf_file": "2025 WAIN Complete Product Catalog_1401-1424.pdf",
+      "page_in_pdf": 1,
+      "pdf_sha256": "c0b6fdae87dd2f01c62ab5fcc31912459989e3c6d68d9ba64f623bf6c2da1c23",
+      "verification": "visual_catalog_check_not_independent_approval"
+    }
+  ]
+}
