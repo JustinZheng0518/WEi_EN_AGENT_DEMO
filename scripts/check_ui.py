@@ -11,7 +11,7 @@ with sync_playwright() as p:
     page=browser.new_page(viewport={'width':1500,'height':1000})
     errors=[]
     page.on('pageerror',lambda error:errors.append(str(error)))
-    page.goto(base)
+    page.goto(base+'/workbench')
     expect(page.locator('#catalogSummary')).to_contain_text('73 个总目录条目')
     expect(page.locator('#catalogTable tr')).to_have_count(74)
     page.screenshot(path=str(out/'catalog-overview.png'),full_page=True)

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WAIN Select · 连接器选型试验台</title><meta name="description" content="输入需求、核对参数、查看有依据的连接器候选清单。HA-010 交互试验。"><link rel="stylesheet" href="/static/trial/trial.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-symbol">W</span><span>WAIN <b>Select</b></span></a><nav aria-label="主导航"><span class="nav-current">选型试验</span><button id="helpButton" class="text-button" type="button">怎么测试</button><a id="workbenchLink" href="/workbench">资料工作台 <span aria-hidden="true">↗</span></a></nav><span class="mode-pill" id="modeLabel">正在连接数据</span></header>
+<main class="page">
+<section class="hero"><div><p class="eyebrow">CONNECTOR SELECTION / INTERACTIVE PREVIEW</p><h1>把需求，变成<br>可核对的连接方案<span>。</span></h1><p class="hero-copy">描述使用条件，核对识别参数，再查看候选组件与缺项。<br>从一套 HA-010 连接器开始，逐步扩展更多产品。</p></div><div class="scope-card"><span class="tiny-label">本次可测试范围</span><strong>HA-010 <span>10 个普通接点 + PE</span></strong><p>电缆端 → 面板端 · 螺钉 / 压接 / 弹簧</p><div class="scope-foot"><span class="status-dot"></span>样板数据待审核，结果为候选方案</div></div></section>
+<div class="connection-note" id="connectionNote" role="status" aria-live="polite">正在准备试验数据…</div>
+<section class="main-grid">
+<div class="input-column">
+<section class="card request-card"><div class="section-title"><span class="step">01</span><div><h2>描述你的需求</h2><p>先试一个例子，也可以直接填写下方参数。</p></div></div>
+<label class="sr-only" for="requestText">自然语言需求</label><textarea id="requestText" rows="5" placeholder="例如：24V，每接点 3A，10 个普通接点另加 PE，螺钉接线，导线 1mm²，线缆外径 8mm，环境 25℃，1 套。" maxlength="3000"></textarea>
+<div class="example-row"><span>试试</span><button class="example" data-example="normal" type="button">24V / 3A 基础方案</button><button class="example" data-example="crimp" type="button">两套压接方案</button><button class="example" data-example="overcurrent" type="button">17A 超额定测试</button><button class="example" data-example="missing" type="button">缺参数测试</button></div>
+<div class="parse-bottom"><small>当前为有限规则识别，尚未接入大模型；复杂或含糊描述请手动核对。</small><button id="parseButton" class="secondary" type="button">识别参数 <span aria-hidden="true">↓</span></button></div><div id="parseMessages" class="messages" aria-live="polite"></div></section>
+<section class="card parameters-card"><div class="section-title"><span class="step">02</span><div><h2>核对选型条件</h2><p>留空代表未知，不会被当成满足条件。</p></div></div>
+<form id="trialForm"><div class="fields">
+<label for="voltage">工作电压 <span>V</span><input id="voltage" name="voltage" type="number" min="0" max="100000" step="any" placeholder="例如 24" required></label>
+<label for="current">每接点工作电流 <span>A</span><input id="current" name="current" type="number" min="0" max="100000" step="any" placeholder="例如 3" required></label>
+<label for="contacts">普通接点数量 <span>PE 另计</span><input id="contacts" name="contacts" type="number" min="1" max="100" step="1" placeholder="当前支持 10" required></label>
+<label for="termination">端接方式<select id="termination" name="termination" required><option value="">请选择</option><option value="screw">螺钉接线</option><option value="crimp">压接端子</option><option value="spring">普通弹簧</option></select></label>
+<label for="wire_mm2">导线截面积 <span>mm²</span><input id="wire_mm2" name="wire_mm2" type="number" min="0" max="1000" step="any" placeholder="未知可留空"></label>
+<label for="cable_diameter_mm">线缆外径 <span>mm</span><input id="cable_diameter_mm" name="cable_diameter_mm" type="number" min="0" max="1000" step="any" placeholder="未知可留空"></label>
+<label for="ambient_c">环境温度 <span>℃</span><input id="ambient_c" name="ambient_c" type="number" min="-273.15" max="1000" step="any" placeholder="未知可留空"></label>
+<label for="quantity">连接套数 <span>套</span><input id="quantity" name="quantity" type="number" min="1" max="10000" value="1" required></label>
+</div><details class="advanced"><summary>进线方向和端子镀层</summary><div class="fields"><label>进线方向<select id="entry_direction" name="entry_direction"><option value="side">侧进线</option><option value="top">顶进线</option></select></label><label>压接端子镀层<select id="plating" name="plating"><option value="silver">镀银</option><option value="gold">镀金</option></select></label></div><p>这些是明确显示的试验默认选项，可按需求修改。</p></details>
+<label class="confirmation" id="ambiguityWrap" hidden><input type="checkbox" id="ambiguityConfirmed">我已核对：针数指普通接点，PE 另计；电流指每接点工作电流。</label>
+<button class="primary run-button" id="runButton" type="submit"><span>生成候选方案</span><span aria-hidden="true">→</span></button><p id="formMessage" class="form-message" role="status" aria-live="polite"></p></form>
+</section><p class="scope-note">本试验选配连接器组件，线缆由用户提供。额定值初筛不代替降额、PE、配对、密封和安装核对。</p>
+</div>
+<section class="results-column card" id="resultsPanel" aria-label="选型结果"><div class="result-top"><div class="section-title"><span class="step">03</span><div><h2>候选方案</h2><p id="resultSubtitle">让每一个组件和待确认项都看得见。</p></div></div><button id="exportButton" class="secondary" type="button" disabled>导出清单</button></div>
+<div id="emptyState" class="empty-state"><div class="connector-illustration" aria-hidden="true"><div class="plug-block"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="connection-line"></div><div class="plug-block socket"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><h3>从一个明确的需求开始</h3><p>左侧选择示例或填写参数，<br>这里会展示候选组件、数量及需要核对的依据。</p><div class="empty-features"><span>✓ 真实型号来源</span><span>✓ 缺项显式提示</span><span>✓ 数量逐项计算</span></div></div>
+<div id="resultContent" hidden><div id="resultBanner" class="result-banner" role="status"></div><p id="staleMessage" class="stale" hidden>参数已更改，请重新生成；当前展示的是上一版结果。</p><div id="resultMetrics" class="metrics"></div><div class="result-tabs" role="tablist" aria-label="结果分类"><button id="bomTab" role="tab" aria-selected="true" type="button">组件清单</button><button id="checksTab" role="tab" aria-selected="false" type="button">检查与缺项 <span id="pendingCount"></span></button><button id="sourcesTab" role="tab" aria-selected="false" type="button">原文依据</button></div><div id="bomView" role="tabpanel"></div><div id="checksView" role="tabpanel" hidden></div><div id="sourcesView" role="tabpanel" hidden></div><p class="result-footnote">状态和原文依据会随资料审核更新。候选清单不等于已经批准的完整连接方案。</p></div>
+</section></section>
+<footer class="footer"><span>WAIN Select · 可交互原型</span><span>先把条件说清楚，再把组合核对完整。</span></footer>
+</main>
+<dialog id="helpDialog"><button id="closeHelp" class="dialog-close" aria-label="关闭使用说明" type="button">×</button><p class="eyebrow">QUICK START</p><h2>现在可以测试什么？</h2><ol><li>点击“24V / 3A 基础方案”，识别并核对参数。</li><li>点击“生成候选方案”，查看组件和待确认项。</li><li>把电流改为 17A，观察超额定提示。</li><li>测试“两套压接方案”，检查公母普通端子各 20 个。</li><li>测试“缺参数”，查看需要补充什么。</li></ol><p>目前仅支持 HA-010 样板，不支持的系列或接点数不会自动替换。模型 API 尚未接入，数据仍待审核。</p><p id="helpMode"></p></dialog>
+<script id="trialData" type="application/json">null</script><script src="/static/trial/core.js"></script><script src="/static/trial/trial.js"></script>
+</body></html>

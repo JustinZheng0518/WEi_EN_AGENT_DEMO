@@ -1,6 +1,6 @@
 # 项目完整路线图
 
-状态更新：2026-10-31（America/Denver）。
+状态更新：2026-10-31（Etc/UTC）。
 
 根据中英文自然语言需求，基于可追溯产品数据生成完整搭配和 BOM；未知、冲突、缺件或未经审核的工程条件不能判定通过。当前优先英文目录。
 
@@ -120,15 +120,16 @@
 | ID | 状态 | 要做什么 | 验收条件 | 前置任务 | 已有证据 |
 | --- | --- | --- | --- | --- | --- |
 | APP-01 | 已完成（限定验收范围） | 本地资料审核及 HA-010 试验页面 | 目录搜索、原图、审核和结构化试验在浏览器可用，支持手机布局。 | — | [wain/static/index.html](../wain/static/index.html)、[scripts/check_ui.py](../scripts/check_ui.py) |
-| APP-02 | 待做 | 面向用户的自然语言会话与方案页面 | 输入需求、追问、展示 BOM、检查状态、原文与待办，产品流程不堆内部实现字段。 | AGENT-04, AGENT-05 | 待补交付证据 |
-| APP-03 | 进行中 / 部分完成 | 导出与方案交付 | 完善 BOM CSV/Excel/JSON、依据报告和方案版本；文件不混淆样板与已批准结果。 | — | [scripts/export.py](../scripts/export.py) |
+| APP-02 | 进行中 / 部分完成 | 面向用户的自然语言会话与方案页面 | 输入需求、追问、展示 BOM、检查状态、原文与待办，产品流程不堆内部实现字段。 | AGENT-04, AGENT-05 | [wain/static/trial/index.html](../wain/static/trial/index.html)、[wain/static/trial/core.js](../wain/static/trial/core.js)、[docs/web-trial.md](../docs/web-trial.md) |
+| APP-03 | 进行中 / 部分完成 | 导出与方案交付 | 完善 BOM CSV/Excel/JSON、依据报告和方案版本；文件不混淆样板与已批准结果。 | — | [scripts/export.py](../scripts/export.py)、[wain/static/trial/trial.js](../wain/static/trial/trial.js) |
 | APP-04 | 待做 | 用户验收与可用性修正 | 用目标用户的真实需求验证操作、中文说明、错误提示、恢复和可访问性。 | APP-02, REVIEW-05 | 待补交付证据 |
+| APP-05 | 已完成（限定验收范围） | 交付 HA-010 可测试网页原型与单文件演示 | 明确限定 10 普通接点加 PE；有限参数识别、人工核对、候选 BOM、缺项/超额定、来源、CSV 和手机布局可测试；提供数据库与自包含 HTML 两版，未接模型/完整工程校验保持明确。 | — | [wain/static/trial/index.html](../wain/static/trial/index.html)、[demo/index.html](../demo/index.html)、[wain/trial.py](../wain/trial.py)、[scripts/build_trial.py](../scripts/build_trial.py)、[scripts/check_trial_ui.py](../scripts/check_trial_ui.py)、[docs/web-trial.md](../docs/web-trial.md) |
 
 ### 数据质量和系统验收
 
 | ID | 状态 | 要做什么 | 验收条件 | 前置任务 | 已有证据 |
 | --- | --- | --- | --- | --- | --- |
-| QA-01 | 已完成（限定验收范围） | 基础数据库/API 与本地浏览器回归 | 已有 53 项历史通过记录，覆盖事务、未知、边界、依赖和原图/页面操作；测试不改业务批准。 | — | [tests/test_ha_series.py](../tests/test_ha_series.py)、[tests/test_selection.py](../tests/test_selection.py)、[scripts/check_ui.py](../scripts/check_ui.py)、[docs/worklog.md](../docs/worklog.md) |
+| QA-01 | 已完成（限定验收范围） | 基础数据库/API 与本地浏览器回归 | 本批 67 项数据库/API 测试和 7 项参数识别测试通过；新旧网页 Chromium 验收通过，覆盖未知、边界、依赖、数量和原图/页面操作，不改业务批准。 | — | [tests/test_ha_series.py](../tests/test_ha_series.py)、[tests/test_selection.py](../tests/test_selection.py)、[scripts/check_ui.py](../scripts/check_ui.py)、[docs/worklog.md](../docs/worklog.md)、[tests/test_trial.py](../tests/test_trial.py)、[tests/trial_core.test.cjs](../tests/trial_core.test.cjs)、[scripts/check_trial_ui.py](../scripts/check_trial_ui.py) |
 | QA-02 | 待做 | 建立人工核验的代表性评测集 | 包含正常、缺件、错误配对、超额定、歧义、资料缺失、多语言和无解；与实际目录和工况对应。 | REVIEW-03, BASE-03 | 待补交付证据 |
 | QA-03 | 待做 | 评估数据准确率与检索覆盖 | 对独立样本计算字段、型号关联、召回和遗漏；结果分系列/版式，不能用行数相等代替准确率。 | QA-02, DATA-03 | 待补交付证据 |
 | QA-04 | 待做 | 完整性与规则反例验收 | 真实正向与负向硬件案例都验证，缺少任何必需件或依据不能误放行；有性能和重复性记录。 | QA-02, REVIEW-05 | 待补交付证据 |

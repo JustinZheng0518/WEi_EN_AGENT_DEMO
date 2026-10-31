@@ -10,6 +10,7 @@ from .review import ReviewAction, ReviewError, TABLES, get_record, apply_review
 from .selection import SelectionRequest,select
 from .catalog import sections as catalog_sections,summary as catalog_summary
 from .ha_series import coverage as ha_coverage
+from .trial import snapshot as trial_snapshot
 from pydantic import BaseModel,ConfigDict,Field,PositiveInt
 from typing import Literal
 from psycopg.types.json import Jsonb
@@ -91,6 +92,24 @@ def new_assessment(body:NewAssessment,request:Request):
     except IntegrityError: raise HTTPException(422,'Invalid assessment evidence; no changes saved')
 
 @app.get('/',include_in_schema=False)
+def trial_page():
+    return FileResponse(ROOT/'wain/static/trial/index.html',headers={
+        'Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'none'",
+        'X-Content-Type-Options':'nosniff'})
+
+@app.get('/trial/data')
+def trial_data():
+    try:
+        with connect() as conn:return trial_snapshot(conn)
+    except ValueError as error:raise HTTPException(503,str(error))
+
+@app.get('/demo',include_in_schema=False)
+def portable_trial_page():
+    return FileResponse(ROOT/'demo/index.html',headers={
+        'Content-Security-Policy':"default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'none'",
+        'X-Content-Type-Options':'nosniff'})
+
+@app.get('/workbench',include_in_schema=False)
 def review_page():
     return FileResponse(ROOT/'wain/static/index.html',headers={
         'Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'none'",

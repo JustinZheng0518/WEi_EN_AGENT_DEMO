@@ -1,10 +1,10 @@
 {
   "updated_on": "2026-10-31",
-  "timezone": "America/Denver",
-  "baseline_commit": "070258106d0eef2531d38db4ca7b86db5e69ca37",
+  "timezone": "Etc/UTC",
+  "baseline_commit": "930cad1c31dee1b50482429b241f0599fa8328c3",
   "release_stage": "development",
   "goal": "根据中英文自然语言需求，基于可追溯产品数据生成完整搭配和 BOM；未知、冲突、缺件或未经审核的工程条件不能判定通过。当前优先英文目录。",
-  "snapshot_basis": "已核对发布环境中保留的导出快照、转录清单和既有提交；历史最近测试为 53 项通过，本次文档整理不等于重新运行应用测试。",
+  "snapshot_basis": "本批只新增网页原型，未重新导入产品。已查询实际业务库：80 条产品全部待审核，1039 条参数、102 条关系。67 项 pytest、7 项参数识别测试及新旧 Chromium 网页验收通过；单文件通过 HTTP 验证且无后续请求，file:// 因管理员策略未测试。",
   "snapshot": {
     "pdf_files": 32, "pdf_pages": 1424, "ocr_pages": 1424,
     "catalog_entries": 73, "catalog_groups": 13,
@@ -13,12 +13,13 @@
     "specifications": 1039, "pending_relations": 102,
     "source_occurrences": 149, "catalog_arrangements": 6,
     "ha_insert_skus": 36, "ha_chapter_skus": 72, "ha_ordering_rows": 147,
-    "last_recorded_passing_tests": 53,
+    "last_recorded_passing_tests": 67,
     "llm_connected": false, "public_deployment": false, "all_catalog_products_entered": false,
     "real_engineering_approved_bom": false
   },
-  "next_tasks": ["HA-02", "HA-03", "COMMON-01", "HA-04", "REVIEW-04"],
+  "next_tasks": ["APP-02", "AGENT-01", "AGENT-02", "HA-02", "REVIEW-04"],
   "known_gaps": [
+    "网页仅为 HA-010 交互原型；模型 API、多轮追问及公开部署尚未接入，Windows 下载试用仍待用户验收。",
     "HA-002 普通接点与 PE 定义未确认，不能按型号数字猜测。",
     "HA-004-V2 线径范围未明确，不套用其他款的上限。",
     "数值尺寸轴向、安装状态及开孔尺寸尚未逐项录入审核。",
@@ -104,11 +105,12 @@
     {"id":"AGENT-07","status":"todo","title":"模型端到端验证与费用观测","acceptance":"真实 API 的成功、失败、超时、重试、上下文和费用有测试记录；未连接不描述为已运行。","depends_on":["AGENT-05","AGENT-06","QA-02"]},
 
     {"id":"APP-01","status":"done","title":"本地资料审核及 HA-010 试验页面","acceptance":"目录搜索、原图、审核和结构化试验在浏览器可用，支持手机布局。","evidence":["wain/static/index.html","scripts/check_ui.py"]},
-    {"id":"APP-02","status":"todo","title":"面向用户的自然语言会话与方案页面","acceptance":"输入需求、追问、展示 BOM、检查状态、原文与待办，产品流程不堆内部实现字段。","depends_on":["AGENT-04","AGENT-05"]},
-    {"id":"APP-03","status":"in_progress","title":"导出与方案交付","acceptance":"完善 BOM CSV/Excel/JSON、依据报告和方案版本；文件不混淆样板与已批准结果。","evidence":["scripts/export.py"]},
+    {"id":"APP-02","status":"in_progress","title":"面向用户的自然语言会话与方案页面","acceptance":"输入需求、追问、展示 BOM、检查状态、原文与待办，产品流程不堆内部实现字段。","depends_on":["AGENT-04","AGENT-05"],"evidence":["wain/static/trial/index.html","wain/static/trial/core.js","docs/web-trial.md"]},
+    {"id":"APP-03","status":"in_progress","title":"导出与方案交付","acceptance":"完善 BOM CSV/Excel/JSON、依据报告和方案版本；文件不混淆样板与已批准结果。","evidence":["scripts/export.py","wain/static/trial/trial.js"]},
     {"id":"APP-04","status":"todo","title":"用户验收与可用性修正","acceptance":"用目标用户的真实需求验证操作、中文说明、错误提示、恢复和可访问性。","depends_on":["APP-02","REVIEW-05"]},
+    {"id":"APP-05","status":"done","title":"交付 HA-010 可测试网页原型与单文件演示","acceptance":"明确限定 10 普通接点加 PE；有限参数识别、人工核对、候选 BOM、缺项/超额定、来源、CSV 和手机布局可测试；提供数据库与自包含 HTML 两版，未接模型/完整工程校验保持明确。","evidence":["wain/static/trial/index.html","demo/index.html","wain/trial.py","scripts/build_trial.py","scripts/check_trial_ui.py","docs/web-trial.md"]},
 
-    {"id":"QA-01","status":"done","title":"基础数据库/API 与本地浏览器回归","acceptance":"已有 53 项历史通过记录，覆盖事务、未知、边界、依赖和原图/页面操作；测试不改业务批准。","evidence":["tests/test_ha_series.py","tests/test_selection.py","scripts/check_ui.py","docs/worklog.md"]},
+    {"id":"QA-01","status":"done","title":"基础数据库/API 与本地浏览器回归","acceptance":"本批 67 项数据库/API 测试和 7 项参数识别测试通过；新旧网页 Chromium 验收通过，覆盖未知、边界、依赖、数量和原图/页面操作，不改业务批准。","evidence":["tests/test_ha_series.py","tests/test_selection.py","scripts/check_ui.py","docs/worklog.md","tests/test_trial.py","tests/trial_core.test.cjs","scripts/check_trial_ui.py"]},
     {"id":"QA-02","status":"todo","title":"建立人工核验的代表性评测集","acceptance":"包含正常、缺件、错误配对、超额定、歧义、资料缺失、多语言和无解；与实际目录和工况对应。","depends_on":["REVIEW-03","BASE-03"]},
     {"id":"QA-03","status":"todo","title":"评估数据准确率与检索覆盖","acceptance":"对独立样本计算字段、型号关联、召回和遗漏；结果分系列/版式，不能用行数相等代替准确率。","depends_on":["QA-02","DATA-03"]},
     {"id":"QA-04","status":"todo","title":"完整性与规则反例验收","acceptance":"真实正向与负向硬件案例都验证，缺少任何必需件或依据不能误放行；有性能和重复性记录。","depends_on":["QA-02","REVIEW-05"]},

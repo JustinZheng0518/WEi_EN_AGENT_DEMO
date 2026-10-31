@@ -8,6 +8,10 @@
 用户要做能够理解中英文自然语言、按电压、电流、接点及场景选产品并配齐所有必需组件的 Agent。
 用户特别要求搭配完整、逐步解释，以及每批更新直接发布 GitHub。
 当前先处理英文 `2025 WAIN Complete Product Catalog`；中文目录接入是后续任务。
+用户已明确最终交付是网页交互，先做可测试版本，之后继续扩建该页面。
+现有原型及试用边界见 [web-trial.md](web-trial.md)：根路径为用户页，原审核页为 `/workbench`；
+`demo/index.html` 是可下载单文件、46 条样板产品的有限初筛；不是模型 Agent 或工程批准。
+没有公开网站；云 Chromium 禁止 file://，已通过 HTTP 验证同一文件且无后续网络请求，Windows 打开仍待用户验收。
 
 当前阶段的数量和下一步以 [STATUS.md](STATUS.md) 为准，所有步骤见 [ROADMAP.md](ROADMAP.md)，
 目录细项见 [series-progress.csv](series-progress.csv)。不要从历史日志中的旧数字推断当前进度。

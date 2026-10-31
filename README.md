@@ -1,7 +1,11 @@
 # WAIN 英文目录数据库
 
 本仓库原为空仓库，现包含 PostgreSQL 数据结构、PDF 索引、可断点续跑的英文 OCR、
-候选型号提取、HA 系列样板数据、查询 API 及本地资料审核页面。
+候选型号提取、HA 系列样板数据、查询 API、选型交互原型及本地资料审核页面。
+
+**先试网页：** 下载 [demo/index.html](demo/index.html)，保存后用 Edge / Chrome 打开。
+无需安装软件或填写密钥。用法、四个示例及两个版本区别见 [网页试用说明](docs/web-trial.md)。
+当前只有 HA-010 样板，有限规则识别，未连接大模型；候选数据待审核。
 
 项目续接入口：[当前进度与下一步](docs/STATUS.md) · [完整路线图](docs/ROADMAP.md) ·
 [73 条目录进度表](docs/series-progress.csv) · [项目记忆](docs/PROJECT_MEMORY.md)。
@@ -32,6 +36,7 @@
 ## 环境与启动
 
 需要 Python 3.12+、uv、Docker 和带 `eng` 语言包的 Tesseract。
+开发回归测试另外需要 Node.js 20+；下载版网页的使用者不需要安装这些工具。
 当前环境使用官方 PostgreSQL 17 镜像，脚本固定镜像摘要。
 
 ```bash
@@ -39,6 +44,9 @@ cd /workspace/WEi_EN_AGENT_DEMO
 bash scripts/setup.sh
 .venv/bin/uvicorn wain.api:app --host 127.0.0.1 --port 8000
 ```
+
+运行后 `/` 为用户试用页，`/workbench` 为原资料审核工作台，`/demo` 为无需数据库请求的单文件演示。
+这是本地开发服务，尚未公开部署。
 
 云环境的执行沙箱可能禁止 Unix socket、Docker socket 或代理网络访问。
 此时使用工具提供的授权执行方式，保留平台代理与 TLS 校验，不能关闭验证或绕过网络策略。
@@ -93,8 +101,8 @@ P33 零件编号索引目前只有总目录引用，正文未定位；文件范�
 ## 查询接口
 
 接口默认只绑定本机，尚未实现多用户身份鉴权，不应直接发布到互联网。
-服务根路径提供中文资料审核页面，支持队列搜索、原图对照、字段修改和审核历史。
-根页面默认显示目录总览，可按分类或中英文条目名称搜索，再切换至资料审核或 HA-010 试验。
+`/workbench` 提供中文资料审核页面，支持队列搜索、原图对照、字段修改和审核历史。
+工作台默认显示目录总览，可按分类或中英文条目名称搜索，再切换至资料审核或 HA-010 试验。
 审核写入要求同源自定义请求头，审核人是操作人填写的标识，不是已认证身份。
 先审核原文证据，再分别审核产品身份、参数及适配关系。修改来源或产品身份会使相关审核失效；
 旧页面提交会被版本检查阻止，防止覆盖新修改。OCR 候选确认不自动创建正式产品。
@@ -144,6 +152,8 @@ bash scripts/postgres.sh backup
 
 ```bash
 WAIN_TEST_URL=http://127.0.0.1:8000 uv run --no-project --with playwright python -m scripts.check_ui
+WAIN_TEST_URL=http://127.0.0.1:8000 uv run --no-project --with playwright python -m scripts.check_trial_ui
+node tests/trial_core.test.cjs
 ```
 
 检查过程不写入业务审核结论，截图输出至 `.local/`。可用 `WAIN_CHROMIUM` 指定其他 Chromium 可执行文件。
