@@ -92,7 +92,7 @@ def current_status(data):
         ('模型 API / 公开部署 / 真实批准 BOM',' / '.join('已完成限定范围' if s[key] else '未完成'
             for key in ['llm_connected','public_deployment','real_engineering_approved_bom']))]
     lines=['# 当前项目状态与下一步','',f'更新日期：{data["updated_on"]}（{data["timezone"]}）。',
-        '',f'本次数据基线提交：`{data["baseline_commit"][:7]}`。',data['snapshot_basis'],
+        '',f'本批前源码基线提交：`{data["baseline_commit"][:7]}`。',data['snapshot_basis'],
         '', '## 当前事实','', '| 项目 | 状态 |','| --- | --- |']
     lines.extend('| '+cell(k)+' | '+cell(v)+' |' for k,v in metrics)
     stage={'development':'开发版本','pilot':'限定范围试点','production':'已记录验收范围的生产版本'}[data['release_stage']]

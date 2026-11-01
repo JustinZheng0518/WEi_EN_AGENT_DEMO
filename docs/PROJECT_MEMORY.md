@@ -16,7 +16,15 @@
 当前阶段的数量和下一步以 [STATUS.md](STATUS.md) 为准，所有步骤见 [ROADMAP.md](ROADMAP.md)，
 目录细项见 [series-progress.csv](series-progress.csv)。不要从历史日志中的旧数字推断当前进度。
 
-## 最新工作方向：部件共性/差异与数据库基础
+## 最新工作方向：HA差异核对与实际补充入库
+
+- 用户同意先对照HA资料包与实际数据库、安全入库。本批`wain.ha_reconcile`对87订货号/1041字段断言生成差异；核对20页映射及实际PDF字节，备份后新增8产品、90有值参数和20未知，均pending。
+- 当前实际88产品全部待审核、1149参数（20 unknown）、237证据、102关系、157跨页来源、6编排。10张表全部旧记录保留；HA本章计数仍36/72/147，不能把配套新增算成芯体新增。3A/16A/32A导航家族已明确关联。
+- 结果入口`docs/ha-reconciliation.md`及CSV；最终pytest111项通过。4处V2扭矩差异保留旧值并报告，5条SW字段待新增迁移；20 unknown只是入库占位而非问题解决。明确未知工艺继续阻止选型放行。
+- CLI先`python -m wain.ha_reconcile plan`，再备份并用计划摘要apply；来源/数据改变会拒绝过期计划，重复导入不改旧记录。原HA转录脚本面对新增未知或更正可能停止，不盲目重导。
+- 网页仍HA-010，离线HTML本批未重建；模型、尺寸、独立工程审核仍未完成。下一步处理V2/专用工艺/尺寸/接口配套及字典缺项。
+
+## 此前：部件共性/差异与数据库基础
 
 - 用户强调先总结每类部件的共性和独特属性，自主修改数据库。设计说明`docs/component-model.md`，真实升级核对`docs/component-model-audit.md`。
 - 实际库已备份并应用`001_component_features`迁移，新增10类/47字段字典与参数值状态；9张业务表原事实/审核摘要一致。新环境使用README初始化或`python -m wain.migrations`升级，不能只启动新版API而漏迁移。已应用SQL及`data/component_schema.json`由校验和固定，未来扩字段应加新迁移。

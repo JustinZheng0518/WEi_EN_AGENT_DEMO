@@ -88,6 +88,10 @@ def select(conn,request):
         specs={}
         for s in values: specs.setdefault(s['parameter'],[]).append(s)
         facts[role]=(p,specs)
+        for s in values:
+            if s['value_state']=='unknown':
+                check('unknown_'+role+'_'+s['parameter'],None,
+                    LABELS[role]+'的 '+s['parameter']+' 明确未知，需确认适用条件及依据：'+s['state_reason'],[s['global_page']])
         required_specs={'hood':['entry_thread_designation','locking_geometry','entry_direction','ip_rating'],
             'panel_housing':['locking_variant','mounting','ip_rating'],
             'cable_entry':['entry_thread_designation','thread_length','sealing','ip_rating']}.get(role,[])

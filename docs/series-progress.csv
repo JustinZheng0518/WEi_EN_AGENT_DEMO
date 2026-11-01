@@ -21,10 +21,10 @@ GROUND_DOCKING,矩形连接器附件,Ground terminal/Docking frame,component_gro
 CODE_PIN,矩形连接器附件,Code pin,component_group,5,P14-17～P14-18,2,未知,部分完成,部分完成,待做,部分完成,未批准,仅 CODE-Q3/Q5；P14 编码附件完整范围尚未盘清。
 CABLE_CLAMP,矩形连接器附件,Cable clamp,component_group,5,P14-19～P14-19,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
 DSUB_ADAPTER,矩形连接器附件,D-Sub adapter,component_group,5,P14-21～P14-21,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-ENCLOSURE_3A,外壳、底座及密封件,3A Hoods/Housings,component_group,5,P15-06～P15-16.1,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+ENCLOSURE_3A,外壳、底座及密封件,3A Hoods/Housings,component_group,5,P15-06～P15-16.1,2,未知,部分完成,部分完成,待做,待做,未批准,3A标准金属侧进线外壳与面板底座各一款，已待审核入库；未覆盖所有变体或批准实际配对。
 ENCLOSURE_10A,外壳、底座及密封件,10A Hoods/Housings,component_group,5,P15-17～P15-18.1,3,未知,部分完成,部分完成,待做,部分完成,未批准,仅两款外壳和一款面板底座，不代表 10A 类别已录全。
-ENCLOSURE_16A,外壳、底座及密封件,16A Metal Hoods/Housings,component_group,5,P15-19～P15-20,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-ENCLOSURE_32A,外壳、底座及密封件,32A Metal Hoods/Housings,component_group,5,P15-21～P15-24,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+ENCLOSURE_16A,外壳、底座及密封件,16A Metal Hoods/Housings,component_group,5,P15-19～P15-20,2,未知,部分完成,部分完成,待做,待做,未批准,16A标准金属侧进线外壳与面板底座各一款，已待审核入库；未覆盖所有变体或批准实际配对。
+ENCLOSURE_32A,外壳、底座及密封件,32A Metal Hoods/Housings,component_group,5,P15-21～P15-24,2,未知,部分完成,部分完成,待做,待做,未批准,32A标准金属侧进线外壳与面板底座各一款，已待审核入库；未覆盖所有变体或批准实际配对。
 ENCLOSURE_6B,外壳、底座及密封件,6B Hoods/Housings,component_group,5,P15-25～P15-38.2,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
 ENCLOSURE_10B,外壳、底座及密封件,10B Hoods/Housings,component_group,5,P15-39～P15-69,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
 ENCLOSURE_16B,外壳、底座及密封件,16B Hoods/Housings,component_group,5,P15-70～P15-107.1,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
@@ -70,5 +70,5 @@ DSUB_044,定制及特殊产品,D-Sub-044 Series,series,7,P29-09～P29-12,0,未�
 CHARGING_TEST_TL_DZ,定制及特殊产品,Charging socket / Test Tool (TL-DZ),component_group,7,P29-13～P29-18,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
 WP,定制及特殊产品,WP Series,series,7,P29-19～P29-22,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
 WIRING_HARNESS,线束服务,wiring harness,service_group,7,P30-01～P30-14,不适用,不适用,不适用,待做,待做,不适用,不适用,按线束服务、装配和供料范围整理，不把说明页计作产品型号。
-TOOLS_GLANDS,工具及电缆接头,Tools/Cable gland,component_group,7,P32-01～P32-28,7,未知,部分完成,部分完成,待做,部分完成,未批准,四条工具、三条电缆接头样板；P32 全部工具/附件仍待扩展。
+TOOLS_GLANDS,工具及电缆接头,Tools/Cable gland,component_group,7,P32-01～P32-28,9,未知,部分完成,部分完成,待做,部分完成,未批准,四条工具、五条电缆接头样板；P32 全部工具/附件仍待扩展。
 PART_NUMBER_INDEX,零件编号索引,List of part no.,reference,7,P33-01～P33-40,不适用,不适用,不适用,不适用,待做,不适用,不适用,按参考资料验收，不按产品 SKU 计数。P33 正文未定位，继续核实版本或补充资料。
