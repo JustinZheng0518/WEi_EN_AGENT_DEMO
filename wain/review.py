@@ -13,7 +13,7 @@ TABLES={'assessment':'assembly_assessments','product':'products','specification'
 FIELDS={
  'assessment':{'scope','findings'},
  'product':{'model','order_number','category','gender','termination','contact_count','pe_contacts','housing_size'},
- 'specification':{'parameter','value_number','value_text','unit','conditions'},
+ 'specification':{'parameter','value_number','value_text','unit','conditions','value_state','state_reason'},
  'relation':{'relation','conditions'},
  'evidence':{'quotation','region'},
  'candidate':{'model_candidate','order_number_candidate'},
@@ -90,7 +90,13 @@ def validate_values(kind,row):
                 raise ReviewError('Invalid contact count')
     if kind=='specification':
         if not str(row['parameter'] or '').strip(): raise ReviewError('Parameter is required')
-        if row['value_number'] is None and not str(row['value_text'] or '').strip(): raise ReviewError('Value is required')
+        state=row.get('value_state','known')
+        if state not in {'known','unknown','not_applicable'}: raise ReviewError('Invalid value state')
+        if state=='known':
+            if (row['value_number'] is None)==(row['value_text'] is None): raise ReviewError('Exactly one value is required')
+            if row['value_text'] is not None and not row['value_text'].strip(): raise ReviewError('Value is required')
+        elif row['value_number'] is not None or row['value_text'] is not None or not str(row.get('state_reason') or '').strip():
+            raise ReviewError('Unknown/not-applicable values require a reason and no value')
         if row['value_number'] is not None:
             try:
                 if not Decimal(str(row['value_number'])).is_finite(): raise ValueError()

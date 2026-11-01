@@ -4,7 +4,7 @@
   "baseline_commit": "e2a307a5aee16a5d54c7021c40f7e924b5ff53a4",
   "release_stage": "development",
   "goal": "根据中英文自然语言需求，基于可追溯产品数据生成完整搭配和 BOM；未知、冲突、缺件或未经审核的工程条件不能判定通过。当前优先英文目录。",
-  "snapshot_basis": "本批将资料整理扩到2025英文目录HA全章：查看20页原图，交付36个型号资料卡、18条候选链路、43条附件/工具记录（32接触件、2编码件、4工具、5接头）、4种规格的8个标准壳体候选及12类未解事项。10项资料完整性回归通过，生成一致性通过。未访问或修改业务数据库，未扩展网页选型范围；80个待审核产品、1039条参数、102条关系及67项应用测试仍沿用e2a307a历史快照。尺寸尚未全部数值转录，配对/PE/密封/降额及真实工程批准未完成。",
+  "snapshot_basis": "本批建立部件共性/差异模型：10类部件、47个字段定义（8身份、39参数），落地类型/单位/类别/部分端接及范围约束、显式未知/不适用状态、条件敏感的只读比较和校验和迁移。实际库已私有备份并升级，9张业务表原内容摘要一致；重查80产品全部pending、1039参数、102关系、174证据、149跨页来源、6编排，HA仍36芯体/72订货号/147行。最终完整pytest97项和Node7项通过；实际库新接口只读核对通过。本批未重跑浏览器验收，未补工程批准、调用模型或公开部署。",
   "snapshot": {
     "pdf_files": 32, "pdf_pages": 1424, "ocr_pages": 1424,
     "catalog_entries": 73, "catalog_groups": 13,
@@ -13,12 +13,13 @@
     "specifications": 1039, "pending_relations": 102,
     "source_occurrences": 149, "catalog_arrangements": 6,
     "ha_insert_skus": 36, "ha_chapter_skus": 72, "ha_ordering_rows": 147,
-    "last_recorded_passing_tests": 67,
+    "last_recorded_passing_tests": 97,
     "llm_connected": false, "public_deployment": false, "all_catalog_products_entered": false,
     "real_engineering_approved_bom": false
   },
-  "next_tasks": ["HA-04", "HA-03", "HA-05", "HA-02", "REVIEW-03", "REVIEW-04", "REVIEW-05", "AGENT-01"],
+  "next_tasks": ["DATA-02", "DATA-05", "HA-04", "HA-03", "HA-05", "HA-02", "REVIEW-03", "REVIEW-04"],
   "known_gaps": [
+    "特征字典只覆盖当前已录参数和部分端接限定；框架/密封件/线缆等仅预留类别，独立螺距、尺寸基准、编码/针位及全部条件语义仍需补充。迁移已验证保留原事实，尚无自动反向迁移或本批备份恢复演练。",
     "HA全章36个芯体及18条链路资料已整理；仍有12类未解事项。HA-002接点/PE、HA-004-V2线径、V2工艺、普通弹簧剥线、HA-032总成PE及全部尺寸/配对/降额/密封需确认；壳体只覆盖标准金属侧进线候选，非所有壳体变体。",
     "面向中国企业使用，当前推荐百炼＋Qwen-Plus 系列；实际地域、模型、账号和费用未确认，未提供密钥或联调；建议预算不视为付费授权。",
     "网页仅为 HA-010 交互原型；模型 API、多轮追问及公开部署尚未接入，Windows 下载试用仍待用户验收。",
@@ -59,10 +60,12 @@
     {"id":"SOURCE-07","status":"todo","scope":"later","title":"接入中文目录并做跨语言对齐","acceptance":"用户提供资料后独立索引、OCR、对照型号与冲突；不阻塞当前英文试验。","depends_on":["SOURCE-01","DATA-02"]},
 
     {"id":"DATA-01","status":"done","title":"建立产品、参数、证据和关系数据结构","acceptance":"PostgreSQL 主键/外键、来源、条件、状态和本地连接可用。","evidence":["schema.sql","wain/db.py"]},
-    {"id":"DATA-02","status":"in_progress","title":"规范字段、单位、中英文术语及电气语义","acceptance":"明确普通接点/PE、AC/DC、每接点电流、标准、导体电位关系、降额条件及单位换算。","evidence":["wain/ha_series.py","docs/database.md"]},
-    {"id":"DATA-03","status":"in_progress","title":"可重复批量导入和冲突处理","acceptance":"除 HA 外建立按版式/系列复用流程；冲突回滚、保护人工更正、保留重复页来源。","evidence":["wain/ha_series.py","tests/test_ha_series.py"]},
+    {"id":"DATA-02","status":"in_progress","title":"规范字段、单位、中英文术语及电气语义","acceptance":"明确普通接点/PE、AC/DC、每接点电流、标准、导体电位关系、降额条件及单位换算。","evidence":["wain/ha_series.py","docs/database.md","docs/component-model.md","docs/component-model-audit.md","migrations/001_component_features.sql","wain/migrations.py","tests/test_characteristics.py"]},
+    {"id":"DATA-03","status":"in_progress","title":"可重复批量导入和冲突处理","acceptance":"除 HA 外建立按版式/系列复用流程；冲突回滚、保护人工更正、保留重复页来源。","evidence":["wain/ha_series.py","tests/test_ha_series.py","docs/component-model.md","docs/component-model-audit.md","migrations/001_component_features.sql","wain/migrations.py","tests/test_characteristics.py"]},
     {"id":"DATA-04","status":"todo","title":"清理 OCR 候选并建立型号总数基准","acceptance":"逐章节建立人工可追溯的预期行数、唯一订货号和遗漏清单；不把候选出现数当产品数。","depends_on":["SOURCE-03","DATA-03"]},
-    {"id":"DATA-05","status":"todo","title":"完善可追踪的数据库迁移与回滚","acceptance":"有版本化迁移、保留审核数据的升级步骤及独立恢复验证。","depends_on":["DATA-01"]},
+    {"id":"DATA-05","status":"in_progress","title":"完善可追踪的数据库迁移与回滚","acceptance":"有版本化迁移、保留审核数据的升级步骤及独立恢复验证。","depends_on":["DATA-01"],"evidence":["docs/component-model.md","docs/component-model-audit.md","migrations/001_component_features.sql","wain/migrations.py","tests/test_characteristics.py"]},
+
+    {"id":"DATA-06","status":"done","title":"建立类别特征字典、值状态与SKU共性差异比较","acceptance":"10类/47字段适用范围、类型、单位及部分端接/上下界有数据库约束；未知/不适用有原因且不当作数值；比较保留每SKU条件、证据和审核状态，不自动继承或推断配对。仅验收当前字段和接口，不代表全目录专有字段及工程规则完成。","evidence":["data/component_schema.json","migrations/001_component_features.sql","wain/characteristics.py","tests/test_characteristics.py","docs/component-model.md","docs/component-model-audit.md"],"depends_on":["DATA-01"]},
 
     {"id":"HA-01","status":"done","title":"转录 HA 本章全部订货表身份","acceptance":"文件 72–79 页登记 36 个芯体、72 个不同订货号、147 行来源；不虚构 HA-032 SKU。","evidence":["data/ha_series.json","docs/ha-coverage.md","tests/test_ha_series.py"]},
     {"id":"HA-02","status":"in_progress","title":"完善 HA 参数及适用条件","acceptance":"逐型号核对电压/电流、线径、剥线、扭矩、材质、温度等，保留明确条件和未知。","evidence":["wain/ha_series.py","docs/ha-coverage.md","docs/ha-series-dossier.md","data/ha_dossier_supplement.json"],"depends_on":["HA-01","DATA-02"]},

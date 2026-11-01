@@ -1,0 +1,952 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "code": "insert",
+      "label_zh": "芯体",
+      "description": "电路接点、PE和端接的载体"
+    },
+    {
+      "code": "contact",
+      "label_zh": "接触件",
+      "description": "按性别、镀层和线径选择的导电件"
+    },
+    {
+      "code": "hood",
+      "label_zh": "电缆端外壳",
+      "description": "进线、芯体固定和机械防护"
+    },
+    {
+      "code": "housing",
+      "label_zh": "底座",
+      "description": "面板/表面固定及插合锁紧"
+    },
+    {
+      "code": "cable_entry",
+      "label_zh": "电缆接头",
+      "description": "夹紧电缆、螺纹连接和密封"
+    },
+    {
+      "code": "tool",
+      "label_zh": "工具",
+      "description": "用于装配工艺，不作为成品消耗件"
+    },
+    {
+      "code": "accessory",
+      "label_zh": "附件",
+      "description": "按功能和明确适用关系选择"
+    },
+    {
+      "code": "frame",
+      "label_zh": "框架",
+      "description": "模块位置与固定"
+    },
+    {
+      "code": "seal",
+      "label_zh": "密封件",
+      "description": "材料、尺寸与适用安装状态"
+    },
+    {
+      "code": "cable",
+      "label_zh": "线缆",
+      "description": "导体、绝缘、长度与环境条件"
+    }
+  ],
+  "fields": [
+    {
+      "code": "model",
+      "label_zh": "型号",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert",
+        "contact",
+        "hood",
+        "housing",
+        "cable_entry",
+        "tool",
+        "accessory",
+        "frame",
+        "seal",
+        "cable"
+      ],
+      "feature_group": "identity",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "identity",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "order_number",
+      "label_zh": "订货号",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert",
+        "contact",
+        "hood",
+        "housing",
+        "cable_entry",
+        "tool",
+        "accessory",
+        "frame",
+        "seal",
+        "cable"
+      ],
+      "feature_group": "identity",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "identity",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "category",
+      "label_zh": "部件类别",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert",
+        "contact",
+        "hood",
+        "housing",
+        "cable_entry",
+        "tool",
+        "accessory",
+        "frame",
+        "seal",
+        "cable"
+      ],
+      "feature_group": "identity",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "identity",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "gender",
+      "label_zh": "性别",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert",
+        "contact"
+      ],
+      "feature_group": "identity",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "identity",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "termination",
+      "label_zh": "端接",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert",
+        "contact"
+      ],
+      "feature_group": "identity",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "identity",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "contact_count",
+      "label_zh": "普通接点数",
+      "value_kind": "integer",
+      "canonical_unit": null,
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "identity",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "identity",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "pe_contacts",
+      "label_zh": "PE接点数",
+      "value_kind": "integer",
+      "canonical_unit": null,
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "identity",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "identity",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "housing_size",
+      "label_zh": "壳体规格代号",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert",
+        "hood",
+        "housing",
+        "frame"
+      ],
+      "feature_group": "identity",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "identity",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "standard_pack_quantity",
+      "label_zh": "目录包装量",
+      "value_kind": "integer",
+      "canonical_unit": "pcs",
+      "categories": [
+        "insert",
+        "contact",
+        "hood",
+        "housing",
+        "cable_entry",
+        "tool",
+        "accessory",
+        "frame",
+        "seal",
+        "cable"
+      ],
+      "feature_group": "purchase",
+      "expected": true,
+      "minimum": 1,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "rated_current",
+      "label_zh": "额定电流",
+      "value_kind": "number",
+      "canonical_unit": "A",
+      "categories": [
+        "insert",
+        "contact"
+      ],
+      "feature_group": "electrical",
+      "expected": true,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "rated_voltage",
+      "label_zh": "额定电压",
+      "value_kind": "number",
+      "canonical_unit": "V",
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "electrical",
+      "expected": false,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "rated_voltage_conductor_ground",
+      "label_zh": "导体对地额定电压",
+      "value_kind": "number",
+      "canonical_unit": "V",
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "electrical",
+      "expected": false,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "rated_voltage_conductor_conductor",
+      "label_zh": "导体间额定电压",
+      "value_kind": "number",
+      "canonical_unit": "V",
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "electrical",
+      "expected": false,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "rated_voltage_ul",
+      "label_zh": "UL额定电压",
+      "value_kind": "number",
+      "canonical_unit": "V",
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "electrical",
+      "expected": false,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "rated_impulse_voltage",
+      "label_zh": "额定冲击电压",
+      "value_kind": "number",
+      "canonical_unit": "V",
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "electrical",
+      "expected": false,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "alternative_voltage_marking",
+      "label_zh": "替代电压标识",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "electrical",
+      "expected": false,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "wire_cross_section_min",
+      "label_zh": "最小导线截面",
+      "value_kind": "number",
+      "canonical_unit": "mm2",
+      "categories": [
+        "insert",
+        "contact"
+      ],
+      "feature_group": "termination",
+      "expected": true,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": "wire_cross_section_max",
+      "bound_role": "min"
+    },
+    {
+      "code": "wire_cross_section_max",
+      "label_zh": "最大导线截面",
+      "value_kind": "number",
+      "canonical_unit": "mm2",
+      "categories": [
+        "insert",
+        "contact"
+      ],
+      "feature_group": "termination",
+      "expected": true,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": "wire_cross_section_min",
+      "bound_role": "max"
+    },
+    {
+      "code": "stripping_length",
+      "label_zh": "剥线长度",
+      "value_kind": "number",
+      "canonical_unit": "mm",
+      "categories": [
+        "insert",
+        "contact"
+      ],
+      "feature_group": "termination",
+      "expected": true,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "tightening_test_torque",
+      "label_zh": "接线紧固/试验扭矩",
+      "value_kind": "number",
+      "canonical_unit": "Nm",
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "termination",
+      "expected": true,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [
+        "screw"
+      ],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "wire_awg_range",
+      "label_zh": "AWG规格",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert",
+        "contact"
+      ],
+      "feature_group": "termination",
+      "expected": false,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "plating",
+      "label_zh": "镀层",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "contact"
+      ],
+      "feature_group": "electrical",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "identification_grooves",
+      "label_zh": "接触件识别槽",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "contact"
+      ],
+      "feature_group": "identity",
+      "expected": false,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "limiting_temperature_min",
+      "label_zh": "材料最低温度",
+      "value_kind": "number",
+      "canonical_unit": "degC",
+      "categories": [
+        "insert",
+        "contact",
+        "hood",
+        "housing",
+        "cable_entry",
+        "seal",
+        "cable"
+      ],
+      "feature_group": "environment",
+      "expected": false,
+      "minimum": -273.15,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": "limiting_temperature_max",
+      "bound_role": "min"
+    },
+    {
+      "code": "limiting_temperature_max",
+      "label_zh": "材料最高温度",
+      "value_kind": "number",
+      "canonical_unit": "degC",
+      "categories": [
+        "insert",
+        "contact",
+        "hood",
+        "housing",
+        "cable_entry",
+        "seal",
+        "cable"
+      ],
+      "feature_group": "environment",
+      "expected": false,
+      "minimum": -273.15,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": "limiting_temperature_min",
+      "bound_role": "max"
+    },
+    {
+      "code": "material",
+      "label_zh": "主体材料",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert",
+        "contact",
+        "hood",
+        "housing",
+        "cable_entry",
+        "tool",
+        "accessory",
+        "frame",
+        "seal",
+        "cable"
+      ],
+      "feature_group": "material",
+      "expected": false,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "contact_material",
+      "label_zh": "接触材料",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert",
+        "contact"
+      ],
+      "feature_group": "material",
+      "expected": false,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "flammability_ul94",
+      "label_zh": "UL94阻燃等级",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert",
+        "hood",
+        "housing",
+        "cable",
+        "seal"
+      ],
+      "feature_group": "material",
+      "expected": false,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "contact_resistance_max",
+      "label_zh": "接触电阻上限",
+      "value_kind": "number",
+      "canonical_unit": "mOhm",
+      "categories": [
+        "insert",
+        "contact"
+      ],
+      "feature_group": "electrical",
+      "expected": false,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "insulation_resistance_min",
+      "label_zh": "绝缘电阻下限",
+      "value_kind": "number",
+      "canonical_unit": "Ohm",
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "electrical",
+      "expected": false,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "mechanical_mating_cycles_min",
+      "label_zh": "机械插拔寿命下限",
+      "value_kind": "integer",
+      "canonical_unit": "cycles",
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "mechanical",
+      "expected": false,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "entry_thread_designation",
+      "label_zh": "进线螺纹标识",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "hood",
+        "housing",
+        "cable_entry"
+      ],
+      "feature_group": "interface",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "locking_geometry",
+      "label_zh": "锁紧几何代号",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "hood",
+        "housing"
+      ],
+      "feature_group": "interface",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "locking_variant",
+      "label_zh": "锁扣变体",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "hood",
+        "housing"
+      ],
+      "feature_group": "interface",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "entry_direction",
+      "label_zh": "进线方向",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "hood",
+        "housing"
+      ],
+      "feature_group": "interface",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "mounting",
+      "label_zh": "安装方式",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "housing"
+      ],
+      "feature_group": "interface",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "sealing",
+      "label_zh": "密封结构",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "cable_entry",
+        "hood",
+        "housing",
+        "seal"
+      ],
+      "feature_group": "interface",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "ip_rating",
+      "label_zh": "防护标识",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "hood",
+        "housing",
+        "cable_entry",
+        "seal"
+      ],
+      "feature_group": "environment",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "cable_diameter_min",
+      "label_zh": "最小夹紧外径",
+      "value_kind": "number",
+      "canonical_unit": "mm",
+      "categories": [
+        "cable_entry"
+      ],
+      "feature_group": "interface",
+      "expected": true,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": "cable_diameter_max",
+      "bound_role": "min"
+    },
+    {
+      "code": "cable_diameter_max",
+      "label_zh": "最大夹紧外径",
+      "value_kind": "number",
+      "canonical_unit": "mm",
+      "categories": [
+        "cable_entry"
+      ],
+      "feature_group": "interface",
+      "expected": true,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": "cable_diameter_min",
+      "bound_role": "max"
+    },
+    {
+      "code": "thread_length",
+      "label_zh": "螺纹长度",
+      "value_kind": "number",
+      "canonical_unit": "mm",
+      "categories": [
+        "cable_entry"
+      ],
+      "feature_group": "interface",
+      "expected": true,
+      "minimum": 0,
+      "minimum_exclusive": true,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "derating_reference",
+      "label_zh": "降额依据",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert",
+        "contact"
+      ],
+      "feature_group": "evidence",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "drawing_reference",
+      "label_zh": "图纸依据",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert",
+        "contact",
+        "hood",
+        "housing",
+        "cable_entry",
+        "tool",
+        "accessory",
+        "frame",
+        "seal",
+        "cable"
+      ],
+      "feature_group": "evidence",
+      "expected": false,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "housing_catalog_reference",
+      "label_zh": "壳体目录引用",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "evidence",
+      "expected": false,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "wiring_variant",
+      "label_zh": "接线结构变体",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "variant",
+      "expected": false,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "contact_numbering",
+      "label_zh": "接点编号",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "insert"
+      ],
+      "feature_group": "variant",
+      "expected": false,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    },
+    {
+      "code": "tool_application",
+      "label_zh": "工具适用说明",
+      "value_kind": "text",
+      "canonical_unit": null,
+      "categories": [
+        "tool"
+      ],
+      "feature_group": "variant",
+      "expected": true,
+      "minimum": null,
+      "minimum_exclusive": false,
+      "when_termination": [],
+      "storage": "specification",
+      "paired_parameter": null,
+      "bound_role": null
+    }
+  ]
+}

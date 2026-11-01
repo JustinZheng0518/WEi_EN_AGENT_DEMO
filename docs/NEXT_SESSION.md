@@ -1,6 +1,14 @@
 # 下次继续的交接记录
 
-## 最新停点：HA 全章资料包
+## 最新停点：部件特征模型与实际库升级
+
+用户强调部件的共有/独特特征和数据库基础。本批已实现10类/47字段字典、规范单位/类型/类别/部分端接与范围约束、unknown/not_applicable值状态、逐SKU条件敏感比较及迁移。入口 [特征模型](component-model.md) 和 [升级核对](component-model-audit.md)。
+
+实际库已有私有备份并迁移成功，9张业务表原内容摘要一致。最终97项pytest及7项Node通过，新特征API已做实际库只读验证。当前仍80产品全部pending、1039参数、102关系；本批不审批工程数据、不接模型、不公开部署。新增参数状态不等于审核状态；共有值不推断互配，不对缺项做系列继承。
+
+运行新代码前使用README初始化或`python -m wain.migrations`升级；不要修改已应用001迁移及其字段字典的内容，扩展要新增迁移。下一步补专有接口/条件语义、缺失HA资料与尺寸并逐项审核，保留已有数据及审核。旧库本批备份恢复演练和自动反向迁移未完成。
+
+## 此前停点：HA 全章资料包
 
 用户要求把HA系列全部整理。本批交付 [系列资料总表](ha-series-dossier.md)、[36型号资料卡](ha-series-models.md) 及型号/链路/附件/问题4份CSV，完整数据为 `data/ha_series_dossier.json`，补充转录为 `data/ha_dossier_supplement.json`。运行 `python scripts/ha_dossier.py --check` 检查生成一致性，10项资料回归在 `tests/test_ha_dossier.py`。
 

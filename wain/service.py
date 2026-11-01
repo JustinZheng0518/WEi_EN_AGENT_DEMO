@@ -27,7 +27,7 @@ def search_products(conn,q='',contact_count=None,category=None,gender=None,termi
     for parameter,value in [('rated_voltage',min_voltage),('rated_current',min_current)]:
         if value is not None:
             conditions.append('''EXISTS (SELECT 1 FROM product_specifications s WHERE s.product_id=p.id
-                AND s.parameter=%s AND s.value_number>=%s'''+
+                AND s.parameter=%s AND s.value_state='known' AND s.value_number>=%s'''+
                 ('' if include_pending else " AND s.review_status='reviewed' AND EXISTS (SELECT 1 FROM evidence e WHERE e.id=s.evidence_id AND e.review_status='reviewed')")+')')
             params.extend([parameter,value])
     where=' AND '.join(conditions) or 'true'

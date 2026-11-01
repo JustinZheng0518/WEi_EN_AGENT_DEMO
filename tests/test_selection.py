@@ -49,6 +49,21 @@ def test_real_pending_data_cannot_finalize(catalog):
     assert all(row['product_id'] for row in report['bom'])
     assert any(c['code']=='assessment_mechanical_sealing' and c['status']=='needs_confirmation' for c in report['checks'])
 
+@pytest.mark.parametrize('parameter,code',[
+    ('limiting_temperature_min','temperature_male_insert'),
+    ('wire_cross_section_min','range_male_insert'),
+    ('rated_current','male_insert_rated_current'),
+])
+def test_explicit_unknown_fact_never_passes_even_with_reviewed_test_scope(catalog,parameter,code):
+    req=request()
+    scope,_=fully_audited_fixture(catalog,req)
+    catalog.execute('''UPDATE product_specifications SET value_state='unknown',value_number=NULL,
+        state_reason='Synthetic regression: exact value unresolved'
+        WHERE product_id=%s AND parameter=%s''',(scope['products']['male_insert'],parameter))
+    result=select(catalog,req)
+    assert result['can_finalize'] is False
+    assert any(c['code']==code and c['status']=='needs_confirmation' for c in result['checks'])
+
 @pytest.mark.parametrize('changes,code',[
     ({'current':17},'male_insert_rated_current'),({'wire_mm2':.5},'range_male_insert'),
     ({'ambient_c':150},'temperature_male_insert'),({'cable_diameter_mm':30},'component_cable_entry'),

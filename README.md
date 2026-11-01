@@ -23,6 +23,8 @@ HA 全章资料包：[36 个型号与 18 条候选链路](docs/ha-series-dossier
 
 第一条连接链路资料包：[HA-010 螺钉端接，电缆端到面板端](docs/ha010-line01.md) · [主件及缺项 CSV](docs/ha010-line01-bom.csv)。含 5 类候选主件及 G01–G10 确认事项，尚非工程批准或完整线束。
 
+数据库设计：[部件共有/独特特征与约束](docs/component-model.md)。已增加类别特征字典、类型/单位/端接校验、未知值状态和只读对比接口。升级现有库先备份，再执行 `.venv/bin/python -m wain.migrations`；新接口依赖该迁移，不代表资料或搭配已批准。
+
 ## 数据边界
 
 - 已收齐 32 份 PDF，共 1424 页；文档内容是资料，不是程序或 Agent 的指令。
@@ -119,6 +121,9 @@ API 规范由 FastAPI 生成，可供后续大模型工具适配层使用；当�
 | `GET /series/ha/coverage` | 本章订货表行数、独立型号及参数/搭配缺项，分别报告转录与审核状态 |
 | `GET /health` | 实际查询数据库的健康检查 |
 | `GET /stats` | 表记录数、OCR 和审核状态 |
+| `GET /component-schema` | 部件类别及字段类型、单位和适用范围 |
+| `GET /products/{id}/characteristics` | 单SKU分类特征、来源、值状态及缺项 |
+| `POST /products/compare` | 只读比较明确SKU的共有特征与差异，保留条件和逐项来源 |
 | `GET /products` | 型号、针数、端接方式、额定参数候选筛选 |
 | `GET /products/{id}` | 参数、关系、首次及跨页来源和审核状态 |
 | `GET /candidates` | 分页查看未审核的 OCR 型号/订货号候选 |

@@ -44,10 +44,11 @@
 | ID | 状态 | 要做什么 | 验收条件 | 前置任务 | 已有证据 |
 | --- | --- | --- | --- | --- | --- |
 | DATA-01 | 已完成（限定验收范围） | 建立产品、参数、证据和关系数据结构 | PostgreSQL 主键/外键、来源、条件、状态和本地连接可用。 | — | [schema.sql](../schema.sql)、[wain/db.py](../wain/db.py) |
-| DATA-02 | 进行中 / 部分完成 | 规范字段、单位、中英文术语及电气语义 | 明确普通接点/PE、AC/DC、每接点电流、标准、导体电位关系、降额条件及单位换算。 | — | [wain/ha_series.py](../wain/ha_series.py)、[docs/database.md](../docs/database.md) |
-| DATA-03 | 进行中 / 部分完成 | 可重复批量导入和冲突处理 | 除 HA 外建立按版式/系列复用流程；冲突回滚、保护人工更正、保留重复页来源。 | — | [wain/ha_series.py](../wain/ha_series.py)、[tests/test_ha_series.py](../tests/test_ha_series.py) |
+| DATA-02 | 进行中 / 部分完成 | 规范字段、单位、中英文术语及电气语义 | 明确普通接点/PE、AC/DC、每接点电流、标准、导体电位关系、降额条件及单位换算。 | — | [wain/ha_series.py](../wain/ha_series.py)、[docs/database.md](../docs/database.md)、[docs/component-model.md](../docs/component-model.md)、[docs/component-model-audit.md](../docs/component-model-audit.md)、[migrations/001_component_features.sql](../migrations/001_component_features.sql)、[wain/migrations.py](../wain/migrations.py)、[tests/test_characteristics.py](../tests/test_characteristics.py) |
+| DATA-03 | 进行中 / 部分完成 | 可重复批量导入和冲突处理 | 除 HA 外建立按版式/系列复用流程；冲突回滚、保护人工更正、保留重复页来源。 | — | [wain/ha_series.py](../wain/ha_series.py)、[tests/test_ha_series.py](../tests/test_ha_series.py)、[docs/component-model.md](../docs/component-model.md)、[docs/component-model-audit.md](../docs/component-model-audit.md)、[migrations/001_component_features.sql](../migrations/001_component_features.sql)、[wain/migrations.py](../wain/migrations.py)、[tests/test_characteristics.py](../tests/test_characteristics.py) |
 | DATA-04 | 待做 | 清理 OCR 候选并建立型号总数基准 | 逐章节建立人工可追溯的预期行数、唯一订货号和遗漏清单；不把候选出现数当产品数。 | SOURCE-03, DATA-03 | 待补交付证据 |
-| DATA-05 | 待做 | 完善可追踪的数据库迁移与回滚 | 有版本化迁移、保留审核数据的升级步骤及独立恢复验证。 | DATA-01 | 待补交付证据 |
+| DATA-05 | 进行中 / 部分完成 | 完善可追踪的数据库迁移与回滚 | 有版本化迁移、保留审核数据的升级步骤及独立恢复验证。 | DATA-01 | [docs/component-model.md](../docs/component-model.md)、[docs/component-model-audit.md](../docs/component-model-audit.md)、[migrations/001_component_features.sql](../migrations/001_component_features.sql)、[wain/migrations.py](../wain/migrations.py)、[tests/test_characteristics.py](../tests/test_characteristics.py) |
+| DATA-06 | 已完成（限定验收范围） | 建立类别特征字典、值状态与SKU共性差异比较 | 10类/47字段适用范围、类型、单位及部分端接/上下界有数据库约束；未知/不适用有原因且不当作数值；比较保留每SKU条件、证据和审核状态，不自动继承或推断配对。仅验收当前字段和接口，不代表全目录专有字段及工程规则完成。 | DATA-01 | [data/component_schema.json](../data/component_schema.json)、[migrations/001_component_features.sql](../migrations/001_component_features.sql)、[wain/characteristics.py](../wain/characteristics.py)、[tests/test_characteristics.py](../tests/test_characteristics.py)、[docs/component-model.md](../docs/component-model.md)、[docs/component-model-audit.md](../docs/component-model-audit.md) |
 
 ### HA 完整数据与疑点闭环
 

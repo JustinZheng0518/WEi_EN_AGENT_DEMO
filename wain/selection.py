@@ -70,7 +70,7 @@ def select(conn,request):
         if role in chosen: chosen[role]=pid
         else: check('unexpected_'+role,False,'本端接方式不应包含 '+LABELS[role]+'。')
     facts={}
-    def spec_ok(spec): return spec['review_status']=='reviewed' and spec['evidence_status']=='reviewed'
+    def spec_ok(spec): return spec['value_state']=='known' and spec['review_status']=='reviewed' and spec['evidence_status']=='reviewed'
     for role,pid in chosen.items():
         p=conn.execute('''SELECT p.*,e.review_status AS evidence_status,pg.global_page FROM products p
             JOIN evidence e ON e.id=p.evidence_id JOIN pages pg ON pg.id=e.page_id WHERE p.id=%s''',(pid,)).fetchone() if pid else None
@@ -98,7 +98,7 @@ def select(conn,request):
         if role.endswith('_insert'):
             lo=specs.get('limiting_temperature_min',[]);hi=specs.get('limiting_temperature_max',[])
             temp=None
-            if request.ambient_c is not None and len(lo)==len(hi)==1 and lo[0]['unit']==hi[0]['unit']=='degC':
+            if request.ambient_c is not None and len(lo)==len(hi)==1 and lo[0]['unit']==hi[0]['unit']=='degC' and lo[0]['value_number'] is not None and hi[0]['value_number'] is not None:
                 within=float(lo[0]['value_number'])<=request.ambient_c<=float(hi[0]['value_number'])
                 temp=False if not within else True if spec_ok(lo[0]) and spec_ok(hi[0]) else None
             check('temperature_'+role,temp,LABELS[role]+'必须满足材料极限温度，且仍需另核对带载降额。',[73])
@@ -128,7 +128,7 @@ def select(conn,request):
         if category in {'insert','contact','cable_entry'}:
             lo,hi,u,value=range_keys
             low=specs.get(lo,[]);high=specs.get(hi,[])
-            if value is None or len(low)!=1 or len(high)!=1 or low[0]['unit']!=u or high[0]['unit']!=u:
+            if value is None or len(low)!=1 or len(high)!=1 or low[0]['unit']!=u or high[0]['unit']!=u or low[0]['value_state']!='known' or high[0]['value_state']!='known':
                 check('range_'+role,None,LABELS[role]+'需要有效线径/外径及有来源的适用范围。')
             else:
                 a=low[0]['value_number'];b=high[0]['value_number']

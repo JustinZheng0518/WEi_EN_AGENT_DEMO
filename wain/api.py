@@ -16,6 +16,7 @@ from typing import Literal
 from psycopg.types.json import Jsonb
 from .db import connect
 from .service import stats, search_products, product_details
+from .characteristics import CharacteristicError, definitions as feature_definitions, describe as describe_features, compare as compare_features
 
 app=FastAPI(title='WAIN Catalog Database',version='0.1.0',
     description='Evidence database with local review tools. Pending facts are not validated selections.')
@@ -148,6 +149,31 @@ class Gender(str,Enum):
     male='male'
     female='female'
     none='none'
+
+@app.get('/component-schema')
+def component_schema(category:str|None=None):
+    with connect() as conn:
+        return {'categories':conn.execute('SELECT * FROM component_categories ORDER BY code').fetchall(),
+                'fields':feature_definitions(conn,category),'automatic_inheritance':False}
+
+class FeatureComparison(BaseModel):
+    model_config=ConfigDict(extra='forbid')
+    product_ids:list[PositiveInt]=Field(min_length=2,max_length=20)
+    include_pending:bool=False
+
+@app.post('/products/compare')
+def compare_product_features(body:FeatureComparison):
+    try:
+        with connect() as conn:return compare_features(conn,body.product_ids,body.include_pending)
+    except CharacteristicError as exc:raise HTTPException(422,str(exc))
+
+@app.get('/products/{product_id}/characteristics')
+def product_characteristics(product_id:int,include_pending:bool=False):
+    try:
+        with connect() as conn:result=describe_features(conn,product_id,include_pending)
+    except CharacteristicError as exc:raise HTTPException(422,str(exc))
+    if result is None:raise HTTPException(404,'Product not found')
+    return result
 
 @app.get('/health')
 def health():

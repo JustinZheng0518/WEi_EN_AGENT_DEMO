@@ -16,7 +16,15 @@
 当前阶段的数量和下一步以 [STATUS.md](STATUS.md) 为准，所有步骤见 [ROADMAP.md](ROADMAP.md)，
 目录细项见 [series-progress.csv](series-progress.csv)。不要从历史日志中的旧数字推断当前进度。
 
-## 最新工作方向：HA 全章资料整理与确认
+## 最新工作方向：部件共性/差异与数据库基础
+
+- 用户强调先总结每类部件的共性和独特属性，自主修改数据库。设计说明`docs/component-model.md`，真实升级核对`docs/component-model-audit.md`。
+- 实际库已备份并应用`001_component_features`迁移，新增10类/47字段字典与参数值状态；9张业务表原事实/审核摘要一致。新环境使用README初始化或`python -m wain.migrations`升级，不能只启动新版API而漏迁移。已应用SQL及`data/component_schema.json`由校验和固定，未来扩字段应加新迁移。
+- 参数继续以逐SKU/条件/证据存储；不建立隐式家族继承。known不是reviewed；unknown/not_applicable必须无数值且有原因。新只读特征和比较接口保留来源，数值/条件不同或缺失不当共有，不推断配对。
+- 最终pytest97项、Node7项通过；实际80产品仍pending、1039参数、102关系。HA全章资料包仍未自动导入，尺寸/工程批准和模型/公开部署仍未完成。
+- 下一步补类型专有接口字段、条件语义、缺失数据及独立审核；DATA-05仍部分完成，未做本批备份恢复演练或自动反向迁移。
+
+## 此前：HA 全章资料整理与确认
 
 - 用户在第一条样板后要求扩展整个 HA 系列。本批查看20页原图，交付36个型号资料卡、18条链路、43条附件/工具记录、4种规格的8个标准侧进线壳体候选和12类确认事项。入口 `docs/ha-series-dossier.md`；生成 `python scripts/ha_dossier.py`、`--check`。
 - 新资料仅为版本化目录资料包，未写入业务数据库；数据库统计仍沿用旧快照，网页仍只支持HA-010。不能声称已扩成HA全系列自动选型或已工程批准。

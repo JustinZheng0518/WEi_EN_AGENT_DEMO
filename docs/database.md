@@ -1,10 +1,16 @@
 # 数据结构与后续 Agent 边界
 
+部件共性/差异、10类47字段字典、值状态与迁移规则见 [部件特征模型](component-model.md)。参数事实仍以逐SKU、逐条件、逐证据存储，不按系列自动继承。
+
 ```mermaid
 erDiagram
     documents ||--|{ pages : contains
     pages ||--o{ evidence : supports
     pages ||--o{ product_candidates : stages
+    component_categories ||--o{ products : classifies
+    component_categories ||--o{ category_characteristics : permits
+    characteristic_definitions ||--o{ category_characteristics : defines
+    characteristic_definitions ||--o{ product_specifications : validates
     product_families ||--o{ products : groups
     evidence ||--o{ products : identifies
     evidence ||--o{ product_specifications : supports

@@ -13,3 +13,5 @@ def connect():
 
 def initialize(conn):
     conn.execute((ROOT / 'schema.sql').read_text())
+    from .migrations import migrate
+    migrate(conn)

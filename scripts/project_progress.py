@@ -88,7 +88,7 @@ def current_status(data):
         ('参数 / 待审核关系',f'{s["specifications"]} 条 / {s["pending_relations"]} 条'),
         ('来源 / 目录编排',f'{s["source_occurrences"]} 条 / {s["catalog_arrangements"]} 个待核对编排'),
         ('HA 本章',f'{s["ha_insert_skus"]} 个芯体；含端子等 {s["ha_chapter_skus"]} 个不同订货号、{s["ha_ordering_rows"]} 行来源'),
-        ('最近已记录应用测试',f'{s["last_recorded_passing_tests"]} 项通过；执行范围和时间以快照依据及工作日志为准'),
+        ('最近已记录 pytest 回归',f'{s["last_recorded_passing_tests"]} 项通过；执行范围和时间以快照依据及工作日志为准'),
         ('模型 API / 公开部署 / 真实批准 BOM',' / '.join('已完成限定范围' if s[key] else '未完成'
             for key in ['llm_connected','public_deployment','real_engineering_approved_bom']))]
     lines=['# 当前项目状态与下一步','',f'更新日期：{data["updated_on"]}（{data["timezone"]}）。',
