@@ -57,7 +57,7 @@ def test_real_pending_data_cannot_finalize(catalog):
 def test_explicit_unknown_fact_never_passes_even_with_reviewed_test_scope(catalog,parameter,code):
     req=request()
     scope,_=fully_audited_fixture(catalog,req)
-    catalog.execute('''UPDATE product_specifications SET value_state='unknown',value_number=NULL,
+    catalog.execute('''UPDATE product_specifications SET value_state='NA',value_number=NULL,
         state_reason='Synthetic regression: exact value unresolved'
         WHERE product_id=%s AND parameter=%s''',(scope['products']['male_insert'],parameter))
     result=select(catalog,req)
@@ -69,11 +69,11 @@ def test_unknown_spring_stripping_process_blocks_otherwise_reviewed_test_scope(c
     scope,eid=fully_audited_fixture(catalog,req)
     assert select(catalog,req)['can_finalize'] is True
     catalog.execute('''INSERT INTO product_specifications(product_id,parameter,unit,value_state,state_reason,
-        evidence_id,review_status) VALUES(%s,'stripping_length','mm','unknown',
+        evidence_id,review_status) VALUES(%s,'stripping_length','mm','NA',
         'HA-specific spring stripping instruction still missing',%s,'reviewed')''',(scope['products']['male_insert'],eid))
     result=select(catalog,req)
     assert result['can_finalize'] is False
-    assert any(c['code']=='unknown_male_insert_stripping_length' and c['status']=='needs_confirmation' for c in result['checks'])
+    assert any(c['code']=='na_male_insert_stripping_length' and c['status']=='needs_confirmation' for c in result['checks'])
 
 @pytest.mark.parametrize('changes,code',[
     ({'current':17},'male_insert_rated_current'),({'wire_mm2':.5},'range_male_insert'),

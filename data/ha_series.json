@@ -59,7 +59,7 @@
   "expected": {"insert_skus":36,"insert_ordering_rows":42,"chapter_unique_skus":72,"chapter_ordering_rows":147,"additional_referenced_tool_skus":2},
   "issues": [
     {"code":"ha002-contact-definition","models":["HA-002-MS","HA-002-FS"],"page":74,"detail":"Ordering rows explicitly list HA-002, but the page headline says 3/4+PE and the technical contact list omits 2. Do not infer signal/PE counts from the model digits."},
-    {"code":"ha004-v2-wire-range","models":["HA-004-M-V2","HA-004-F-V2"],"page":73,"detail":"Technical table gives a general HA-003/004 screw range and an explicit larger HA-003-M/F-V2 range, but no separate HA-004-V2 range. Keep its wire limits unknown pending variant confirmation."},
+    {"code":"ha004-v2-wire-range","models":["HA-004-M-V2","HA-004-F-V2"],"page":73,"detail":"Technical table gives a general HA-003/004 screw range and an explicit larger HA-003-M/F-V2 range, but no separate HA-004-V2 range. Keep its wire limits NA pending variant confirmation."},
     {"code":"ha032-not-a-single-sku","models":[],"page":78,"detail":"HA-032 is a 2x16 arrangement; ordering table supplies HA-016 base and (17-32) numbered halves. No separate HA-032 order number is printed."},
     {"code":"drawing-axes-and-mounting","models":[],"page":73,"detail":"Dimension drawings and panel cutouts are retained as evidence but numeric dimension axes and mounting state are not yet independently transcribed or verified."},
     {"code":"no-engineering-approval","models":[],"page":73,"detail":"Derating curves, model mating, PE construction, complete enclosures and seals require separate engineering review. Catalog transcription is not approval."}

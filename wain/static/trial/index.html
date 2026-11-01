@@ -12,15 +12,15 @@
 <label class="sr-only" for="requestText">自然语言需求</label><textarea id="requestText" rows="5" placeholder="例如：24V，每接点 3A，10 个普通接点另加 PE，螺钉接线，导线 1mm²，线缆外径 8mm，环境 25℃，1 套。" maxlength="3000"></textarea>
 <div class="example-row"><span>试试</span><button class="example" data-example="normal" type="button">24V / 3A 基础方案</button><button class="example" data-example="crimp" type="button">两套压接方案</button><button class="example" data-example="overcurrent" type="button">17A 超额定测试</button><button class="example" data-example="missing" type="button">缺参数测试</button></div>
 <div class="parse-bottom"><small>当前为有限规则识别，尚未接入大模型；复杂或含糊描述请手动核对。</small><button id="parseButton" class="secondary" type="button">识别参数 <span aria-hidden="true">↓</span></button></div><div id="parseMessages" class="messages" aria-live="polite"></div></section>
-<section class="card parameters-card"><div class="section-title"><span class="step">02</span><div><h2>核对选型条件</h2><p>留空代表未知，不会被当成满足条件。</p></div></div>
+<section class="card parameters-card"><div class="section-title"><span class="step">02</span><div><h2>核对选型条件</h2><p>留空代表NA，不会被当成满足条件。</p></div></div>
 <form id="trialForm"><div class="fields">
 <label for="voltage">工作电压 <span>V</span><input id="voltage" name="voltage" type="number" min="0" max="100000" step="any" placeholder="例如 24" required></label>
 <label for="current">每接点工作电流 <span>A</span><input id="current" name="current" type="number" min="0" max="100000" step="any" placeholder="例如 3" required></label>
 <label for="contacts">普通接点数量 <span>PE 另计</span><input id="contacts" name="contacts" type="number" min="1" max="100" step="1" placeholder="当前支持 10" required></label>
 <label for="termination">端接方式<select id="termination" name="termination" required><option value="">请选择</option><option value="screw">螺钉接线</option><option value="crimp">压接端子</option><option value="spring">普通弹簧</option></select></label>
-<label for="wire_mm2">导线截面积 <span>mm²</span><input id="wire_mm2" name="wire_mm2" type="number" min="0" max="1000" step="any" placeholder="未知可留空"></label>
-<label for="cable_diameter_mm">线缆外径 <span>mm</span><input id="cable_diameter_mm" name="cable_diameter_mm" type="number" min="0" max="1000" step="any" placeholder="未知可留空"></label>
-<label for="ambient_c">环境温度 <span>℃</span><input id="ambient_c" name="ambient_c" type="number" min="-273.15" max="1000" step="any" placeholder="未知可留空"></label>
+<label for="wire_mm2">导线截面积 <span>mm²</span><input id="wire_mm2" name="wire_mm2" type="number" min="0" max="1000" step="any" placeholder="NA可留空"></label>
+<label for="cable_diameter_mm">线缆外径 <span>mm</span><input id="cable_diameter_mm" name="cable_diameter_mm" type="number" min="0" max="1000" step="any" placeholder="NA可留空"></label>
+<label for="ambient_c">环境温度 <span>℃</span><input id="ambient_c" name="ambient_c" type="number" min="-273.15" max="1000" step="any" placeholder="NA可留空"></label>
 <label for="quantity">连接套数 <span>套</span><input id="quantity" name="quantity" type="number" min="1" max="10000" value="1" required></label>
 </div><details class="advanced"><summary>进线方向和端子镀层</summary><div class="fields"><label>进线方向<select id="entry_direction" name="entry_direction"><option value="side">侧进线</option><option value="top">顶进线</option></select></label><label>压接端子镀层<select id="plating" name="plating"><option value="silver">镀银</option><option value="gold">镀金</option></select></label></div><p>这些是明确显示的试验默认选项，可按需求修改。</p></details>
 <label class="confirmation" id="ambiguityWrap" hidden><input type="checkbox" id="ambiguityConfirmed">我已核对：针数指普通接点，PE 另计；电流指每接点工作电流。</label>

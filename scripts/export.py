@@ -13,6 +13,7 @@ folder=ROOT/'.local/exports'
 folder.mkdir(parents=True,exist_ok=True)
 
 def csv_value(value):
+    if value is None: return 'NA'
     if isinstance(value,(dict,list)):
         value=json.dumps(value,ensure_ascii=False)
     if isinstance(value,str) and value.lstrip().startswith(('=','+','-','@')):
@@ -44,7 +45,7 @@ with connect() as conn:
     headers=list(pilot[0]) if pilot else []
     table='<tr>'+''.join('<th>'+escape(k)+'</th>' for k in headers)+'</tr>'
     for row in pilot:
-        table+='<tr>'+''.join('<td>'+escape(str(v) if v is not None else '未知')+'</td>' for v in row.values())+'</tr>'
+        table+='<tr>'+''.join('<td>'+escape(str(v) if v is not None else 'NA')+'</td>' for v in row.values())+'</tr>'
     sources=''
     for source in conn.execute('''SELECT p.global_page,p.local_page,p.printed_page,d.source_path
         FROM pages p JOIN documents d ON d.id=p.document_id WHERE p.global_page IN (73,76,77)

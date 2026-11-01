@@ -32,7 +32,7 @@ def test_import_does_not_create_products_or_approvals_and_repeats_safely(db):
     import_inventory(db);import_inventory(db)
     report=summary(db)
     assert report['contents_entries']==73
-    assert report['sales_priority']=='unknown'
+    assert report['sales_priority']=='NA'
     assert report['all_products_entered'] is False
     assert report['sample_products_assigned']==before==48
     assert report['sample_products_unassigned']==0

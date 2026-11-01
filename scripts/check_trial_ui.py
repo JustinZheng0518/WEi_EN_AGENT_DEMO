@@ -1,5 +1,6 @@
 """Read-only online and portable trial browser acceptance; no review writes."""
 import os
+import re
 from pathlib import Path
 from playwright.sync_api import sync_playwright, expect
 
@@ -46,7 +47,12 @@ with sync_playwright() as p:
             expect(page.locator('.bom-item').filter(has_text=role).locator('.quantity')).to_contain_text('20')
         page.click('[data-example="missing"]'); page.click('#runButton')
         expect(page.locator('#resultBanner')).to_contain_text('仍需确认')
-        expect(page.locator('#bomView')).to_contain_text('待选定')
+        expect(page.locator('#bomView .model').filter(has_text=re.compile(r'^NA$'))).to_have_count(3)
+        with page.expect_download() as na_download:
+            page.locator('#exportButton').click()
+        na_csv=Path(na_download.value.path()).read_text(encoding='utf-8-sig')
+        assert '"NA"' in na_csv and '未知' not in na_csv
+        assert '未知' not in page.locator('body').inner_text()
         page.click('#checksTab'); expect(page.locator('#checksView')).to_contain_text('线')
         # Unsupported requests must not leave the previous BOM usable.
         page.fill('#contacts', '8'); page.click('#runButton')

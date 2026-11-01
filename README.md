@@ -17,13 +17,15 @@
 
 整本英文目录的 [系列与类别导航](docs/catalog-map.md) 已单独整理：总目录的 73 个条目、13 个分类，
 包括系列、规格、附件、服务与参考内容，不等于 73 个独立产品系列。每项带有总目录来源、
-印刷页码及部分样板覆盖情况；业务重要性和销量优先级仍未知。
+印刷页码及部分样板覆盖情况；业务重要性和销量优先级仍NA。
 
 HA 全章资料包：[36 个型号与 18 条候选链路](docs/ha-series-dossier.md) · [型号参数 CSV](docs/ha-series-models.csv) · [链路 CSV](docs/ha-series-routes.csv) · [附件 CSV](docs/ha-series-accessories.csv) · [未解事项](docs/ha-series-issues.csv)。资料包不扩展当前 HA-010 网页选型范围，未完成尺寸全数值转录或真实工程批准。
 
 第一条连接链路资料包：[HA-010 螺钉端接，电缆端到面板端](docs/ha010-line01.md) · [主件及缺项 CSV](docs/ha010-line01-bom.csv)。含 5 类候选主件及 G01–G10 确认事项，尚非工程批准或完整线束。
 
-数据库设计：[部件共有/独特特征与约束](docs/component-model.md)。已增加类别特征字典、类型/单位/端接校验、未知值状态和只读对比接口。升级现有库先备份，再执行 `.venv/bin/python -m wain.migrations`；新接口依赖该迁移，不代表资料或搭配已批准。
+数据库设计：[部件共有/独特特征与约束](docs/component-model.md)。已增加类别特征字典、类型/单位/端接校验、NA值状态和只读对比接口。升级现有库先备份，再执行 `.venv/bin/python -m wain.migrations`；新接口依赖该迁移，不代表资料或搭配已批准。
+
+NA规则：[NA状态与迁移](docs/na-policy.md)。不确定数据统一标NA，不使用旧状态；NA保留原因和来源，与“已确认不适用”分开。
 
 ## 数据边界
 
@@ -35,7 +37,7 @@ HA 全章资料包：[36 个型号与 18 条候选链路](docs/ha-series-dossier
   后续加入配套产品并完成 HA 本章订货号转录，当前共 88 条产品，全部仍待独立审核。
 - HA 本章登记 36 个芯体、72 个不同订货号、147 行订货表来源，详见 [型号与缺项核对](docs/ha-coverage.md)。
   这只表示有边界的本章订货表转录完成，不表示所有参数、搭配或整本目录已完成。
-- 当前 1149 条参数记录保留独立证据（含 20 条明确未知记录）；102 条端子/可选编码件关系仍待审核。
+- 当前 1149 条参数记录保留独立证据（含 20 条明确NA记录）；102 条端子/可选编码件关系仍待审核。
 - 当前没有审核通过的完整搭配，不提供自动通过的 BOM。额定值筛选只是候选筛选，必须继续核验降额、温度、线径等条件。
 - 目录没有声明的配对关系不推断为事实；没有自动添加 `mates_with` 关系。
 
@@ -66,7 +68,7 @@ bash scripts/setup.sh
 
 ## HA 资料包差异与补充导入
 
-[差异及实际导入结果](docs/ha-reconciliation.md) · [逐项差异CSV](docs/ha-reconciliation-diff.csv)。本批新增8个配套产品、90条有值参数和20条未知记录，旧记录及审核保持；4处V2扭矩差异与5条未登记SW字段保留待办。
+[差异及实际导入结果](docs/ha-reconciliation.md) · [逐项差异CSV](docs/ha-reconciliation-diff.csv)。本批新增8个配套产品、90条有值参数和20条NA记录，旧记录及审核保持；4处V2扭矩差异与5条未登记SW字段保留待办。
 
 ```bash
 .venv/bin/python -m wain.ha_reconcile plan
@@ -76,7 +78,7 @@ bash scripts/setup.sh
 .venv/bin/python -m wain.catalog export
 ```
 
-补充导入只追加pending，不覆盖旧值、不批准搭配；执行前还核对PDF字节校验值。unknown的新增动作完成不表示未知问题已解决。原HA批量转录工具面对已有未知或人工更正可能停止，应先查看差异，不盲目重导。网页仍限定HA-010；离线HTML仍是其原构建快照，未在本批重建。
+补充导入只追加pending，不覆盖旧值、不批准搭配；执行前还核对PDF字节校验值。NA的新增动作完成不表示NA问题已解决。原HA批量转录工具面对已有NA或人工更正可能停止，应先查看差异，不盲目重导。网页仍限定HA-010；离线HTML已按NA规则重建，含48条样板投影。
 
 ## 导入与恢复进度
 

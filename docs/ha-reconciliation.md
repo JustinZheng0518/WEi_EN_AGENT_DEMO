@@ -12,22 +12,22 @@
 | existing_identity | 79 | 87 |
 | new_fact | 90 | 0 |
 | new_identity | 8 | 0 |
-| new_unknown | 20 | 0 |
+| new_na | 20 | 0 |
 | requires_review | 4 | 4 |
 | schema_gap | 5 | 5 |
 
-本次实际添加：{"known_facts":90,"products":8,"unknowns":20}。没有新增或批准适配关系，没有工程批准。
+本次实际添加：{"known_facts":90,"products":8,"na_records":20}。没有新增或批准适配关系，没有工程批准。
 
-equivalent只表示与资料包记录对齐，不代表已审核。new_unknown降为0表示未知占位已写入，新增的20条unknown仍待确认，并非问题已解决。
+equivalent只表示与资料包记录对齐，不代表已审核。new_na降为0表示NA占位已写入，新增的20条NA仍待确认，并非问题已解决。
 
 ## 仍需复核的逐项差异
 
 | 型号 | 字段 | 状态 | 旧值 / 状态 | 资料包值 / 状态 | 文件页 |
 | --- | --- | --- | --- | --- | --- |
-| HA-003-M-V2 | tightening_test_torque | requires_review | 0.25 | unknown | 73 |
-| HA-003-F-V2 | tightening_test_torque | requires_review | 0.25 | unknown | 73 |
-| HA-004-M-V2 | tightening_test_torque | requires_review | 0.25 | unknown | 73 |
-| HA-004-F-V2 | tightening_test_torque | requires_review | 0.25 | unknown | 73 |
+| HA-003-M-V2 | tightening_test_torque | requires_review | 0.25 | NA | 73 |
+| HA-003-F-V2 | tightening_test_torque | requires_review | 0.25 | NA | 73 |
+| HA-004-M-V2 | tightening_test_torque | requires_review | 0.25 | NA | 73 |
+| HA-004-F-V2 | tightening_test_torque | requires_review | 0.25 | NA | 73 |
 | WNA-M20(D4-8) | wrench_size | schema_gap | 无同条件记录 | 22 | 1401 |
 | WNA-M20(D6-12) | wrench_size | schema_gap | 无同条件记录 | 22 | 1401 |
 | WNA-M20(D8-14) | wrench_size | schema_gap | 无同条件记录 | 24 | 1401 |
@@ -38,12 +38,12 @@ requires_review保留原记录，不自动判断哪一方正确；condition_diff
 
 ## 审核与使用边界
 
-- 本批只补目录事实和明确未知；HA-002普通/PE接点、HA-004-V2线径、V2工艺等仍待确认。unknown没有数值，不等于0或不需要。
+- 本批只补目录事实和明确NA；HA-002普通/PE接点、HA-004-V2线径、V2工艺等仍待确认。NA没有数值，不等于0或不需要。
 - HA-032仍为真实HA-016半组编排；不创建独立HA-032订货号。原有配对/关系及工程结论不增加、不批准。
 - 壳体规格、锁扣名称、入口标识仅为产品参数，不证明芯体/壳体或壳体/接头实际适配。
 - 线径/剥线的条件保留；压接芯体的7.5mm只针对所列普通压接接触件，不能套给PE。
 - 接头温度按static/dynamic分开，不套芯体温度；扳手SW暂列schema_gap，不擅自挪用其他字段。
-- 旧批量转录脚本仍针对旧基线；补充后不应盲目重跑以覆盖unknown或工艺更正，应先使用此差异工具。
+- 旧批量转录脚本仍针对旧基线；补充后不应盲目重跑以覆盖NA或工艺更正，应先使用此差异工具。
 
 [下载逐项差异CSV](ha-reconciliation-diff.csv)。完整导入前后计划和校验摘要保存在本地忽略目录，避免把备份、PDF或私有路径提交Git。
 

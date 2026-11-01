@@ -11,7 +11,7 @@
       "torque_nm": 0.25,
       "stripping_mm": 4.5,
       "stripping_source_page": 64,
-      "notes": "小规格专用技术页0.25 N·m优先于通用工艺表；不是安装螺钉或PE未知紧固点扭矩",
+      "notes": "小规格专用技术页0.25 N·m优先于通用工艺表；不是安装螺钉或PENA紧固点扭矩",
       "source_page": 73
     },
     "small_screw_v2_003": {
@@ -1365,7 +1365,7 @@
       "id": "PE-WIRING",
       "models": [],
       "title": "PE、线缆和外部供料",
-      "required_evidence": "核实两侧PE端接及壳体接地连续性、导线长度/绝缘/线色/线序、设备端子和剥线；未知数量不记0",
+      "required_evidence": "核实两侧PE端接及壳体接地连续性、导线长度/绝缘/线色/线序、设备端子和剥线；NA数量不记0",
       "source_pages": [
         73,
         74,

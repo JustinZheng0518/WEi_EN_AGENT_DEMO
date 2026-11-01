@@ -141,7 +141,7 @@ def validate(data, chapter):
 
 def show(value):
     if value is None:
-        return '待确认'
+        return 'NA'
     if isinstance(value, list):
         return ' / '.join(map(str, value))
     return str(value)
@@ -158,7 +158,7 @@ def csv_text(headers, rows):
     stream = io.StringIO(newline='')
     w = csv.writer(stream, lineterminator='\n')
     w.writerow(headers)
-    w.writerows(rows)
+    w.writerows([['NA' if value is None or value == '' else value for value in row] for row in rows])
     return '\ufeff' + stream.getvalue()
 
 
@@ -217,9 +217,9 @@ def outputs(data):
         '## 参数与工艺中容易混淆的地方', '',
         '- HA-002/003/004：10 A；230 V 导体对地、400 V 导体对导体。替代标识及 UL 600 V 单独保留，不能统一取最大值。',
         '- HA-010/016：16 A、250 V、污染等级 3；污染等级 2 的 250/400 V 标识另列，实际工况及降额未批准。HA-032 组合页另标 250 V、16 A，但没有独立 HA-032 降额曲线。',
-        '- 螺钉普通 HA-003：0.75–1.5 mm²、0.25 N·m；HA-003-V2 线径为 0.75–2.5 mm²，但 V2 扭矩/剥线需变体确认。HA-004-V2 线径保持未知。',
+        '- 螺钉普通 HA-003：0.75–1.5 mm²、0.25 N·m；HA-003-V2 线径为 0.75–2.5 mm²，但 V2 扭矩/剥线需变体确认。HA-004-V2 线径保持NA。',
         '- 螺钉 HA-010/016：0.75–2.5 mm²、0.5 N·m；工艺页 00-09 给 HA-003/004 剥线 4.5 mm、HA-010/016/032 为 7.5 mm。通用表未单列 V2；不据此覆盖专用参数或批准 PE 紧固点。',
-        '- 普通弹簧：0.14–2.5 mm²；HA 普通弹簧剥线仍未知。00-14 页列的是 HE/HVE 等，不能直接套其 7–9 mm。Quick-in 为 0.5–2.5 mm²、剥线 10±0.5 mm，独立记录。',
+        '- 普通弹簧：0.14–2.5 mm²；HA 普通弹簧剥线仍NA。00-14 页列的是 HE/HVE 等，不能直接套其 7–9 mm。Quick-in 为 0.5–2.5 mm²、剥线 10±0.5 mm，独立记录。',
         '- 压接接触件：32 个订货号，分公母、银/金镀层、8 档线径；最小档 0.14–0.37 mm²，其余按明确规格，不把相邻规格插值为连续适用。剥线 7.5 mm。',
         '- 0.14–0.37 mm² 按 HA 页选 TL02；工具页明确 TL02G 不适合 16 A、0.37 mm² 接触件。小于 0.75 mm² 推荐 TL15 辅助装针；TL01 用于退针。工具不计入成品数量。',
         '- CODE-Q3 仅列于 HA-003-V2 和 HA-003 Quick-in；CODE-Q5 仅列于 HA-004 Quick-in。不把编码件认定为所有 HA 的必需件。',
@@ -244,7 +244,7 @@ def outputs(data):
                      '- 待确认：' + '、'.join(route['open_issue_ids']) + '。', '']
     overview += ['## 未解事项与技术确认', '', table(['ID', '事项', '需要取得的依据', '文件页'],
                   [[i['id'], i['title'], i['required_evidence'], show(i['source_pages'])] for i in data['issues']]), '',
-                 '所有链路还需确认实际电压、电流、同时载流、线径、外径、温度、用途、防护、公母安装方向、PE、紧固件、密封及随件范围。线缆/面板内导线/设备端子/保护盖等未选定项数量保持未知，不当作不需要。', '',
+                 '所有链路还需确认实际电压、电流、同时载流、线径、外径、温度、用途、防护、公母安装方向、PE、紧固件、密封及随件范围。线缆/面板内导线/设备端子/保护盖等未选定项数量保持NA，不当作不需要。', '',
                  '向厂家或公司技术人员询问时，应带上链路 ID、全部候选订货号及真实工况，要求逐项提供配对、安装图、端接工艺、PE、降额与附件清单依据。本批未对外发送信息。', '',
                  '## 来源与复现', '',
                  table(['文件页', '印刷页', '来源分卷', '分卷内页'],

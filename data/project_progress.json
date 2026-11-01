@@ -1,25 +1,25 @@
 {
   "updated_on": "2026-10-31",
   "timezone": "America/Denver",
-  "baseline_commit": "a6d234dff11db3c9b9b25a4b5634c82cbf3b32b1",
+  "baseline_commit": "f966ec056b7ac15e6322dd80555d0f8f8306f145",
   "release_stage": "development",
-  "goal": "根据中英文自然语言需求，基于可追溯产品数据生成完整搭配和 BOM；未知、冲突、缺件或未经审核的工程条件不能判定通过。当前优先英文目录。",
-  "snapshot_basis": "本批对照87个HA资料包订货号及1041条字段断言，完成20页来源映射和实际PDF字节核对；私有备份后补入8个产品、90条有值参数、20条明确未知。实际库现为88产品全部pending、1149参数（20条unknown）、237证据、102关系、157跨页来源、6编排；HA本章36芯体/72订货号/147行不变。10张业务表原记录逐条保留，未新增或批准适配。最终pytest111项通过；本批未重跑浏览器/Node验收或重建离线HTML。4处V2扭矩差异和5条SW字段字典缺项仍保留，尺寸/工程批准/模型及公开部署未完成。",
+  "goal": "根据中英文自然语言需求，基于可追溯产品数据生成完整搭配和 BOM；NA、冲突、缺件或未经审核的工程条件不能判定通过。当前优先英文目录。",
+  "snapshot_basis": "按用户规则将无法确认的数据统一NA（Not Available），与已确认不适用分开。备份后应用002迁移，20条旧状态转NA并新增20条前后审计；数值、来源和审核决定保留。实际88产品全pending、1149参数=1129 known+20 NA、237证据、102关系、157跨页来源、6编排，当前旧状态0条且禁止再写。导入、比较、选型、页面、CSV与资料包已统一NA；离线演示重建为48投影。最终pytest117项、Node7项通过；Chromium数据库版/离线版含NA页面及CSV验收通过。NA不填0、不默认通过，工程批准/模型/公开部署未完成。",
   "snapshot": {
     "pdf_files": 32, "pdf_pages": 1424, "ocr_pages": 1424,
     "catalog_entries": 73, "catalog_groups": 13,
     "ocr_candidate_occurrences": 13109,
     "products": 88, "pending_products": 88, "approved_products": 0,
-    "specifications": 1149, "pending_relations": 102,
+    "specifications": 1149, "na_specifications": 20, "pending_relations": 102,
     "source_occurrences": 157, "catalog_arrangements": 6,
     "ha_insert_skus": 36, "ha_chapter_skus": 72, "ha_ordering_rows": 147,
-    "last_recorded_passing_tests": 111,
+    "last_recorded_passing_tests": 117,
     "llm_connected": false, "public_deployment": false, "all_catalog_products_entered": false,
     "real_engineering_approved_bom": false
   },
   "next_tasks": ["HA-04", "HA-03", "HA-05", "DATA-02", "DATA-05", "HA-02", "REVIEW-03", "REVIEW-04"],
   "known_gaps": [
-    "HA资料补充入库仍保留4处V2扭矩差异（旧库带变体确认条件的0.25Nm、资料包未知）及5条SW扳手尺寸未登记字段；20条unknown已入库但未解决。新增壳体/接头不代表真实配对或完整BOM获批。",
+    "HA资料补充入库仍保留4处V2扭矩差异（旧库带变体确认条件的0.25Nm、资料包NA）及5条SW扳手尺寸未登记字段；20条NA已入库但未解决。新增壳体/接头不代表真实配对或完整BOM获批。",
     "特征字典只覆盖当前已录参数和部分端接限定；框架/密封件/线缆等仅预留类别，独立螺距、尺寸基准、编码/针位及全部条件语义仍需补充。迁移已验证保留原事实，尚无自动反向迁移或本批备份恢复演练。",
     "HA全章36个芯体及18条链路资料已整理；仍有12类未解事项。HA-002接点/PE、HA-004-V2线径、V2工艺、普通弹簧剥线、HA-032总成PE及全部尺寸/配对/降额/密封需确认；壳体只覆盖标准金属侧进线候选，非所有壳体变体。",
     "面向中国企业使用，当前推荐百炼＋Qwen-Plus 系列；实际地域、模型、账号和费用未确认，未提供密钥或联调；建议预算不视为付费授权。",
@@ -29,7 +29,7 @@
     "数值尺寸轴向、安装状态及开孔尺寸尚未逐项录入审核。",
     "真实型号配对、PE、降额、螺纹、锁扣、密封及附件完整性仍缺工程批准。",
     "P33-01～P33-40 零件编号索引只有目录引用，正文未定位；不等于已确认丢失上传文件。",
-    "实际主销系列、客户优先型号未知，工程实施顺序不代表销售排名。",
+    "实际主销系列、客户优先型号NA，工程实施顺序不代表销售排名。",
     "PDF、数据库及 OCR 原始结果未推送 GitHub，跨环境持久化和自动备份仍需正式方案。"
   ],
   "phases": [
@@ -49,7 +49,7 @@
   "tasks": [
     {"id":"BASE-01","status":"done","title":"核对现状及有边界的成果","acceptance":"明确 OCR、转录、审核和工程批准四层状态；保留本次基线和历史提交。","evidence":["docs/worklog.md","docs/ha-coverage.md"]},
     {"id":"BASE-02","status":"done","title":"建立路线图、项目记忆和逐条进度表","acceptance":"仓库有单一进度源、可再生成文档和 73 条目录跟踪记录；AGENTS 要求每次更新。","evidence":["data/project_progress.json","scripts/project_progress.py","docs/PROJECT_MEMORY.md"]},
-    {"id":"BASE-03","status":"todo","title":"确认业务范围和录入优先级","acceptance":"记录常用型号、典型需求、连接范围及业务优先级；未知销量不自造排名。","depends_on":["BASE-01"]},
+    {"id":"BASE-03","status":"todo","title":"确认业务范围和录入优先级","acceptance":"记录常用型号、典型需求、连接范围及业务优先级；NA销量不自造排名。","depends_on":["BASE-01"]},
     {"id":"BASE-04","status":"ongoing","title":"每次交付同步进度和 GitHub","acceptance":"每批工作更新状态、指标、缺项、证据和历史；验证后提交推送并核对远程 SHA。","evidence":["AGENTS.md"]},
 
     {"id":"SOURCE-01","status":"done","title":"英文 PDF 分卷索引及文件一致性","acceptance":"32 份、1424 页连续范围，文件校验值和原始路径可追溯。","evidence":["wain/ingest.py","docs/progress.md"]},
@@ -66,12 +66,14 @@
     {"id":"DATA-04","status":"todo","title":"清理 OCR 候选并建立型号总数基准","acceptance":"逐章节建立人工可追溯的预期行数、唯一订货号和遗漏清单；不把候选出现数当产品数。","depends_on":["SOURCE-03","DATA-03"]},
     {"id":"DATA-05","status":"in_progress","title":"完善可追踪的数据库迁移与回滚","acceptance":"有版本化迁移、保留审核数据的升级步骤及独立恢复验证。","depends_on":["DATA-01"],"evidence":["docs/component-model.md","docs/component-model-audit.md","migrations/001_component_features.sql","wain/migrations.py","tests/test_characteristics.py"]},
 
-    {"id":"DATA-06","status":"done","title":"建立类别特征字典、值状态与SKU共性差异比较","acceptance":"10类/47字段适用范围、类型、单位及部分端接/上下界有数据库约束；未知/不适用有原因且不当作数值；比较保留每SKU条件、证据和审核状态，不自动继承或推断配对。仅验收当前字段和接口，不代表全目录专有字段及工程规则完成。","evidence":["data/component_schema.json","migrations/001_component_features.sql","wain/characteristics.py","tests/test_characteristics.py","docs/component-model.md","docs/component-model-audit.md"],"depends_on":["DATA-01"]},
+    {"id":"DATA-06","status":"done","title":"建立类别特征字典、值状态与SKU共性差异比较","acceptance":"10类/47字段适用范围、类型、单位及部分端接/上下界有数据库约束；NA/不适用有原因且不当作数值；比较保留每SKU条件、证据和审核状态，不自动继承或推断配对。仅验收当前字段和接口，不代表全目录专有字段及工程规则完成。","evidence":["data/component_schema.json","migrations/001_component_features.sql","wain/characteristics.py","tests/test_characteristics.py","docs/component-model.md","docs/component-model-audit.md"],"depends_on":["DATA-01"]},
+
+    {"id":"DATA-07","status":"done","title":"统一NA可用性状态并迁移旧记录","acceptance":"当前数据和导入只用known/NA/not_applicable，NA保留原因、来源和空数值；数据库拒绝旧状态，迁移保留前后审计；页面/CSV/比较统一NA，关键NA不能自动校验通过。","evidence":["migrations/002_na_availability.sql","tests/test_na_policy.py","docs/na-policy.md","wain/migrations.py"],"depends_on":["DATA-06"]},
 
     {"id":"HA-01","status":"done","title":"转录 HA 本章全部订货表身份","acceptance":"文件 72–79 页登记 36 个芯体、72 个不同订货号、147 行来源；不虚构 HA-032 SKU。","evidence":["data/ha_series.json","docs/ha-coverage.md","tests/test_ha_series.py"]},
-    {"id":"HA-02","status":"in_progress","title":"完善 HA 参数及适用条件","acceptance":"逐型号核对电压/电流、线径、剥线、扭矩、材质、温度等，保留明确条件和未知。","evidence":["wain/ha_series.py","docs/ha-coverage.md","docs/ha-series-dossier.md","data/ha_dossier_supplement.json","docs/ha-reconciliation.md","wain/ha_reconcile.py","tests/test_ha_reconcile.py"],"depends_on":["HA-01","DATA-02"]},
+    {"id":"HA-02","status":"in_progress","title":"完善 HA 参数及适用条件","acceptance":"逐型号核对电压/电流、线径、剥线、扭矩、材质、温度等，保留明确条件和NA。","evidence":["wain/ha_series.py","docs/ha-coverage.md","docs/ha-series-dossier.md","data/ha_dossier_supplement.json","docs/ha-reconciliation.md","wain/ha_reconcile.py","tests/test_ha_reconcile.py"],"depends_on":["HA-01","DATA-02"]},
     {"id":"HA-03","status":"in_progress","title":"转录并核对尺寸与安装图","acceptance":"区分长宽高、视图、开孔、安装状态和单位；数值关联图中区域并审核。","depends_on":["HA-01"],"evidence":["docs/ha-series-dossier.md","data/ha_dossier_supplement.json"]},
-    {"id":"HA-04","status":"in_progress","title":"处理 HA-002、HA-004-V2 等明确疑点","acceptance":"通过原图、补充资料或厂家依据核实；未解决项保持未知，不以型号猜测。","depends_on":["HA-01"],"evidence":["docs/ha-series-dossier.md","data/ha_dossier_supplement.json","docs/ha-reconciliation.md","wain/ha_reconcile.py","tests/test_ha_reconcile.py"]},
+    {"id":"HA-04","status":"in_progress","title":"处理 HA-002、HA-004-V2 等明确疑点","acceptance":"通过原图、补充资料或厂家依据核实；未解决项保持NA，不以型号猜测。","depends_on":["HA-01"],"evidence":["docs/ha-series-dossier.md","data/ha_dossier_supplement.json","docs/ha-reconciliation.md","wain/ha_reconcile.py","tests/test_ha_reconcile.py"]},
     {"id":"HA-05","status":"in_progress","title":"完成 HA 端子、编码件、工具及外壳关联","acceptance":"逐型号关联实际适用的产品、数量和条件；可选与必需分别记录。","evidence":["docs/ha010-line01.md","wain/ha_series.py","wain/ha010_seed.py","docs/ha-series-dossier.md","data/ha_dossier_supplement.json","docs/ha-reconciliation.md","wain/ha_reconcile.py","tests/test_ha_reconcile.py"],"depends_on":["HA-01","COMMON-01","COMMON-02"]},
     {"id":"HA-06","status":"todo","title":"完成 HA 数据独立审核及章节验收","acceptance":"审核身份、参数、来源、关系和遗漏；有未解问题则明确列出，不能声称参数全完。","depends_on":["HA-02","HA-03","HA-04","HA-05","REVIEW-04"]},
 
@@ -79,7 +81,7 @@
 
     {"id":"HA-08","status":"done","title":"交付HA全章型号与变体链路资料包","acceptance":"36芯体有参数/来源/图纸定位/缺项资料卡；18条变体链路覆盖全部芯体，附端子、编码、工具、标准侧进线壳体和接头候选。仅验收目录资料包，不代替全部尺寸转录、所有壳体变体、数据库导入或真实工程批准。","evidence":["docs/ha-series-dossier.md","docs/ha-series-models.md","docs/ha-series-models.csv","docs/ha-series-routes.csv","docs/ha-series-accessories.csv","docs/ha-series-issues.csv","data/ha_dossier_supplement.json","scripts/ha_dossier.py","tests/test_ha_dossier.py"],"depends_on":["HA-01"]},
 
-    {"id":"HA-09","status":"done","title":"完成HA资料包与实际库的差异核对及待审核补充导入","acceptance":"87资料包订货号/1041字段断言有只读差异计划，来源映射/文件SHA可核对；事务只追加有来源的pending或明确unknown，拒绝过期计划、保护全部旧事实和审核，报告保留差异/字典缺项。仅验收补充导入，不代替数值尺寸、配对和工程批准。","evidence":["docs/ha-reconciliation.md","docs/ha-reconciliation-diff.csv","wain/ha_reconcile.py","tests/test_ha_reconcile.py"],"depends_on":["HA-08","DATA-06"]},
+    {"id":"HA-09","status":"done","title":"完成HA资料包与实际库的差异核对及待审核补充导入","acceptance":"87资料包订货号/1041字段断言有只读差异计划，来源映射/文件SHA可核对；事务只追加有来源的pending或明确NA，拒绝过期计划、保护全部旧事实和审核，报告保留差异/字典缺项。仅验收补充导入，不代替数值尺寸、配对和工程批准。","evidence":["docs/ha-reconciliation.md","docs/ha-reconciliation-diff.csv","wain/ha_reconcile.py","tests/test_ha_reconcile.py"],"depends_on":["HA-08","DATA-06"]},
 
     {"id":"COMMON-01","status":"in_progress","title":"完整录入共用压接端子","acceptance":"P13 各电流/结构条目逐行盘点，核对适用芯体、线径、镀层、装配和工具。","evidence":["wain/seed.py","wain/ha_series.py","docs/ha-series-dossier.md","data/ha_dossier_supplement.json"]},
     {"id":"COMMON-02","status":"in_progress","title":"完整录入外壳、底座、锁扣及密封件","acceptance":"覆盖目录规格和变体，核对真实订货号、配对、进线、开孔和防护成立条件。","evidence":["docs/ha010-line01.md","wain/ha010_seed.py","docs/ha-series-dossier.md","data/ha_dossier_supplement.json","docs/ha-reconciliation.md","wain/ha_reconcile.py","tests/test_ha_reconcile.py"]},
@@ -96,7 +98,7 @@
 
     {"id":"RULE-01","status":"in_progress","title":"需求字段和硬约束校验","acceptance":"除 HA-010 试验外支持所选范围，明确标准、电位、环境、电流语义和必需追问。","evidence":["wain/selection.py"]},
     {"id":"RULE-02","status":"in_progress","title":"电气、机械及环境兼容规则","acceptance":"用来源支持的额定/降额、编码、针位、尺寸、锁扣、螺纹、密封及温度校验组合。","evidence":["wain/selection.py"],"depends_on":["DATA-02"]},
-    {"id":"RULE-03","status":"in_progress","title":"必需依赖闭合与完整 BOM 求解","acceptance":"从主件递归展开依赖，正确处理条件附件、缺件、循环和未知数量；不只阻止缺件，还能生成支持范围内的组合。","evidence":["wain/selection.py","tests/test_selection.py"]},
+    {"id":"RULE-03","status":"in_progress","title":"必需依赖闭合与完整 BOM 求解","acceptance":"从主件递归展开依赖，正确处理条件附件、缺件、循环和NA数量；不只阻止缺件，还能生成支持范围内的组合。","evidence":["wain/selection.py","tests/test_selection.py"]},
     {"id":"RULE-04","status":"in_progress","title":"数量、PE、包装和装配工具规则","acceptance":"按套数和接点计算数量，独立核对 PE，区分使用量、采购量、工具及外部供料。","evidence":["wain/selection.py"]},
     {"id":"RULE-05","status":"todo","title":"多方案、替代及无解解释","acceptance":"先满足硬约束再排序；区分可行、待确认、无解，替代关系有依据，库存/价格只在有数据时使用。","depends_on":["RULE-01","RULE-02","RULE-03"]},
     {"id":"RULE-06","status":"todo","title":"扩展可复用系列模板与规则版本","acceptance":"新系列可通过明确模板接入，规则变更有版本和回归用例，不能使用永久假定通过的开关。","depends_on":["RULE-02","RULE-03"]},
@@ -109,9 +111,9 @@
     {"id":"REVIEW-06","status":"todo","title":"按系列和场景扩展真实批准范围","acceptance":"每个上线范围有真实批准用例和限制；不把一个方案通过推广到所有型号或工况。","depends_on":["REVIEW-05","RULE-06"]},
 
     {"id":"AGENT-01","status":"in_progress","title":"选择模型 API 与安全配置","acceptance":"确认供应商、模型、费用预算和数据发送范围；凭证只通过安全配置提供，不能入聊天或 Git。","evidence":["docs/NEXT_SESSION.md","docs/PROJECT_MEMORY.md"]},
-    {"id":"AGENT-02","status":"todo","title":"中英文自然语言转结构化需求","acceptance":"处理单位、针数/芯数/PE、AC/DC、电流语义、场景和硬约束；歧义保持未知。","depends_on":["DATA-02","AGENT-01"]},
+    {"id":"AGENT-02","status":"todo","title":"中英文自然语言转结构化需求","acceptance":"处理单位、针数/芯数/PE、AC/DC、电流语义、场景和硬约束；歧义保持NA。","depends_on":["DATA-02","AGENT-01"]},
     {"id":"AGENT-03","status":"todo","title":"封装模型工具调用接口","acceptance":"检索、产品详情、搭配求解、完整性校验、证据查询工具有固定 schema；模型不直接执行 SQL。","depends_on":["AGENT-01","RULE-01","RULE-03"]},
-    {"id":"AGENT-04","status":"todo","title":"多轮追问与需求修订","acceptance":"只追问影响决策的未知项，保留用户回答和偏好；修改需求后重算方案。","depends_on":["AGENT-02","AGENT-03"]},
+    {"id":"AGENT-04","status":"todo","title":"多轮追问与需求修订","acceptance":"只追问影响决策的NA项，保留用户回答和偏好；修改需求后重算方案。","depends_on":["AGENT-02","AGENT-03"]},
     {"id":"AGENT-05","status":"todo","title":"生成可追溯方案说明和 BOM","acceptance":"所有型号来自数据库，结论对应校验与证据；明确待确认、缺件、无解及替代条件。","depends_on":["AGENT-03","AGENT-04"]},
     {"id":"AGENT-06","status":"todo","title":"约束幻觉、注入及工具越权","acceptance":"目录/OCR 仅作为数据；模型不能虚构型号或修改批准，最终放行由后端控制并有回归用例。","depends_on":["AGENT-03"]},
     {"id":"AGENT-07","status":"todo","title":"模型端到端验证与费用观测","acceptance":"真实 API 的成功、失败、超时、重试、上下文和费用有测试记录；未连接不描述为已运行。","depends_on":["AGENT-05","AGENT-06","QA-02"]},
@@ -122,7 +124,7 @@
     {"id":"APP-04","status":"todo","title":"用户验收与可用性修正","acceptance":"用目标用户的真实需求验证操作、中文说明、错误提示、恢复和可访问性。","depends_on":["APP-02","REVIEW-05"]},
     {"id":"APP-05","status":"done","title":"交付 HA-010 可测试网页原型与单文件演示","acceptance":"明确限定 10 普通接点加 PE；有限参数识别、人工核对、候选 BOM、缺项/超额定、来源、CSV 和手机布局可测试；提供数据库与自包含 HTML 两版，未接模型/完整工程校验保持明确。","evidence":["wain/static/trial/index.html","demo/index.html","wain/trial.py","scripts/build_trial.py","scripts/check_trial_ui.py","docs/web-trial.md"]},
 
-    {"id":"QA-01","status":"done","title":"基础数据库/API 与本地浏览器回归","acceptance":"本批 67 项数据库/API 测试和 7 项参数识别测试通过；新旧网页 Chromium 验收通过，覆盖未知、边界、依赖、数量和原图/页面操作，不改业务批准。","evidence":["tests/test_ha_series.py","tests/test_selection.py","scripts/check_ui.py","docs/worklog.md","tests/test_trial.py","tests/trial_core.test.cjs","scripts/check_trial_ui.py"]},
+    {"id":"QA-01","status":"done","title":"基础数据库/API 与本地浏览器回归","acceptance":"本批 67 项数据库/API 测试和 7 项参数识别测试通过；新旧网页 Chromium 验收通过，覆盖NA、边界、依赖、数量和原图/页面操作，不改业务批准。","evidence":["tests/test_ha_series.py","tests/test_selection.py","scripts/check_ui.py","docs/worklog.md","tests/test_trial.py","tests/trial_core.test.cjs","scripts/check_trial_ui.py"]},
     {"id":"QA-02","status":"todo","title":"建立人工核验的代表性评测集","acceptance":"包含正常、缺件、错误配对、超额定、歧义、资料缺失、多语言和无解；与实际目录和工况对应。","depends_on":["REVIEW-03","BASE-03"]},
     {"id":"QA-03","status":"todo","title":"评估数据准确率与检索覆盖","acceptance":"对独立样本计算字段、型号关联、召回和遗漏；结果分系列/版式，不能用行数相等代替准确率。","depends_on":["QA-02","DATA-03"]},
     {"id":"QA-04","status":"todo","title":"完整性与规则反例验收","acceptance":"真实正向与负向硬件案例都验证，缺少任何必需件或依据不能误放行；有性能和重复性记录。","depends_on":["QA-02","REVIEW-05"]},

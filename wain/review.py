@@ -91,12 +91,12 @@ def validate_values(kind,row):
     if kind=='specification':
         if not str(row['parameter'] or '').strip(): raise ReviewError('Parameter is required')
         state=row.get('value_state','known')
-        if state not in {'known','unknown','not_applicable'}: raise ReviewError('Invalid value state')
+        if state not in {'known','NA','not_applicable'}: raise ReviewError('Invalid value state')
         if state=='known':
             if (row['value_number'] is None)==(row['value_text'] is None): raise ReviewError('Exactly one value is required')
             if row['value_text'] is not None and not row['value_text'].strip(): raise ReviewError('Value is required')
         elif row['value_number'] is not None or row['value_text'] is not None or not str(row.get('state_reason') or '').strip():
-            raise ReviewError('Unknown/not-applicable values require a reason and no value')
+            raise ReviewError('NA/not-applicable values require a reason and no value')
         if row['value_number'] is not None:
             try:
                 if not Decimal(str(row['value_number'])).is_finite(): raise ValueError()

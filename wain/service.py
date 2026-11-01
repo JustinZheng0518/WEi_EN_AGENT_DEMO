@@ -43,6 +43,11 @@ def product_details(conn,product_id):
     product['specifications']=conn.execute('''SELECT s.*,p.global_page,p.printed_page FROM product_specifications s
         JOIN evidence e ON e.id=s.evidence_id JOIN pages p ON p.id=e.page_id WHERE product_id=%s
         ORDER BY parameter''',(product_id,)).fetchall()
+    product['identity_display']={key:product[key] if product[key] is not None else 'NA'
+                                 for key in ['contact_count','pe_contacts','housing_size','termination','gender']}
+    for specification in product['specifications']:
+        value=specification['value_number'] if specification['value_number'] is not None else specification['value_text']
+        specification['display_value']='NA' if value is None else value
     product['relations']=conn.execute('''SELECT r.*,p.model AS target_model FROM product_relations r
         JOIN products p ON p.id=r.target_product_id WHERE source_product_id=%s ORDER BY p.model''',(product_id,)).fetchall()
     product['evidence']=conn.execute('''SELECT e.*,p.global_page,p.printed_page,d.filename FROM evidence e

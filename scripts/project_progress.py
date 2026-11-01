@@ -73,7 +73,7 @@ def roadmap(data):
         lines.append('')
     lines.extend(['## 全目录逐条记录','',
         '型号级范围还需跟踪 [73 条目录进度表](series-progress.csv)。其中系列、规格、附件、服务及参考条目不能混为同一种产品验收。',
-        '除 HA 本章已建立 36 个芯体订货号基准外，多数类别尚不知道全部 SKU 数量，因此总数一栏保持未知。',
+        '除 HA 本章已建立 36 个芯体订货号基准外，多数类别尚不知道全部 SKU 数量，因此总数一栏保持NA。',
         '', '## 对外试点的最低条件','',
         '必须明确上线系列和工况范围，并满足 REVIEW-05、AGENT-07、APP-04、QA-04、QA-05 和 OPS-06 对应验收。',
         '不要求一次上线所有目录，但必须明确未覆盖的范围；不能把局部试验推广为整本目录可选型。',''])
@@ -136,7 +136,7 @@ def series_csv(data,catalog):
         if service:note='按线束服务、装配和供料范围整理，不把说明页计作产品型号。'
         writer.writerow([row['code'],groups[row['group']],row['title_en'],row['kind'],row['source'],row['start']+'～'+row['end'],
             '不适用' if reference or service else override.get('sku_entered',0),
-            '不适用' if reference or service else override.get('sku_total_in_scope','未知'),
+            '不适用' if reference or service else override.get('sku_total_in_scope','NA'),
             *[DATA_STATUS[values[k]] for k in ['identity','parameters','review','compatibility']],
             '不适用' if reference or service else '未批准' if values.get('engineering','todo')=='todo'
             else DATA_STATUS[values['engineering']],note])

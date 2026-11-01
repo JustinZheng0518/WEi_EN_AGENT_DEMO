@@ -14,7 +14,7 @@ def snapshot(conn):
           'standard_pack_quantity','plating','entry_thread_designation']
     for row in rows:
         row['specifications']=conn.execute('''SELECT s.parameter,s.value_number,s.value_text,s.unit,s.conditions,
-            s.review_status,p.global_page FROM product_specifications s JOIN evidence e ON e.id=s.evidence_id
+            s.review_status,s.value_state,s.state_reason,p.global_page FROM product_specifications s JOIN evidence e ON e.id=s.evidence_id
             JOIN pages p ON p.id=e.page_id WHERE s.product_id=%s AND s.parameter=ANY(%s) ORDER BY s.parameter,s.id''',
             (row['id'],keys)).fetchall()
     return {'version':1,'scope':'HA-010 connector-component interaction trial',

@@ -44,7 +44,7 @@ def proposal():
         facts.append(dict(order_number=p['order_number'],model=p['model'],parameter=code,
             value_number=value if isinstance(value,(int,float,Decimal)) else None,
             value_text=value if isinstance(value,str) else None,unit=unit,conditions=conditions or {},
-            value_state='unknown' if value is None else 'known',state_reason=reason,
+            value_state='NA' if value is None else 'known',state_reason=reason,
             source_page=page,quotation=quote or f'{code}: {value}; '+p['quotation']))
     technical=('HA technical data: HA-002/003/004 10A, conductor-ground 230V, conductor-conductor 400V; '
         'HA-010/016 16A 250V, pollution degree 3; UL 600V; impulse 4kV; '
@@ -151,7 +151,7 @@ def proposal():
     if len(set(keys))!=len(keys):
         raise ReconciliationError('Duplicate proposed parameter/condition')
     return dict(products=products,facts=facts,sources=dossier['sources'],open_issues=dossier['issues'],
-                input_digest=digest({'chapter':chapter,'supplement':supplement,'mapper_version':1}))
+                input_digest=digest({'chapter':chapter,'supplement':supplement,'mapper_version':2}))
 
 
 def check_sources(conn,data,verify_files=False):
@@ -226,8 +226,8 @@ def make_plan(conn,data=None):
         elif other:
             status='condition_difference';reason='Same field exists under different conditions; no automatic merging or duplicate condition assertion'
         else:
-            status='new_unknown' if fact['value_state']=='unknown' else 'new_fact'
-            reason='Add explicit pending unknown, no numeric default' if fact['value_state']=='unknown' else 'Missing field with source; add pending only'
+            status='new_na' if fact['value_state']=='NA' else 'new_fact'
+            reason='Add explicit pending NA, no numeric default' if fact['value_state']=='NA' else 'Missing field with source; add pending only'
         current={k:old[k] for k in ['id','value_number','value_text','unit','conditions','value_state','state_reason','review_status','evidence_status','evidence_id']} if old else None
         # Preserve condition variants in reports without exposing private source paths.
         alternatives=[{k:r[k] for k in ['id','value_number','value_text','unit','conditions','value_state','review_status','evidence_status']} for r in other] if not old else []
@@ -288,13 +288,13 @@ def apply_plan(conn,expected_plan_digest,data=None,verify_files=True):
                 context_label,source_model,source_order_number) VALUES(%s,%s,%s,'ha-dossier-companions-2025',%s,%s,%s)''',
                 ('ha-dossier-companions-2025:'+p['order_number'],row['id'],eid,'Standard cable-to-panel companion; compatibility unapproved',p['model'],p['order_number']))
         for entry in plan['entries']:
-            if entry['kind']!='specification' or entry['status'] not in {'new_fact','new_unknown'}:continue
+            if entry['kind']!='specification' or entry['status'] not in {'new_fact','new_na'}:continue
             fact=entry['proposed'];pid=orders[fact['order_number']]
             eid=evidence(conn,pages[fact['source_page']],fact['quotation'])
             conn.execute('''INSERT INTO product_specifications(product_id,parameter,value_number,value_text,unit,
                 conditions,evidence_id,value_state,state_reason) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)''',
                 (pid,fact['parameter'],fact['value_number'],fact['value_text'],fact['unit'],Jsonb(fact['conditions']),eid,fact['value_state'],fact['state_reason']))
-            added['unknowns' if fact['value_state']=='unknown' else 'known_facts']+=1
+            added['na_records' if fact['value_state']=='NA' else 'known_facts']+=1
         details=dict(input_digest=data['input_digest'],plan_digest=plan['plan_digest'],added=dict(added),
                      retained_unresolved={k:v for k,v in plan['summary'].items() if k in {'requires_review','condition_difference','identity_conflict','blocked_identity','schema_gap'}},
                      reviewed_or_overwritten=0)
@@ -322,7 +322,7 @@ def write_report(before,after,applied=None,folder=ROOT/'docs'):
         lines.append(f'| {key} | {before["summary"].get(key,0)} | {after["summary"].get(key,0)} |')
     if applied:
         lines+=['', '本次实际添加：'+canonical(applied['added'])+'。没有新增或批准适配关系，没有工程批准。']
-    lines+=['', 'equivalent只表示与资料包记录对齐，不代表已审核。new_unknown降为0表示未知占位已写入，新增的20条unknown仍待确认，并非问题已解决。']
+    lines+=['', 'equivalent只表示与资料包记录对齐，不代表已审核。new_na降为0表示NA占位已写入，新增的20条NA仍待确认，并非问题已解决。']
     lines+=['', '## 仍需复核的逐项差异','', '| 型号 | 字段 | 状态 | 旧值 / 状态 | 资料包值 / 状态 | 文件页 |','| --- | --- | --- | --- | --- | --- |']
     for e in after['entries']:
         if e['status'] not in {'requires_review','condition_difference','identity_conflict','schema_gap','blocked_identity'}:continue
@@ -333,12 +333,12 @@ def write_report(before,after,applied=None,folder=ROOT/'docs'):
             p.get('value_number') if p.get('value_number') is not None else p.get('value_text') or p.get('value_state',p['model']),p['source_page']]))+' |')
     lines+=['', 'requires_review保留原记录，不自动判断哪一方正确；condition_difference不合并条件或重复断言；schema_gap待新增字段迁移后再导入。', '',
         '## 审核与使用边界','',
-        '- 本批只补目录事实和明确未知；HA-002普通/PE接点、HA-004-V2线径、V2工艺等仍待确认。unknown没有数值，不等于0或不需要。',
+        '- 本批只补目录事实和明确NA；HA-002普通/PE接点、HA-004-V2线径、V2工艺等仍待确认。NA没有数值，不等于0或不需要。',
         '- HA-032仍为真实HA-016半组编排；不创建独立HA-032订货号。原有配对/关系及工程结论不增加、不批准。',
         '- 壳体规格、锁扣名称、入口标识仅为产品参数，不证明芯体/壳体或壳体/接头实际适配。',
         '- 线径/剥线的条件保留；压接芯体的7.5mm只针对所列普通压接接触件，不能套给PE。',
         '- 接头温度按static/dynamic分开，不套芯体温度；扳手SW暂列schema_gap，不擅自挪用其他字段。',
-        '- 旧批量转录脚本仍针对旧基线；补充后不应盲目重跑以覆盖unknown或工艺更正，应先使用此差异工具。', '',
+        '- 旧批量转录脚本仍针对旧基线；补充后不应盲目重跑以覆盖NA或工艺更正，应先使用此差异工具。', '',
         '[下载逐项差异CSV](ha-reconciliation-diff.csv)。完整导入前后计划和校验摘要保存在本地忽略目录，避免把备份、PDF或私有路径提交Git。', '',
         '## 复现','',
         '只读计划：`python -m wain.ha_reconcile plan`。应用：`python -m wain.ha_reconcile apply --expected-plan <计划摘要>`。',

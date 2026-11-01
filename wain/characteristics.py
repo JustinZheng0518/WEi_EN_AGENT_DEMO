@@ -38,7 +38,7 @@ def describe(conn, product_id, include_pending=False):
             not definition['when_termination'] or p['termination'] in definition['when_termination'])
         if definition['storage']=='identity':
             value = p[definition['code']]
-            observation = dict(value=value,value_state='unknown' if value is None else 'known',
+            observation = dict(value=value,value_state='NA' if value is None else 'known',
                 conditions={},evidence_id=p['evidence_id'],global_page=p['global_page'],
                 review_status=p['review_status'],evidence_status=p['evidence_status'])
             observations = [observation]
@@ -46,9 +46,12 @@ def describe(conn, product_id, include_pending=False):
             observations = [{**row,'value':row['value_number'] if row['value_number'] is not None else row['value_text']}
                             for row in by_parameter.get(definition['code'],[])
                             if include_pending or (row['review_status']=='reviewed' and row['evidence_status']=='reviewed')]
+        for observation in observations:
+            observation['display_value'] = 'NA' if observation['value'] is None else observation['value']
         field['observations'] = observations
         if not observations:
-            field['state'] = 'unreviewed' if by_parameter.get(definition['code']) else 'not_recorded'
+            field['state'] = 'NA'
+            field['availability_reason'] = 'unreviewed' if by_parameter.get(definition['code']) else 'not_recorded'
         elif any(o['review_status']=='conflict' or o['evidence_status']=='conflict' for o in observations):
             field['state'] = 'conflict'
         elif all(o['value_state']=='known' for o in observations):
@@ -101,6 +104,6 @@ def compare(conn, product_ids, include_pending=False):
         else:
             different.append(item)
     return dict(products=[{k:p[k] for k in ['product_id','model','order_number','category','family']} for p in products],
-                common_in_this_comparison=common,different_or_unknown=different,include_pending=include_pending,
+                common_in_this_comparison=common,different_or_na=different,include_pending=include_pending,
                 compatibility_inferred=False,can_finalize=False,
                 notice='Shared values only describe these explicit SKUs under identical conditions; they do not establish inheritance, mating, interchangeability or assembly approval.')

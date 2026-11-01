@@ -144,7 +144,7 @@
       "name": "insert_screw_tightening_test_torque_nm",
       "value": 0.5,
       "source_page": 73,
-      "condition": "不用于壳体、接头或未知PE紧固点"
+      "condition": "不用于壳体、接头或NAPE紧固点"
     },
     {
       "name": "insert_limiting_temperature_c",
@@ -342,7 +342,7 @@
     "目录原图核对不是独立审核或工程批准",
     "未更改业务数据库或网页算法",
     "示例工况不是用户确认的需求",
-    "未知附件数量不是0；采购数量未确定",
+    "NA附件数量不是0；采购数量未确定",
     "不得依据同规格/公母名称自动生成已批准配对"
   ]
 }

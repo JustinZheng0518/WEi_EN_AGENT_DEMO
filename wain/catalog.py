@@ -58,7 +58,7 @@ def import_inventory(conn,path=DATA):
         for family in row.get('families',[]):
             conn.execute('INSERT INTO catalog_family_links VALUES(%s,%s) ON CONFLICT DO NOTHING',(row['code'],family))
     return {'groups':len(data['groups']),'contents_entries':len(data['sections']),
-            'notice':'Navigation only; no products or approvals created. Sales priority remains unknown.'}
+            'notice':'Navigation only; no products or approvals created. Sales priority: NA.'}
 
 def collect_labels(conn):
     allowed={label_parts(r['start'])[0] for r in load_data()['sections']}
@@ -110,7 +110,7 @@ def sections(conn,group=None,q=''):
         row['location_status']='ambiguous' if len(a)>1 or len(b)>1 or (a and b and a[0]>b[0]) else 'anchors_found' if a and b else 'partial_anchors' if matching else 'unlocated'
         row['footer_matched_page_count']=len(matching)
         row['sample_status']='partial_sample' if row['sample_products'] else 'not_structured'
-        row['sales_priority']='unknown'
+        row['sales_priority']='NA'
         row['engineering_batch_basis']='Dependency-first work suggestion; not sales importance or a customer requirement'
         if group and row['group_code']!=group: continue
         if q and q.casefold() not in (row['code']+' '+row['title_en']+' '+row['summary_zh']).casefold(): continue
@@ -127,7 +127,7 @@ def summary(conn):
             'sample_products_assigned':assigned,'sample_products_unassigned':total-assigned,
             'location_counts':dict(Counter(r['location_status'] for r in rows)),
             'unlocated_entries':[r['code'] for r in rows if r['location_status']=='unlocated'],
-            'sales_priority':'unknown','all_products_entered':False,
+            'sales_priority':'NA','all_products_entered':False,
             'notice':'Contents navigation and partial sample counts; no SKU denominator, completion percentage or verified compatibility is implied.'}
 
 def export(conn):
@@ -143,7 +143,7 @@ def export(conn):
            f'- 当前 {report["sample_products_assigned"]} 条样板产品已关联到相应导航类别，仍只覆盖部分型号。',
            '- 页脚定位是 OCR 候选；锚点找到不代表中间每页或全部产品已核对。不会用统一页码偏移补造定位。',
            '- 总目录引用 P33-01～P33-40 零件编号索引，目前未定位到正文；已上传文件末尾为文件第 1423 页的 32-28 和第 1424 页封底。应进一步确认目录版本或补充资料。',
-           '- 所有条目的业务重要性/销售优先级未知；总目录不能证明 HA 或其他系列是主销系列。',
+           '- 所有条目的业务重要性/销售优先级NA；总目录不能证明 HA 或其他系列是主销系列。',
            '','## 建议录入顺序（工程依赖，不代表销量）','',
            '1. 先完善现有 HA 样板及共用端子、外壳、附件、工具/进线接头，形成可复用的数据规范。',
            '2. 再处理 HE、HD/HDD 等基础芯体条目，同时建立圆形接口技术词汇；这是实施建议，须按后续业务需求调整。',

@@ -25,6 +25,11 @@ class SelectionRequest(BaseModel):
     plating:Literal['silver','gold']='silver'
     components:dict[str,PositiveInt|None]=Field(default_factory=dict)
 
+    @field_validator('wire_mm2','cable_diameter_mm','ambient_c',mode='before')
+    @classmethod
+    def na_input(cls,value):
+        return None if isinstance(value,str) and value.strip().upper()=='NA' else value
+
     @field_validator('components')
     @classmethod
     def valid_roles(cls,value):
@@ -38,7 +43,7 @@ def select(conn,request):
                        'message':message,'source_pages':list(pages)})
     check('scope',request.contacts==10,'本试验范围为 HA-010：10 个普通接点另加 PE，电缆到面板连接器组件。',[76])
     for name,value,label in [('wire',request.wire_mm2,'导线截面积'),('diameter',request.cable_diameter_mm,'线缆外径'),('ambient',request.ambient_c,'环境温度')]:
-        check('input_'+name,True if value is not None else None,label+('已提供。' if value is not None else '未知，需要补充。'))
+        check('input_'+name,True if value is not None else None,label+('已提供。' if value is not None else 'NA，需要补充。'))
     def by_model(model):
         row=conn.execute('SELECT id FROM products WHERE model=%s ORDER BY id LIMIT 1',(model,)).fetchone()
         return row['id'] if row else None
@@ -89,9 +94,9 @@ def select(conn,request):
         for s in values: specs.setdefault(s['parameter'],[]).append(s)
         facts[role]=(p,specs)
         for s in values:
-            if s['value_state']=='unknown':
-                check('unknown_'+role+'_'+s['parameter'],None,
-                    LABELS[role]+'的 '+s['parameter']+' 明确未知，需确认适用条件及依据：'+s['state_reason'],[s['global_page']])
+            if s['value_state']=='NA':
+                check('na_'+role+'_'+s['parameter'],None,
+                    LABELS[role]+'的 '+s['parameter']+' 明确NA，需确认适用条件及依据：'+s['state_reason'],[s['global_page']])
         required_specs={'hood':['entry_thread_designation','locking_geometry','entry_direction','ip_rating'],
             'panel_housing':['locking_variant','mounting','ip_rating'],
             'cable_entry':['entry_thread_designation','thread_length','sealing','ip_rating']}.get(role,[])

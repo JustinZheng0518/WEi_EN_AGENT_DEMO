@@ -62,7 +62,7 @@ def test_category_and_range_constraints_apply_to_imports_and_edits(db):
 
 def test_unknown_and_not_applicable_are_not_zero_and_need_reasons(db):
     p=sku(db,'HA-010-M')
-    for state,reason in [('unknown','Specific stripping instruction not verified'),('not_applicable','No screw operation for this test-only field context')]:
+    for state,reason in [('NA','Specific stripping instruction not verified'),('not_applicable','No screw operation for this test-only field context')]:
         with db.transaction(force_rollback=True):
             db.execute('''INSERT INTO product_specifications(product_id,parameter,unit,value_state,state_reason,evidence_id)
                 VALUES(%s,'stripping_length','mm',%s,%s,%s)''',(p['id'],state,reason,p['evidence_id']))
@@ -72,19 +72,20 @@ def test_unknown_and_not_applicable_are_not_zero_and_need_reasons(db):
     with pytest.raises(psycopg.errors.CheckViolation):
         with db.transaction():
             db.execute('''INSERT INTO product_specifications(product_id,parameter,unit,value_state,evidence_id)
-                VALUES(%s,'stripping_length','mm','unknown',%s)''',(p['id'],p['evidence_id']))
-    assert field(db,'HA-010-M','stripping_length')['state']=='not_recorded'
+                VALUES(%s,'stripping_length','mm','NA',%s)''',(p['id'],p['evidence_id']))
+    assert field(db,'HA-010-M','stripping_length')['state']=='NA'
+    assert field(db,'HA-010-M','stripping_length')['availability_reason']=='not_recorded'
 
 
 def test_explicit_unknown_edit_is_audited_and_does_not_qualify_as_shared_fact(db):
     p=sku(db,'HA-010-M')
     s=db.execute("SELECT * FROM product_specifications WHERE product_id=%s AND parameter='rated_current'",(p['id'],)).fetchone()
     result=apply_review(db,'specification',s['id'],ReviewAction(decision='save',actor='test',note='Exact rating requires clarification',expected_version=0,
-        edits={'value_state':'unknown','value_number':None,'state_reason':'Exact rating requires clarification'}))
-    assert result['history'][0]['changes']['after']['value_state']=='unknown'
+        edits={'value_state':'NA','value_number':None,'state_reason':'Exact rating requires clarification'}))
+    assert result['history'][0]['changes']['after']['value_state']=='NA'
     report=compare(db,[p['id'],sku(db,'HA-010-F')['id']],True)
     assert 'rated_current' not in {f['code'] for f in report['common_in_this_comparison']}
-    assert 'rated_current' in {f['code'] for f in report['different_or_unknown']}
+    assert 'rated_current' in {f['code'] for f in report['different_or_na']}
 
 
 def test_shared_feature_preserves_each_skus_evidence_and_is_not_mating(db):
@@ -94,7 +95,7 @@ def test_shared_feature_preserves_each_skus_evidence_and_is_not_mating(db):
     assert not current['all_reviewed']
     assert [p['product_id'] for p in current['by_product']]==ids
     assert all(p['field']['observations'][0]['evidence_id'] for p in current['by_product'])
-    assert 'gender' in {f['code'] for f in report['different_or_unknown']}
+    assert 'gender' in {f['code'] for f in report['different_or_na']}
     assert not report['compatibility_inferred'] and not report['can_finalize']
 
 
@@ -108,7 +109,7 @@ def test_same_number_under_different_conditions_is_not_common(db):
 def test_cross_category_applicability_is_not_an_invented_zero(db):
     ids=[sku(db,m)['id'] for m in ['HA-010-MC','CESM-1.0']]
     report=compare(db,ids,True)
-    voltage=next(f for f in report['different_or_unknown'] if f['code']=='rated_voltage')
+    voltage=next(f for f in report['different_or_na'] if f['code']=='rated_voltage')
     assert voltage['by_product'][1]['field'] is None
     assert voltage['by_product'][1]['applicability']=='not_defined_for_category'
     with pytest.raises(CharacteristicError,match='unreviewed'):
@@ -118,7 +119,7 @@ def test_cross_category_applicability_is_not_an_invented_zero(db):
 def test_reviewed_unknown_still_is_not_a_numeric_rating(db):
     p=sku(db,'HA-010-M')
     s=db.execute("SELECT * FROM product_specifications WHERE product_id=%s AND parameter='rated_current'",(p['id'],)).fetchone()
-    db.execute("UPDATE product_specifications SET value_state='unknown',value_number=NULL,state_reason='test unknown',review_status='reviewed' WHERE id=%s",(s['id'],))
+    db.execute("UPDATE product_specifications SET value_state='NA',value_number=NULL,state_reason='test unknown',review_status='reviewed' WHERE id=%s",(s['id'],))
     from wain.service import search_products
     assert search_products(db,q=p['order_number'],min_current=1,include_pending=True)['items']==[]
 
@@ -145,7 +146,7 @@ def test_migration_upgrades_legacy_rows_without_changing_facts_or_reviews():
             after=conn.execute('SELECT * FROM product_specifications ORDER BY id').fetchall()
             assert [{k:v for k,v in s.items() if k not in {'value_state','state_reason'}} for s in after]==before_specs
             assert all(s['value_state']=='known' and s['state_reason'] is None for s in after)
-            assert conn.execute('SELECT count(*) AS n FROM schema_migrations').fetchone()['n']==1
+            assert conn.execute('SELECT count(*) AS n FROM schema_migrations').fetchone()['n']==2
         finally:
             conn.rollback()
 

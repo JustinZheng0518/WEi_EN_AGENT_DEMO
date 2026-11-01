@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WAIN 产品审核与选型</title><link rel="stylesheet" href="/static/style.css"></head>
-<body><header><div><b>WAIN</b> 产品资料工作台</div><span>原文可追溯 · 未知条件不默认通过</span></header>
+<body><header><div><b>WAIN</b> 产品资料工作台</div><span>原文可追溯 · NA条件不默认通过</span></header>
 <nav><button id="catalogTab">目录总览</button><button id="reviewTab">资料审核</button><button id="selectionTab">HA-010 选型试验</button></nav>
-<main id="catalogPanel"><h1>英文目录系列与类别导航</h1><p class="notice">这是总目录条目清单，包含系列、外壳规格、附件和参考内容，不是完整产品库。用途说明依据目录标题；主销系列与销售优先级尚未知。</p>
+<main id="catalogPanel"><h1>英文目录系列与类别导航</h1><p class="notice">这是总目录条目清单，包含系列、外壳规格、附件和参考内容，不是完整产品库。用途说明依据目录标题；主销系列与销售优先级为 NA。</p>
 <p id="catalogSummary" role="status">正在读取目录…</p><details><summary>HA 本章录入与缺项</summary><p id="haCoverageMessage">正在读取…</p><ul id="haCoverageIssues"></ul></details><section class="toolbar"><label>分类<select id="catalogGroup"><option value="">全部分类</option></select></label><label>搜索条目<input id="catalogQuery" placeholder="例如 HE、M12、外壳、铁路"></label></section>
 <div id="catalogTable"></div><p id="catalogNotice">页码匹配来自原页脚 OCR 候选，不能证明对应系列已经录全。P33 零件编号索引尚未定位。</p></main>
 <main id="reviewPanel" hidden><section class="toolbar">
@@ -28,9 +28,9 @@
 <label>每接点电流 A<input name="current" type="number" min="0.01" step="any" value="3" required></label>
 <label>普通接点数量（PE 单独计算）<input name="contacts" type="number" min="1" max="100" value="10" required></label>
 <label>端接方式<select name="termination"><option value="screw">螺钉</option><option value="crimp">压接</option><option value="spring">弹簧</option></select></label>
-<label>线径 mm²<input name="wire_mm2" type="number" min="0.01" step="any" placeholder="未知可留空"></label>
-<label>线缆外径 mm<input name="cable_diameter_mm" type="number" min="0.01" step="any" placeholder="未知可留空"></label>
-<label>环境温度 °C<input name="ambient_c" type="number" step="any" placeholder="未知可留空"></label>
+<label>线径 mm²<input name="wire_mm2" type="number" min="0.01" step="any" placeholder="NA可留空"></label>
+<label>线缆外径 mm<input name="cable_diameter_mm" type="number" min="0.01" step="any" placeholder="NA可留空"></label>
+<label>环境温度 °C<input name="ambient_c" type="number" step="any" placeholder="NA可留空"></label>
 <label>连接套数<input name="quantity" type="number" min="1" max="10000" value="1" required></label><button type="submit">生成检查报告</button></form><div id="selectionResult" role="status"></div>
 <details class="engineering"><summary>为当前组合记录有来源的工程核对</summary><p>先生成报告。记录仅适用于报告中的组件和工况，不会自动确认。修改输入后须重新生成报告。</p>
 <label>核对类型<select id="assessmentCode"><option value="derating">实际工况下的降额能力</option><option value="mechanical_sealing">螺纹、密封、锁扣和附件</option><option value="pe_termination">PE 接地结构</option><option value="pinout_mounting">针位、防呆和安装空间</option></select></label>

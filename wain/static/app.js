@@ -2,7 +2,7 @@
 const $=id=>document.getElementById(id);
 const state={offset:0,current:null};
 const STATUS={pending:'待审核',reviewed:'已确认',conflict:'有冲突',accepted:'候选文字已确认',rejected:'已拒绝',passed:'通过',failed:'不符合',needs_confirmation:'待确认'};
-const FIELD={model:'型号',order_number:'订货号',category:'产品类别',gender:'公母端',termination:'端接方式',contact_count:'普通接点数',pe_contacts:'PE 接点数',housing_size:'外壳规格',parameter:'参数名称',value_number:'数值',value_state:'值状态（known / unknown / not_applicable）',state_reason:'未知或不适用的依据说明',value_text:'文字值',unit:'单位',conditions:'适用条件（JSON）',quotation:'原文引用',region:'原文区域 [x0,y0,x1,y1]',relation:'适配关系类型',model_candidate:'候选型号',order_number_candidate:'候选订货号',scope:'本次工况与组件（JSON）',findings:'工程核对结论（JSON）'};
+const FIELD={model:'型号',order_number:'订货号',category:'产品类别',gender:'公母端',termination:'端接方式',contact_count:'普通接点数',pe_contacts:'PE 接点数',housing_size:'外壳规格',parameter:'参数名称',value_number:'数值',value_state:'值状态（known / NA / not_applicable）',state_reason:'NA或不适用的依据说明',value_text:'文字值',unit:'单位',conditions:'适用条件（JSON）',quotation:'原文引用',region:'原文区域 [x0,y0,x1,y1]',relation:'适配关系类型',model_candidate:'候选型号',order_number_candidate:'候选订货号',scope:'本次工况与组件（JSON）',findings:'工程核对结论（JSON）'};
 function node(tag,text,className){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(className)e.className=className;return e;}
 async function api(path,options){const r=await fetch(path,options);let data;try{data=await r.json();}catch{throw Error('服务器未返回有效数据');}if(!r.ok)throw Error(typeof data.detail==='string'?data.detail:JSON.stringify(data.detail));return data;}
 function message(text){$('message').textContent=text;}

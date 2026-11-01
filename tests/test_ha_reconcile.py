@@ -51,7 +51,7 @@ def test_plan_is_read_only_and_complete(catalog):
     plan=make_plan(catalog)
     assert counts(catalog)==before
     assert plan['summary']=={'existing_identity':79,'new_identity':8,'equivalent':922,
-                             'new_fact':90,'new_unknown':20,'requires_review':4,'schema_gap':5}
+                             'new_fact':90,'new_na':20,'requires_review':4,'schema_gap':5}
     assert len(proposal()['products'])==87 and len(proposal()['facts'])==1041
     assert len(plan['sources'])==20
     assert make_plan(catalog)['plan_digest']==plan['plan_digest']
@@ -62,7 +62,7 @@ def test_additions_are_pending_idempotent_and_preserve_all_original_rows(catalog
     before=originals(catalog)
     p=make_plan(catalog)
     result=apply_plan(catalog,p['plan_digest'],verify_files=False)
-    assert result['added']=={'products':8,'known_facts':90,'unknowns':20}
+    assert result['added']=={'products':8,'known_facts':90,'na_records':20}
     after=originals(catalog)
     for name,rows in before.items():
         after_by_id={r['id']:r for r in after[name]}
@@ -161,7 +161,7 @@ def test_unknowns_do_not_fill_v2_or_ha002_with_guessed_numbers(catalog):
     assert catalog.execute("SELECT contact_count,pe_contacts FROM products WHERE model='HA-002-MS'").fetchone()==dict(contact_count=None,pe_contacts=None)
     rows=catalog.execute('''SELECT s.* FROM product_specifications s JOIN products p ON p.id=s.product_id
         WHERE p.model='HA-004-M-V2' AND s.parameter IN ('wire_cross_section_min','wire_cross_section_max')''').fetchall()
-    assert len(rows)==2 and all(r['value_state']=='unknown' and r['value_number'] is None and r['state_reason'] for r in rows)
+    assert len(rows)==2 and all(r['value_state']=='NA' and r['value_number'] is None and r['state_reason'] for r in rows)
     torque=catalog.execute('''SELECT s.* FROM product_specifications s JOIN products p ON p.id=s.product_id
         WHERE p.model='HA-004-M-V2' AND s.parameter='tightening_test_torque' ''').fetchone()
     assert torque['value_state']=='known' and torque['value_number']==.25

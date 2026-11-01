@@ -1,74 +1,74 @@
 ﻿条目代码,分类,目录条目,条目类型,目录来源文件页,印刷页码范围,已登记样板型号数,已知型号基准,型号清单,参数录入,资料审核,配对与附件,真实工程批准,下一事项/范围限制
 HA,矩形连接器芯体,HA Series-the slim inserts,series,5,P01-01～P01-07,36,36,本章范围已登记,部分完成,待做,部分完成,未批准,仅本章 72–79 页的芯体订货号登记完成；147 行包括端子等重复来源。参数/配对仍有缺项，非工程批准。
-HE,矩形连接器芯体,HE Series-compact inserts,series,5,P02-01～P02-10,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HVE,矩形连接器芯体,HVE Series-high voltage inserts,series,5,P03-01～P03-12,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HVES,矩形连接器芯体,HVES Series-high voltage inserts,series,5,P04-01～P04-08,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HEE,矩形连接器芯体,HEE Series-high density inserts,series,5,P05-01～P05-12,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HEEE,矩形连接器芯体,HEEE Series-high density inserts,series,5,P05E-01～P05E-04,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HD_HDD,矩形连接器芯体,HD&HDD Series-ultra-high density inserts,series_group,5,P06-01～P06-24,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HSB,矩形连接器芯体,HSB Series-high heavy-current inserts,series,5,P07-01～P07-07,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HK,矩形连接器芯体,HK Series-combination inserts,series,5,P08-01～P08-29,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HE_AV,矩形连接器芯体,HE AV Series-extendible inserts,series,5,P09-01～P09-07,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HD_AV,矩形连接器芯体,HD AV Series-extendible inserts,series,5,P09-08～P09-14,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HM,矩形连接器芯体,HM Series-flexible and combined inserts,series,5,P10-01～P10-71,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HQ,矩形连接器芯体,HQ Series-compact inserts,series,5,P11-01～P11-20,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HC_INSERTS,矩形连接器芯体,HC Series-high heavy-current inserts,series,5,P12-01～P12-28,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HCM,矩形连接器芯体,HCM Series-small sized solder insert,series,5,P12H-01～P12H-05.1,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-RECTANGULAR_CONTACTS,压接端子,Rectangular connector-Crimp contacts,component_group,5,P13-01～P13-07,32,未知,部分完成,部分完成,待做,部分完成,未批准,仅 HA 页中的 16A 端子样板；P13 全类别型号数尚未盘清。
-PCB_ADAPTER,矩形连接器附件,PCB-adapter,component_group,5,P14-02～P14-11,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-RAIL_BRACKET,矩形连接器附件,Rail bracket,component_group,5,P14-12～P14-13,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-GROUND_DOCKING,矩形连接器附件,Ground terminal/Docking frame,component_group,5,P14-14～P14-16,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-CODE_PIN,矩形连接器附件,Code pin,component_group,5,P14-17～P14-18,2,未知,部分完成,部分完成,待做,部分完成,未批准,仅 CODE-Q3/Q5；P14 编码附件完整范围尚未盘清。
-CABLE_CLAMP,矩形连接器附件,Cable clamp,component_group,5,P14-19～P14-19,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-DSUB_ADAPTER,矩形连接器附件,D-Sub adapter,component_group,5,P14-21～P14-21,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-ENCLOSURE_3A,外壳、底座及密封件,3A Hoods/Housings,component_group,5,P15-06～P15-16.1,2,未知,部分完成,部分完成,待做,待做,未批准,3A标准金属侧进线外壳与面板底座各一款，已待审核入库；未覆盖所有变体或批准实际配对。
-ENCLOSURE_10A,外壳、底座及密封件,10A Hoods/Housings,component_group,5,P15-17～P15-18.1,3,未知,部分完成,部分完成,待做,部分完成,未批准,仅两款外壳和一款面板底座，不代表 10A 类别已录全。
-ENCLOSURE_16A,外壳、底座及密封件,16A Metal Hoods/Housings,component_group,5,P15-19～P15-20,2,未知,部分完成,部分完成,待做,待做,未批准,16A标准金属侧进线外壳与面板底座各一款，已待审核入库；未覆盖所有变体或批准实际配对。
-ENCLOSURE_32A,外壳、底座及密封件,32A Metal Hoods/Housings,component_group,5,P15-21～P15-24,2,未知,部分完成,部分完成,待做,待做,未批准,32A标准金属侧进线外壳与面板底座各一款，已待审核入库；未覆盖所有变体或批准实际配对。
-ENCLOSURE_6B,外壳、底座及密封件,6B Hoods/Housings,component_group,5,P15-25～P15-38.2,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-ENCLOSURE_10B,外壳、底座及密封件,10B Hoods/Housings,component_group,5,P15-39～P15-69,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-ENCLOSURE_16B,外壳、底座及密封件,16B Hoods/Housings,component_group,5,P15-70～P15-107.1,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-ENCLOSURE_24B,外壳、底座及密封件,24B Hoods/Housings,component_group,5,P15-108～P15-150,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-ENCLOSURE_32B,外壳、底座及密封件,32B Hoods/Housings,component_group,5,P15-151～P15-159,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-ENCLOSURE_48B,外壳、底座及密封件,48B Hoods/Housings,component_group,5,P15-160～P15-162,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HC_ENCLOSURES,外壳、底座及密封件,HC Hoods/Housings,component_group,5,P15-163～P15-168,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-THICKENED_SEAL,外壳、底座及密封件,Thickned seal part (H series BK housing),component_group,5,P15-169～P15-170,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-PCB_CONNECTOR,PCB 连接器,PCB Connector,component_group,5,P15F-01～P15F-48,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-EC_RAIL,铁路运输 EC 系列,Rail transportation industry EC series,series,6,P15E-02～P15E-08,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HIGH_TEMPERATURE,高温系列,High temperature series,series,6,P15H-01～P15H-08,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HE,矩形连接器芯体,HE Series-compact inserts,series,5,P02-01～P02-10,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HVE,矩形连接器芯体,HVE Series-high voltage inserts,series,5,P03-01～P03-12,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HVES,矩形连接器芯体,HVES Series-high voltage inserts,series,5,P04-01～P04-08,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HEE,矩形连接器芯体,HEE Series-high density inserts,series,5,P05-01～P05-12,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HEEE,矩形连接器芯体,HEEE Series-high density inserts,series,5,P05E-01～P05E-04,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HD_HDD,矩形连接器芯体,HD&HDD Series-ultra-high density inserts,series_group,5,P06-01～P06-24,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HSB,矩形连接器芯体,HSB Series-high heavy-current inserts,series,5,P07-01～P07-07,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HK,矩形连接器芯体,HK Series-combination inserts,series,5,P08-01～P08-29,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HE_AV,矩形连接器芯体,HE AV Series-extendible inserts,series,5,P09-01～P09-07,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HD_AV,矩形连接器芯体,HD AV Series-extendible inserts,series,5,P09-08～P09-14,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HM,矩形连接器芯体,HM Series-flexible and combined inserts,series,5,P10-01～P10-71,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HQ,矩形连接器芯体,HQ Series-compact inserts,series,5,P11-01～P11-20,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HC_INSERTS,矩形连接器芯体,HC Series-high heavy-current inserts,series,5,P12-01～P12-28,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HCM,矩形连接器芯体,HCM Series-small sized solder insert,series,5,P12H-01～P12H-05.1,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+RECTANGULAR_CONTACTS,压接端子,Rectangular connector-Crimp contacts,component_group,5,P13-01～P13-07,32,NA,部分完成,部分完成,待做,部分完成,未批准,仅 HA 页中的 16A 端子样板；P13 全类别型号数尚未盘清。
+PCB_ADAPTER,矩形连接器附件,PCB-adapter,component_group,5,P14-02～P14-11,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+RAIL_BRACKET,矩形连接器附件,Rail bracket,component_group,5,P14-12～P14-13,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+GROUND_DOCKING,矩形连接器附件,Ground terminal/Docking frame,component_group,5,P14-14～P14-16,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+CODE_PIN,矩形连接器附件,Code pin,component_group,5,P14-17～P14-18,2,NA,部分完成,部分完成,待做,部分完成,未批准,仅 CODE-Q3/Q5；P14 编码附件完整范围尚未盘清。
+CABLE_CLAMP,矩形连接器附件,Cable clamp,component_group,5,P14-19～P14-19,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+DSUB_ADAPTER,矩形连接器附件,D-Sub adapter,component_group,5,P14-21～P14-21,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+ENCLOSURE_3A,外壳、底座及密封件,3A Hoods/Housings,component_group,5,P15-06～P15-16.1,2,NA,部分完成,部分完成,待做,待做,未批准,3A标准金属侧进线外壳与面板底座各一款，已待审核入库；未覆盖所有变体或批准实际配对。
+ENCLOSURE_10A,外壳、底座及密封件,10A Hoods/Housings,component_group,5,P15-17～P15-18.1,3,NA,部分完成,部分完成,待做,部分完成,未批准,仅两款外壳和一款面板底座，不代表 10A 类别已录全。
+ENCLOSURE_16A,外壳、底座及密封件,16A Metal Hoods/Housings,component_group,5,P15-19～P15-20,2,NA,部分完成,部分完成,待做,待做,未批准,16A标准金属侧进线外壳与面板底座各一款，已待审核入库；未覆盖所有变体或批准实际配对。
+ENCLOSURE_32A,外壳、底座及密封件,32A Metal Hoods/Housings,component_group,5,P15-21～P15-24,2,NA,部分完成,部分完成,待做,待做,未批准,32A标准金属侧进线外壳与面板底座各一款，已待审核入库；未覆盖所有变体或批准实际配对。
+ENCLOSURE_6B,外壳、底座及密封件,6B Hoods/Housings,component_group,5,P15-25～P15-38.2,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+ENCLOSURE_10B,外壳、底座及密封件,10B Hoods/Housings,component_group,5,P15-39～P15-69,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+ENCLOSURE_16B,外壳、底座及密封件,16B Hoods/Housings,component_group,5,P15-70～P15-107.1,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+ENCLOSURE_24B,外壳、底座及密封件,24B Hoods/Housings,component_group,5,P15-108～P15-150,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+ENCLOSURE_32B,外壳、底座及密封件,32B Hoods/Housings,component_group,5,P15-151～P15-159,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+ENCLOSURE_48B,外壳、底座及密封件,48B Hoods/Housings,component_group,5,P15-160～P15-162,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HC_ENCLOSURES,外壳、底座及密封件,HC Hoods/Housings,component_group,5,P15-163～P15-168,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+THICKENED_SEAL,外壳、底座及密封件,Thickned seal part (H series BK housing),component_group,5,P15-169～P15-170,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+PCB_CONNECTOR,PCB 连接器,PCB Connector,component_group,5,P15F-01～P15F-48,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+EC_RAIL,铁路运输 EC 系列,Rail transportation industry EC series,series,6,P15E-02～P15E-08,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HIGH_TEMPERATURE,高温系列,High temperature series,series,6,P15H-01～P15H-08,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
 CIRCULAR_TECHNICAL,技术参考,Circular connector-Technical characteristics,reference,6,P16-02～P16-12,不适用,不适用,不适用,不适用,待做,不适用,不适用,按参考资料验收，不按产品 SKU 计数。需逐页整理技术语义。
-M8,圆形连接器及相关接口,M8,series,6,P17-01～P17-23,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M12_A,圆形连接器及相关接口,M12-A,series,6,P18-01～P18-41,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M12_B,圆形连接器及相关接口,M12-B,series,6,P18B-01～P18B-28,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M12_D,圆形连接器及相关接口,M12-D,series,6,P19-01～P19-36,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M12_S,圆形连接器及相关接口,M12-S,series,6,P19S-01～P19S-16,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M12_L,圆形连接器及相关接口,M12-L,series,6,P19L-01～P19L-20,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M12_X,圆形连接器及相关接口,M12-X,series,6,P19X-01～P19X-16,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M12_Y,圆形连接器及相关接口,M12-Y,series,6,P19Y-01～P19Y-10,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-RJ45,圆形连接器及相关接口,RJ45,interface_group,6,P19R-01～P19R-06,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M12_HYBRID,圆形连接器及相关接口,M12-Hybrid,series,6,P19H-01～P19H-02,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-IO_LINK_BOX,圆形连接器及相关接口,IO-Link Sensor junction box,component_group,6,P19K-01～P19K-16,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M8_M12_DISTRIBUTION,圆形连接器及相关接口,M8/M12 Distributor; M8/M12 Sensor junction box,component_group,6,P20-01～P20-16,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-SOLENOID_VALVE,圆形连接器及相关接口,Solenoid valve connector,interface_group,6,P20V-01～P20V-06,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-SEVEN_EIGHTHS,圆形连接器及相关接口,7/8,series,6,P21-01～P21-18,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M15,圆形连接器及相关接口,M15,series,6,P21Q-01～P21Q-16,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M17,圆形连接器及相关接口,M17,series,6,P21S-01～P21S-75,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-MX17,圆形连接器及相关接口,MX17,series,6,P21X-01～P21X-10,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HR23,圆形连接器及相关接口,HR23(M23),series,6,P22-01～P22-14,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-MR23,圆形连接器及相关接口,MR23,series,6,P23-01～P23-118,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M23,圆形连接器及相关接口,M23,series,6,P24-01～P24-25,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M27,圆形连接器及相关接口,M27,series,6,P24A-01～P24A-04,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-M40,圆形连接器及相关接口,M40,series,6,P25-01～P25-12,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-Q38,圆形连接器及相关接口,Q38,series,6,P25Q-01～P25Q-08,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-POWER_CONNECTOR,圆形连接器及相关接口,Power electrical connector,component_group,6,P26-01～P26-08,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-CUSTOM_HW,定制及特殊产品,Customized product-HW,series,6,P27-01～P27-04,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-CUSTOM_MI,定制及特殊产品,Customized product-MI,series,6,P27-05～P27-06,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HCC,定制及特殊产品,HCC Series-single row inserts,series,7,P28-01～P28-02,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-HV,定制及特殊产品,HV Series-single row inserts,series,7,P29-01～P29-04,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-STATE_GRID_ANTI_OPEN,定制及特殊产品,The State Grid Anti-Open Connector,component_group,7,P29-05～P29-08.8.1,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-DSUB_044,定制及特殊产品,D-Sub-044 Series,series,7,P29-09～P29-12,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-CHARGING_TEST_TL_DZ,定制及特殊产品,Charging socket / Test Tool (TL-DZ),component_group,7,P29-13～P29-18,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
-WP,定制及特殊产品,WP Series,series,7,P29-19～P29-22,0,未知,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M8,圆形连接器及相关接口,M8,series,6,P17-01～P17-23,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M12_A,圆形连接器及相关接口,M12-A,series,6,P18-01～P18-41,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M12_B,圆形连接器及相关接口,M12-B,series,6,P18B-01～P18B-28,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M12_D,圆形连接器及相关接口,M12-D,series,6,P19-01～P19-36,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M12_S,圆形连接器及相关接口,M12-S,series,6,P19S-01～P19S-16,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M12_L,圆形连接器及相关接口,M12-L,series,6,P19L-01～P19L-20,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M12_X,圆形连接器及相关接口,M12-X,series,6,P19X-01～P19X-16,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M12_Y,圆形连接器及相关接口,M12-Y,series,6,P19Y-01～P19Y-10,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+RJ45,圆形连接器及相关接口,RJ45,interface_group,6,P19R-01～P19R-06,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M12_HYBRID,圆形连接器及相关接口,M12-Hybrid,series,6,P19H-01～P19H-02,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+IO_LINK_BOX,圆形连接器及相关接口,IO-Link Sensor junction box,component_group,6,P19K-01～P19K-16,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M8_M12_DISTRIBUTION,圆形连接器及相关接口,M8/M12 Distributor; M8/M12 Sensor junction box,component_group,6,P20-01～P20-16,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+SOLENOID_VALVE,圆形连接器及相关接口,Solenoid valve connector,interface_group,6,P20V-01～P20V-06,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+SEVEN_EIGHTHS,圆形连接器及相关接口,7/8,series,6,P21-01～P21-18,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M15,圆形连接器及相关接口,M15,series,6,P21Q-01～P21Q-16,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M17,圆形连接器及相关接口,M17,series,6,P21S-01～P21S-75,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+MX17,圆形连接器及相关接口,MX17,series,6,P21X-01～P21X-10,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HR23,圆形连接器及相关接口,HR23(M23),series,6,P22-01～P22-14,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+MR23,圆形连接器及相关接口,MR23,series,6,P23-01～P23-118,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M23,圆形连接器及相关接口,M23,series,6,P24-01～P24-25,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M27,圆形连接器及相关接口,M27,series,6,P24A-01～P24A-04,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+M40,圆形连接器及相关接口,M40,series,6,P25-01～P25-12,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+Q38,圆形连接器及相关接口,Q38,series,6,P25Q-01～P25Q-08,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+POWER_CONNECTOR,圆形连接器及相关接口,Power electrical connector,component_group,6,P26-01～P26-08,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+CUSTOM_HW,定制及特殊产品,Customized product-HW,series,6,P27-01～P27-04,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+CUSTOM_MI,定制及特殊产品,Customized product-MI,series,6,P27-05～P27-06,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HCC,定制及特殊产品,HCC Series-single row inserts,series,7,P28-01～P28-02,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+HV,定制及特殊产品,HV Series-single row inserts,series,7,P29-01～P29-04,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+STATE_GRID_ANTI_OPEN,定制及特殊产品,The State Grid Anti-Open Connector,component_group,7,P29-05～P29-08.8.1,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+DSUB_044,定制及特殊产品,D-Sub-044 Series,series,7,P29-09～P29-12,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+CHARGING_TEST_TL_DZ,定制及特殊产品,Charging socket / Test Tool (TL-DZ),component_group,7,P29-13～P29-18,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
+WP,定制及特殊产品,WP Series,series,7,P29-19～P29-22,0,NA,待做,待做,待做,待做,未批准,先建立本章节型号/来源基准，再提取参数与配套并独立审核。
 WIRING_HARNESS,线束服务,wiring harness,service_group,7,P30-01～P30-14,不适用,不适用,不适用,待做,待做,不适用,不适用,按线束服务、装配和供料范围整理，不把说明页计作产品型号。
-TOOLS_GLANDS,工具及电缆接头,Tools/Cable gland,component_group,7,P32-01～P32-28,9,未知,部分完成,部分完成,待做,部分完成,未批准,四条工具、五条电缆接头样板；P32 全部工具/附件仍待扩展。
+TOOLS_GLANDS,工具及电缆接头,Tools/Cable gland,component_group,7,P32-01～P32-28,9,NA,部分完成,部分完成,待做,部分完成,未批准,四条工具、五条电缆接头样板；P32 全部工具/附件仍待扩展。
 PART_NUMBER_INDEX,零件编号索引,List of part no.,reference,7,P33-01～P33-40,不适用,不适用,不适用,不适用,待做,不适用,不适用,按参考资料验收，不按产品 SKU 计数。P33 正文未定位，继续核实版本或补充资料。
